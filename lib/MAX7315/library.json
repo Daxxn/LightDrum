@@ -1,0 +1,30 @@
+{
+    "name": "MAX7315",
+    "description": "Library for interfacing with the MAX7315 IO expander IC over I2C.",
+    "authors": [
+        {
+            "name": "Daxxn",
+            "url": "null",
+            "maintainer": true
+        }
+    ],
+    "version": "0.0.1",
+    "frameworks": "arduino",
+    "dependencies": [
+        {
+            "name": "C:\\Users\\Daxxn\\Code\\Arduino\\libraries\\Registers",
+            "version": ">=0.0.1",
+            "frameworks": "arduino"
+        },
+        {
+            "name": "C:\\Users\\Daxxn\\Code\\Arduino\\libraries\\Algorythms",
+            "version": ">=0.0.1",
+            "frameworks": "arduino"
+        },
+        {
+            "name": "C:\\Users\\Daxxn\\Code\\Arduino\\libraries\\PrintUtils",
+            "version": ">=0.0.1",
+            "frameworks": "arduino"
+        }
+    ]
+}

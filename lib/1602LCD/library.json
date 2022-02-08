@@ -1,0 +1,13 @@
+{
+    "name": "1602LCDScreen",
+    "description": "Library for interfacing with a 1602 style LCD screen.",
+    "authors": [
+        {
+            "name": "Daxxn",
+            "url": "null",
+            "maintainer": true
+        }
+    ],
+    "version": "0.1.0",
+    "frameworks": "arduino"
+}
