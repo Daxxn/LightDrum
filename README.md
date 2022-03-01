@@ -1,5 +1,9 @@
 # LED Controller
 
+### Have you ever wanted the drum set to be the loudest thing on stage? Well... this won't do that, but it will be extremely visible!
+
+---
+
 This project is a present for my dad first. The idea is to lay strings of LEDs on his drum set and control those strings with audio and MIDI signals.
 
 ## Features
