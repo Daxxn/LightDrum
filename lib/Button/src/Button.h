@@ -2,6 +2,8 @@
 
 #include <Arduino.h>
 
+#define DEBOUNCE_TIME 60
+
 class Button
 {
 public:
@@ -13,6 +15,12 @@ public:
 
   void Update();
 private:
+  unsigned long _lastPressTime;
+  unsigned long _currentPressTime;
   int _pin;
+  uint8_t _state;
+  uint8_t _prevState;
   uint8_t _mode;
+
+  static bool Debounce(unsigned long current, unsigned long last);
 };

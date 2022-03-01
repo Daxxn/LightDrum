@@ -2,19 +2,20 @@
 
 ### 1602 LCD Screen
 
-|Pin | Net    | Description          |
-| -- | ------ | -------------------- |
-| 22 | LCD-D7 | 1602 Data Line 7     |
-| 24 | LCD-D6 | 1602 Data Line 6     |
-| 26 | LCD-D5 | 1602 Data Line 5     |
-| 28 | LCD-D4 | 1602 Data Line 4     |
-| 30 | LCD-D3 | 1602 Data Line 3     |
-| 32 | LCD-D2 | 1602 Data Line 2     |
-| 34 | LCD-D1 | 1602 Data Line 1     |
-| 36 | LCD-D0 | 1602 Data Line 0     |
-| 38 | LCD-EN | 1602 Enable          |
-| 40 | LCD-RW | 1602 Read/Write      |
-| 42 | LCD-RS | 1602 Register Select |
+|Pin | Net         | Description             |
+| -- | ----------- | ----------------------- |
+| 22 | LCD-D7      | 1602 Data Line 7        |
+| 24 | LCD-D6      | 1602 Data Line 6        |
+| 26 | LCD-D5      | 1602 Data Line 5        |
+| 28 | LCD-D4      | 1602 Data Line 4        |
+| 30 | LCD-D3      | 1602 Data Line 3        |
+| 32 | LCD-D2      | 1602 Data Line 2        |
+| 34 | LCD-D1      | 1602 Data Line 1        |
+| 36 | LCD-D0      | 1602 Data Line 0        |
+| 38 | LCD-EN      | 1602 Enable             |
+| 40 | LCD-RW      | 1602 Read/Write         |
+| 42 | LCD-RS      | 1602 Register Select    |
+| 48 | LCD-PWR-SIG | 1602 Power Relay Signal |
 
 ### Buttons
 
@@ -67,13 +68,13 @@
 | 45 | ENC2-A  | Encoder 2 Line A |
 | 43 | ENC2-B  | Encoder 2 Line B |
 
-### Other Inputs
+### Other
 
-|Pin | Net     | Description               |
-| -- | ------- | ------------------------- |
-| 50 | PWR1-SW | Barrel Jack 1 Plug Switch |
-| 52 | PWR2-SW | Barrel Jack 2 Plug Switch |
-| 31 | HP-SW   | 1/8 Jack Plug Switch      |
+|Pin | Net         | Description               |
+| -- | ----------- | ------------------------- |
+| 50 | PWR1-SW     | Barrel Jack 1 Plug Switch |
+| 52 | PWR2-SW     | Barrel Jack 2 Plug Switch |
+| 31 | HP-SW       | 1/8 Jack Plug Switch      |
 
 ### Serial
 

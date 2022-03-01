@@ -38,7 +38,7 @@ enum DataLength
 class LCDScreen
 {
 private:
-    // Parallel Data Pin numbers
+    // Parallel Data Pins numbers
     int *_dataPins;
     // 4-bit or 8-bit mode
     // !! DONT USE !!
@@ -122,6 +122,9 @@ public:
     void Print(char c);
 
     // Print to the LCD screen
+    void Print(uint8_t c);
+
+    // Print to the LCD screen
     void Print(String str);
 
     // Print to the LCD screen
@@ -131,11 +134,13 @@ public:
     void Print(long num);
 
     // Print to the LCD screen and wraps to the next line
-    //
-    // Doesnt completely work. The only way I know of right now to
-    // go to the next line is to print blank chars into the buffer.
-    // If the text is greater than 40, the screen will wrap automatically.
     void Println(String str);
+
+    void Println(uint8_t* str, unsigned int len);
+
+    void Println(char* str, unsigned int len);
+    // Wraps the screen to the next line
+    void Println();
 
     // !!! Only for testing !!!
     void Test();

@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "STP16Driver.h"
-#include "PrintUtils.h"
+#include "Logger.h"
 
 #pragma region Constructors
 STP16Driver::STP16Driver(int dataPin, int clockPin, int latchPin, int enablePin)
@@ -149,9 +149,9 @@ void STP16Driver::SendState()
     }
 
     Serial.println("Low");
-    PrintBinary(lowBits, 8, LSB);
+    Logger::LogByte(lowBits);
     Serial.println("High");
-    PrintBinary(highBits, 8, LSB);
+    Logger::LogByte(highBits);
     
     this->Send(lowBits);
     this->Send(highBits);

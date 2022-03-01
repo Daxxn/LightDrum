@@ -12,11 +12,37 @@
 const String LINE_PADDING = "                        ";
 #pragma endregion
 
+struct MenuItem
+{
+  String line1;
+  String line2;
+  MenuItem() {
+    this->line1 = "";
+    this->line2 = "";
+  }
+  MenuItem(String line1, String line2) {
+    this->line1 = line1;
+    this->line2 = line2;
+  }
+};
+
+
 class LCDMenu
 {
 public:
   LCDMenu(LCDScreen *screen);
   LCDMenu(LCDScreen *screen, uint8_t mainMenu);
+  LCDMenu(
+    LCDScreen *screen,
+    String *menus,
+    uint8_t menuCount
+  );
+  LCDMenu(
+    LCDScreen *screen,
+    String *menus,
+    uint8_t menuCount,
+    uint8_t mainMenu
+  );
 
   void Begin();
   void SetMenus(String *menus, uint8_t menuCount);
@@ -25,6 +51,8 @@ public:
   void HandleDown();
   void HandleHome();
   void HandleBack();
+
+  void Update();
 private:
   LCDScreen *_screen;
   uint8_t _menuCount;
@@ -32,9 +60,7 @@ private:
   uint8_t _currentMenu;
   uint8_t _prevMenu;
   uint8_t _mainMenu;
-  String *_menus;
-
-  void Update();
+  MenuItem *_menus;
 
   String SetMenu(String menu);
 };

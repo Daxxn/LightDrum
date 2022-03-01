@@ -22,8 +22,17 @@ Button::Button(int pin, void (*click)(), uint8_t mode)
 
 void Button::Update()
 {
-  if (digitalRead(this->_pin) == 1)
+  // Serial.println("In Update");
+  this->_state = digitalRead(this->_pin);
+  this->_currentPressTime = millis();
+  if (this->_state == 0 && this->Debounce(this->_currentPressTime, this->_lastPressTime))
   {
     this->Click();
   }
+  this->_lastPressTime = this->_currentPressTime;
+}
+
+bool Button::Debounce(unsigned long current, unsigned long last)
+{
+  return (current - last) > DEBOUNCE_TIME;
 }

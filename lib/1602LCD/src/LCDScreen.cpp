@@ -150,6 +150,7 @@ void LCDScreen::Clear()
     this->SetDataLines(1);
     this->SendEnable();
     this->_charCount = 0;
+    this->Return();
 }
 
 void LCDScreen::Return()
@@ -187,12 +188,24 @@ void LCDScreen::Print(String str)
 void LCDScreen::Print(char c)
 {
     // Serial.println(c);
+    // digitalWrite(this->_rsPin, HIGH);
+    // digitalWrite(this->_rwPin, LOW);
+    // this->SetDataLines(byte(c));
+    // this->SendEnable();
+    // this->_charCount++;
+    // delayMicroseconds(60);
+    this->Print((uint8_t)c);
+}
+
+void LCDScreen::Print(uint8_t b)
+{
+    // Serial.println(c);
     digitalWrite(this->_rsPin, HIGH);
     digitalWrite(this->_rwPin, LOW);
-    this->SetDataLines(byte(c));
+    this->SetDataLines(b);
     this->SendEnable();
     this->_charCount++;
-    delayMicroseconds(40);
+    delayMicroseconds(60);
 }
 
 // void LCDScreen::print(int value)
@@ -210,23 +223,51 @@ void LCDScreen::Println(String str)
     this->ShiftLine();
 }
 
+void LCDScreen::Println(uint8_t* str, unsigned int len)
+{
+    for (size_t i = 0; i < len; i++)
+    {
+        this->Print(str[i]);
+    }
+    delayMicroseconds(40);
+    this->ShiftLine();
+}
+
+void LCDScreen::Println(char* str, unsigned int len)
+{
+    for (size_t i = 0; i < len; i++)
+    {
+        this->Print(str[i]);
+    }
+    delayMicroseconds(40);
+    this->ShiftLine();
+}
+
+void LCDScreen::Println()
+{
+    this->ShiftLine();
+}
+
 void LCDScreen::ShiftLine()
 {
-    int diff = LCD_LINE_COUNT - this->_charCount;
-    if (diff >= 0)
-    {
-        String blank = "";
-        for (int i = 0; i < diff; i++)
-        {
-            blank += " ";
-        }
-        this->Print(blank);
-    } else {
-        for (int i = 0; i < diff; i++)
-        {
-            this->SetDataLines(0b100);
-        }
-    }
+    // int diff = LCD_LINE_COUNT - this->_charCount;
+    // if (diff >= 0)
+    // {
+    //     String blank = "";
+    //     for (int i = 0; i < diff; i++)
+    //     {
+    //         blank += " ";
+    //     }
+    //     this->Print(blank);
+    // } else {
+    //     for (int i = 0; i < diff; i++)
+    //     {
+    //         this->SetDataLines(0b100);
+    //     }
+    // }
+    digitalWrite(this->_rsPin, LOW);
+    digitalWrite(this->_rwPin, LOW);
+    this->SetDataLines(0b11000000);
     delayMicroseconds(40);
 }
 
@@ -245,7 +286,7 @@ uint8_t LCDScreen::SetState(uint8_t offset, bool state)
 
 void LCDScreen::SendEnable()
 {
-    delayMicroseconds(10);
+    delayMicroseconds(12);
     digitalWrite(this->_enPin, HIGH);
     delayMicroseconds(LCD_WRITE_DELAY);
     digitalWrite(this->_enPin, LOW);
