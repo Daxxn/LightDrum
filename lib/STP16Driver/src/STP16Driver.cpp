@@ -3,20 +3,30 @@
 #include "Logger.h"
 
 #pragma region Constructors
-STP16Driver::STP16Driver(int dataPin, int clockPin, int latchPin, int enablePin)
+STP16Driver::STP16Driver(
+    const int dataPin,
+    const int clockPin,
+    const int latchPin,
+    const int enablePin
+)
 {
-    this->_dataPin = dataPin;
+    this->_dataPin = &dataPin;
     this->_clockPin = clockPin;
     this->_latchPin = latchPin;
     this->_enablePin = enablePin;
+    this->_states = new LEDState[STP16_LED_COUNT];
+}
+
+STP16Driver::~STP16Driver()
+{
+    delete[] this->_states;
 }
 #pragma endregion
 
 #pragma region Initialization
 void STP16Driver::Begin()
 {
-    this->_states[STP16_LED_COUNT] = {};
-    pinMode(this->_dataPin, OUTPUT);
+    pinMode(*(this->_dataPin), OUTPUT);
     pinMode(this->_clockPin, OUTPUT);
     pinMode(this->_latchPin, OUTPUT);
     pinMode(this->_enablePin, OUTPUT);
@@ -43,51 +53,27 @@ void STP16Driver::Enable(bool en)
 #pragma endregion
 
 #pragma region Setting State
-void STP16Driver::SetLEDs(LEDState states[STP16_LED_COUNT])
+void STP16Driver::SetLEDs(LEDState* states)
 {
-    bool change = false;
-    for (size_t i = 0; i < STP16_LED_COUNT; i++)
-    {
-        if (this->_states[i] != states[i])
-        {
-            this->_states[i] = states[i];
-            if (!change)
-            {
-                change = true;
-            }
-        }
-    }
+    memcpy(this->_states, states, 16);
+    // for (size_t i = 0; i < STP16_LED_COUNT; i++)
+    // {
+    //     if (this->_states[i] != states[i])
+    //     {
+    //         this->_states[i] = states[i];
+    //         if (!change)
+    //         {
+    //             change = true;
+    //         }
+    //     }
+    // }
 
-    if (change)
-    {
-        this->SendState();
-    }
+    this->SendState();
 }
 
-void STP16Driver::SetLEDs(uint8_t states[STP16_LED_COUNT])
+void STP16Driver::SetLEDs(uint8_t* states)
 {
-    bool change = false;
-    for (size_t i = 0; i < STP16_LED_COUNT; i++)
-    {
-        if (this->_states[i] != states[i])
-        {
-            this->_states[i] = (LEDState)states[i];
-            if (!change)
-            {
-                change = true;
-            }
-        }
-    }
-
-    if (change)
-    {
-        this->SendState();
-    }
-}
-
-void STP16Driver::SetLEDs(bool states[STP16_LED_COUNT])
-{
-    bool change = false;
+    static bool change = false;
     for (size_t i = 0; i < STP16_LED_COUNT; i++)
     {
         if (this->_states[i] != states[i])
@@ -106,7 +92,28 @@ void STP16Driver::SetLEDs(bool states[STP16_LED_COUNT])
     }
 }
 
-void STP16Driver::SetLED(int index, LEDState state)
+void STP16Driver::SetLEDs(bool* states)
+{
+    static bool change = false;
+    for (size_t i = 0; i < STP16_LED_COUNT; i++)
+    {
+        if (this->_states[i] != states[i])
+        {
+            this->_states[i] = (LEDState)states[i];
+            if (!change)
+            {
+                change = true;
+            }
+        }
+    }
+
+    if (change)
+    {
+        this->SendState();
+    }
+}
+
+void STP16Driver::SetLED(int& index, LEDState state)
 {
     if (index > 0 && index < STP16_LED_COUNT)
     {
@@ -131,8 +138,8 @@ void STP16Driver::Clear()
 #pragma region Sending Data
 void STP16Driver::SendState()
 {
-    byte highBits = 0;
-    byte lowBits = 0;
+    static uint8_t highBits = 0;
+    static uint8_t lowBits = 0;
 
     digitalWrite(this->_latchPin, HIGH);
     digitalWrite(this->_enablePin, HIGH);
@@ -160,8 +167,11 @@ void STP16Driver::SendState()
     digitalWrite(this->_enablePin, LOW);
 }
 
-void STP16Driver::Send(uint8_t state)
+void STP16Driver::Send(uint8_t& state)
 {
-    shiftOut(this->_dataPin, this->_clockPin, LSBFIRST, state);
+    shiftOut(
+        *(this->_dataPin),
+        this->_clockPin,
+        LSBFIRST, this->_state);
 }
 #pragma endregion

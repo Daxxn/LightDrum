@@ -68,6 +68,7 @@ const int ledEPin = 33;
 
 LCDScreen2 lcd(dataPins, rsPin, rwPin, enPin);
 MenuController menu(&lcd);
+
 STP16Driver leds(ledDPin, ledCPin, ledLPin, ledEPin);
 
 // Menu root(MenuData::MenuOne);
@@ -128,6 +129,9 @@ void setup() {
 
   Logger::Log("Menu INIT Complete");
   // Serial.println("Menu INIT Complete");
+
+  leds.Begin();
+  Logger::Log("LED Driver INIT Complete");
 }
 
 void loop() {
@@ -140,6 +144,10 @@ void loop() {
   #pragma region Menu Test
   // menu.Update();
   lcd.Test();
+  #pragma endregion
+
+  #pragma region LED Driver Test
+  
   #pragma endregion
 
   // count++;
