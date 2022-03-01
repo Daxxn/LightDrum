@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2022-03-01T20:25:14Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.99,
+        "LayerNumber": 4,
+        "Name": {
+            "ProjectId": "LEDController-REV2-PCB v16"
+        },
+        "Owner": "Daxxn Lantz <nynjalantz@gmail.com>",
+        "Size": {
+            "X": 132.08,
+            "Y": 156.21
+        }
+    }
+}
