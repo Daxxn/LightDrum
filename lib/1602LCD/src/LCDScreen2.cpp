@@ -129,7 +129,7 @@ void LCDScreen2::End()
 #pragma region Util Methods
 void LCDScreen2::Test()
 {
-  Logger::LogArr(this->topBuffer, 16);
+  Logger::LogArr("Top Buffer", this->topBuffer, 16);
 }
 
 uint8_t LCDScreen2::SetState(uint8_t offset, bool state)

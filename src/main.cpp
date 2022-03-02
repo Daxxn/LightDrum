@@ -58,11 +58,17 @@ int rsPin = 42;
 int rwPin = 40;
 #pragma endregion
 
-#pragma region name
+#pragma region STP16 LED Pins
 const int ledDPin = 39;
 const int ledCPin = 37;
 const int ledLPin = 35;
 const int ledEPin = 33;
+#pragma endregion
+
+#pragma region Individual Color PWM Pins
+const int ch8GPin = 9;
+const int ch8RPin = 11;
+const int ch8BPin = 13;
 #pragma endregion
 #pragma endregion
 
@@ -100,7 +106,19 @@ void UpdateButtons() {
 }
 #pragma endregion
 
+#pragma region Simple PWM Control
 byte val = 0;
+void SimplePWM()
+{
+  val++;
+  Serial.println(analogRead(55));
+  analogWrite(ch8RPin, val);
+  analogWrite(ch8GPin, val - 64);
+  // analogWrite(ch8BPin, val - 64 * 2);
+}
+#pragma endregion
+
+uint8_t ind = 0;
 
 void setup() {
   delay(500);
@@ -131,6 +149,7 @@ void setup() {
   // Serial.println("Menu INIT Complete");
 
   leds.Begin();
+  leds.Enable(true);
   Logger::Log("LED Driver INIT Complete");
 }
 
@@ -143,14 +162,27 @@ void loop() {
   #pragma endregion
   #pragma region Menu Test
   // menu.Update();
-  lcd.Test();
+  // lcd.Test();
   #pragma endregion
 
   #pragma region LED Driver Test
-  
+  // Logger::Log("Current LED", ind);
+  // leds.ToggleLED(ind);
+  // if (ind > 15)
+  // {
+  //   ind = 0;
+  // }
+  // else
+  // {
+  //   ind++;
+  // }
+  #pragma endregion
+
+  #pragma region PWM Test
+  SimplePWM();
   #pragma endregion
 
   // count++;
   UpdateButtons();
-  delay(100);
+  delay(5);
 }

@@ -20,6 +20,16 @@ void Logger::Log(const char msg[], const char data[])
   }
 }
 
+void Logger::Log(const char msg[], uint8_t& data)
+{
+  if (Logger::enable)
+  {
+    Serial.print(msg);
+    Serial.print(" : ");
+    Serial.println(data);
+  }
+}
+
 void Logger::LogArr(uint8_t* arr, unsigned int length)
 {
   if (Logger::enable)
