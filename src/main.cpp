@@ -77,17 +77,9 @@ MenuController menu(&lcd);
 
 STP16Driver leds(ledDPin, ledCPin, ledLPin, ledEPin);
 
-// Menu root(MenuData::MenuOne);
-// Menu m2(MenuData::MenuTwo);
-// Menu m3(MenuData::MenuThree);
-
-// Menu root(FunMenus::MenuOne);
-// Menu m2(FunMenus::MenuTwo);
-// Menu m3(FunMenus::MenuThree);
-
-Menu root(MommasBDay::MenuOne);
-Menu m2(MommasBDay::MenuTwo);
-Menu m3(MommasBDay::MenuThree);
+Menu root(MenuData::MenuOne);
+Menu m2(MenuData::MenuTwo);
+Menu m3(MenuData::MenuThree);
 
 Button upBtn;
 Button downBtn;
@@ -114,7 +106,7 @@ void SimplePWM()
   Serial.println(analogRead(55));
   analogWrite(ch8RPin, val);
   analogWrite(ch8GPin, val - 64);
-  // analogWrite(ch8BPin, val - 64 * 2);
+  analogWrite(ch8BPin, val - 64 * 2);
 }
 #pragma endregion
 
@@ -123,6 +115,7 @@ uint8_t ind = 0;
 void setup() {
   delay(500);
   Serial.begin(115200);
+  delay(500);
 
   Logger::Log("Starting LCD Test Mode");
   // Serial.println("Starting LCD Test Mode");
