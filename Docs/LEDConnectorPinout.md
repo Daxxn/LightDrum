@@ -29,7 +29,6 @@ Pinout for the main LED strip D-Sub connector.
 | P17 | I2C-SDA | I2C Data |
 | P18 | I2C-SCLK | I2C Clock |
 | P19 | NC | Not Connected |
-|
 | P20 | LED5-PWR | LED Strip Channel 5 +12V |
 | P21 | LED5-G | Channel 5 Green |
 | P22 | LED5-R | Channel 5 Red |
