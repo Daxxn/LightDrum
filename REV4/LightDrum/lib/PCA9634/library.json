@@ -1,0 +1,13 @@
+{
+  "name": "PCA9634",
+  "description": "Interface library for PCA9634 PWM LED driver.",
+  "authors": [
+      {
+          "name": "Daxxn",
+          "url": "null",
+          "maintainer": true
+      }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino"
+}

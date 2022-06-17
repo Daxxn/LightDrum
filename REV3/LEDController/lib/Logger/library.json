@@ -1,0 +1,13 @@
+{
+  "name": "Logger",
+  "description": "Simple serial logging library.",
+  "authors": [
+      {
+          "name": "Daxxn",
+          "url": "null",
+          "maintainer": true
+      }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino"
+}
