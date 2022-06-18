@@ -160,6 +160,8 @@ public:
 private:
   int oePin;
   bool outEnable = false;
+  bool settingsChanged;
+  
   uint8_t address;
   PCAEnums::OpMode opMode = PCAEnums::OpMode::SLEEP;
   PCAEnums::Drive driveMode = PCAEnums::Drive::TOTEM;

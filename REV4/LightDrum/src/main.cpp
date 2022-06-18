@@ -6,7 +6,6 @@
 #include "MenuController.h"
 #include "Menu.h"
 #include "MenuData.h"
-#include "Logger.h"
 #include "STP16Driver.h"
 #include "LightDrumPinout.h"
 #include "PCA9634.h"
@@ -19,7 +18,7 @@ const float senseResistance = 0.06;
 const int senseGain = 100;
 #pragma endregion
 
-#pragma region LCD Pins
+#pragma region LCD Screen Pins
 int dataPins[8] = {
   LCDPins::D0_PIN,
   LCDPins::D1_PIN,
@@ -36,20 +35,20 @@ int rwPin = LCDPins::RW_PIN;
 #pragma endregion
 
 #pragma region Class Definitions
-PCA9634 pwm0(&Wire, Ser::I2C::PWM0_ADDR, Ser::I2C::PWM_OE, true);
-PCA9634 pwm1(&Wire, Ser::I2C::PWM1_ADDR, Ser::I2C::PWM_OE, true);
-PCA9634 pwm2(&Wire, Ser::I2C::PWM2_ADDR, Ser::I2C::PWM_OE, true);
+PCA9634 pwm0(&Wire, Ser::I2C::LED1_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
+PCA9634 pwm1(&Wire, Ser::I2C::LED2_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
+PCA9634 pwm2(&Wire, Ser::I2C::LED3_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
 
 CurrentSense currentMonitors[8] = 
 {
-  CurrentSense(Anlg::CURR_SENSEPins::S0_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S1_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S2_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S3_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S4_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S5_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S6_PIN, senseResistance, senseGain),
-  CurrentSense(Anlg::CURR_SENSEPins::S7_PIN, senseResistance, senseGain)
+  CurrentSense(Anlg::CURRPins::SNS_1_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_2_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_3_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_4_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_5_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_6_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_7_PIN, senseResistance, senseGain),
+  CurrentSense(Anlg::CURRPins::SNS_8_PIN, senseResistance, senseGain)
 };
 
 LCDScreen2 lcd(dataPins, rsPin, rwPin, enPin);
@@ -97,10 +96,10 @@ void UpdateButtons() {
 
 void UpdatePWM()
 {
-  // pwm0.Update();
+  pwm0.Update();
   // pwm0.ReadSettings();
   // pwm1.ReadSettings();
-  pwm1.Update();
+  // pwm1.Update();
   // pwm2.Update();
 }
 #pragma endregion
@@ -110,22 +109,22 @@ void UpdatePWM()
 #pragma region System Test Functions
 void IndicatorTest()
 {
-  digitalWrite(INDICATORPins::ACT_PIN, HIGH);
-  digitalWrite(INDICATORPins::HOME_PIN, HIGH);
-  digitalWrite(INDICATORPins::M_DOWN_PIN, HIGH);
-  digitalWrite(INDICATORPins::M_UP_PIN, HIGH);
-  digitalWrite(INDICATORPins::MODE_PIN, HIGH);
+  digitalWrite(INDPins::ACT_PIN, HIGH);
+  digitalWrite(INDPins::HOME_PIN, HIGH);
+  digitalWrite(INDPins::M_DN_PIN, HIGH);
+  digitalWrite(INDPins::M_UP_PIN, HIGH);
+  digitalWrite(INDPins::MODE_PIN, HIGH);
   delay(1000);
-  digitalWrite(INDICATORPins::ACT_PIN, LOW);
-  digitalWrite(INDICATORPins::HOME_PIN, LOW);
-  digitalWrite(INDICATORPins::M_DOWN_PIN, LOW);
-  digitalWrite(INDICATORPins::MODE_PIN, LOW);
-  digitalWrite(INDICATORPins::M_UP_PIN, LOW);
+  digitalWrite(INDPins::ACT_PIN, LOW);
+  digitalWrite(INDPins::HOME_PIN, LOW);
+  digitalWrite(INDPins::M_DN_PIN, LOW);
+  digitalWrite(INDPins::MODE_PIN, LOW);
+  digitalWrite(INDPins::M_UP_PIN, LOW);
 }
 
 void RelayTest()
 {
-  digitalWrite(POWERPins::RELAY_PIN, HIGH);
+  digitalWrite(PWRPins::PWR_EN_PIN, HIGH);
   // delay(1000);
   // digitalWrite(POWERPins::RELAY_PIN, LOW);
   // delay(1000);
@@ -133,73 +132,79 @@ void RelayTest()
 #pragma endregion
 
 void setup() {
+  #pragma region Power Init
+  pinMode(PWRPins::PWR_EN_PIN, OUTPUT);
+  pinMode(PWRPins::INV_EN_PIN, OUTPUT);
+
+  digitalWrite(PWRPins::INV_EN_PIN, HIGH);
+  digitalWrite(PWRPins::PWR_EN_PIN, LOW);
+  #pragma endregion
+
   delay(100);
 
   Wire.begin();
   SPI.begin();
 
-  // pwm0.Begin();
-  pwm1.Begin();
+  #pragma region Init
+  #pragma region PWM
+  pwm0.Begin();
+  // pwm1.Begin();
 
-  // pwm0.ToggleMode(PCAEnums::OpMode::NORM);
+  delay(50);
+
+  pwm0.ToggleMode(PCAEnums::OpMode::NORM);
   // pwm0.ToggleEnable(true);
-  pwm1.ToggleEnable(true);
+  pwm0.ToggleEnable(true);
+  // pwm1.ToggleEnable(true);
 
-  pinMode(INDICATORPins::ACT_PIN, OUTPUT);
-  pinMode(INDICATORPins::HOME_PIN, OUTPUT);
-  pinMode(INDICATORPins::M_DOWN_PIN, OUTPUT);
-  pinMode(INDICATORPins::M_UP_PIN, OUTPUT);
-  pinMode(INDICATORPins::MODE_PIN, OUTPUT);
+  pwm0.SetLEDOutput(PCAEnums::PWMState::PWM);
 
-  pinMode(POWERPins::RELAY_PIN, OUTPUT);
+  pinMode(LEDPins::PWM_OE_PIN, OUTPUT);
+  digitalWrite(LEDPins::PWM_OE_PIN, LOW);
+  #pragma endregion
 
-  // for (auto &&c : currentMonitors)
-  // {
-  //   c.Begin();
-  // }
+  #pragma region Inicator LEDs
+  pinMode(INDPins::ACT_PIN, OUTPUT);
+  pinMode(INDPins::HOME_PIN, OUTPUT);
+  pinMode(INDPins::M_DN_PIN, OUTPUT);
+  pinMode(INDPins::M_UP_PIN, OUTPUT);
+  pinMode(INDPins::MODE_PIN, OUTPUT);
+  #pragma endregion
 
-  Logger::Log("Starting LCD Test Mode");
-  // Serial.println("Starting LCD Test Mode");
-
-  upBtn   = Button(BUTTONSPins::M_UP_PIN, [] () { menu.Next(); });
-  downBtn = Button(BUTTONSPins::M_DOWN_PIN, [] () { menu.Prev(); });
-  homeBtn = Button(BUTTONSPins::HOME_PIN, [] () { menu.Home(); });
-  ActBtn = Button(BUTTONSPins::ACT_PIN, [] () { menu.Act(); });
-  ModeBtn = Button(BUTTONSPins::MODE_PIN, [] () { // Blink Indicator
-    digitalWrite(INDICATORPins::MODE_PIN, HIGH);
+  #pragma region Switches
+  upBtn   = Button(SWITCHPins::M_UP_PIN, [] () { menu.Next(); });
+  downBtn = Button(SWITCHPins::M_DN_PIN, [] () { menu.Prev(); });
+  homeBtn = Button(SWITCHPins::HOME_PIN, [] () { menu.Home(); });
+  ActBtn = Button(SWITCHPins::ACT_PIN, [] () { menu.Act(); });
+  ModeBtn = Button(SWITCHPins::MODE_PIN, [] () { // Blink Indicator
+    digitalWrite(SWITCHPins::MODE_PIN, HIGH);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, LOW);
+    digitalWrite(INDPins::MODE_PIN, LOW);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, HIGH);
+    digitalWrite(INDPins::MODE_PIN, HIGH);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, LOW);
+    digitalWrite(INDPins::MODE_PIN, LOW);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, HIGH);
+    digitalWrite(INDPins::MODE_PIN, HIGH);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, LOW);
+    digitalWrite(INDPins::MODE_PIN, LOW);
     delay(100);
-    digitalWrite(INDICATORPins::MODE_PIN, HIGH);
+    digitalWrite(INDPins::MODE_PIN, HIGH);
   });
+  #pragma endregion
 
-  Logger::Log("Button INIT Complete");
-  // Serial.println("Button INIT Complete");
-
+  #pragma region Menu
   root.SetNext(&m2);
   m2.SetNext(&m3);
   m3.SetNext(&root);
 
-
-  Logger::Log("Menu Set Complete");
-  // Serial.println("Menu Set Complete");
-
   menu.Begin(&root);
   // lcd.Begin();
-
-  Logger::Log("Menu INIT Complete");
-  // Serial.println("Menu INIT Complete");
+  #pragma endregion
+  #pragma endregion
 
   IndicatorTest();
-  digitalWrite(POWERPins::RELAY_PIN, HIGH);
+  digitalWrite(PWRPins::PWR_EN_PIN, HIGH);
   delay(2000);
 }
 
@@ -219,20 +224,24 @@ void loop() {
   // {
   //   pwm0.SetStates(secondState, 8);
   // }
-  flip = !flip;
-  if (flip)
-  {
-    pwm1.SetStates(firstState, 8);
-  }
-  else
-  {
-    pwm1.SetStates(secondState, 8);
-  }
+  // flip = !flip;
+  // if (flip)
+  // {
+  //   pwm0.SetStates(firstState, 8);
+  //   // pwm1.SetStates(firstState, 8);
+  // }
+  // else
+  // {
+  //   pwm0.SetStates(secondState, 8);
+  //   // pwm1.SetStates(secondState, 8);
+  // }
+  // pwm0.Test();
+  pwm0.SetState(0, 1);
   
   #pragma endregion
 
   // IndicatorTest();
-  // RelayTest();
+  RelayTest();
   // count++;
   #pragma endregion
   UpdateButtons();

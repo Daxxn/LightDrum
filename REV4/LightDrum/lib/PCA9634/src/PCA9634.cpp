@@ -109,11 +109,13 @@ void PCA9634::ToggleEnable(bool en)
 void PCA9634::ToggleMode(PCAEnums::OpMode mode)
 {
   this->opMode = mode;
+  this->settingsChanged = true;
 }
 
 void PCA9634::ToggleMode(bool mode)
 {
   this->opMode = mode ? PCAEnums::OpMode::NORM : PCAEnums::OpMode::SLEEP;
+  this->settingsChanged = true;
 }
 
 PCAEnums::OpMode PCA9634::GetMode()
@@ -146,6 +148,8 @@ void PCA9634::ReadSettings()
 
 void PCA9634::SendSettings()
 {
+  if (!this->settingsChanged) return;
+  
   uint8_t mode1Data = Registers::SetMask(
     0x00,
     PCA9634Const::M1_MODEMask,
@@ -175,6 +179,7 @@ void PCA9634::SendSettings()
     PCA9634Const::MODE1,
     data, 2
   );
+  this->settingsChanged = false;
 }
 
 void PCA9634::SendLEDOutput()
@@ -192,7 +197,8 @@ void PCA9634::SendLEDOutput()
   output[1] = byte2;
   
   this->Send(
-    PCAEnums::AutoIncOption::AUTO_INC_ALL, PCA9634Const::LEDOUT0,
+    PCAEnums::AutoIncOption::AUTO_INC_ALL,
+    PCA9634Const::LEDOUT0,
     output, 2
   );
 }

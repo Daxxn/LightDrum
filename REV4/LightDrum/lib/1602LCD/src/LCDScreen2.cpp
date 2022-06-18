@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include "LCDScreen2.h"
-#include "Logger.h"
 
 LCDScreen2::LCDScreen2(
   const int dataPins[],
@@ -129,7 +128,6 @@ void LCDScreen2::End()
 #pragma region Util Methods
 void LCDScreen2::Test()
 {
-  Logger::LogArr(this->topBuffer, 16);
 }
 
 uint8_t LCDScreen2::SetState(uint8_t offset, bool state)

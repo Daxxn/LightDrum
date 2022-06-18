@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include "STP16Driver.h"
-#include "Logger.h"
 
 #pragma region Constructors
 STP16Driver::STP16Driver(int dataPin, int clockPin, int latchPin, int enablePin)
@@ -147,11 +146,6 @@ void STP16Driver::SendState()
         
         highBits |= (int)this->_states[i] ? 1 << (i - 8) : 0;
     }
-
-    Serial.println("Low");
-    Logger::LogByte(lowBits);
-    Serial.println("High");
-    Logger::LogByte(highBits);
     
     this->Send(lowBits);
     this->Send(highBits);
