@@ -41,7 +41,7 @@ namespace Digitl {
 		const int ENC2_PIN = 60;
 	}
 	namespace PWRPins {
-		const int INV_EN_PIN = 111;
+		const int INV_EN_PIN = PJ7;
 		const int PWR_EN_PIN = 69;
 	}
 	namespace AUDIOPins {

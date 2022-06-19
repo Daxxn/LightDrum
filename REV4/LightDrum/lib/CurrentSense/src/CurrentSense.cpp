@@ -26,6 +26,16 @@ void CurrentSense::Calc()
     this->_current = this->_inputVoltage * this->_multiplier;
 }
 
+int CurrentSense::GetRaw()
+{
+    return this->_raw;
+}
+
+uint8_t CurrentSense::ToByte()
+{
+    return (uint8_t)(this->_raw / 4);
+}
+
 void CurrentSense::Debug()
 {
     Serial.print("Raw: ");

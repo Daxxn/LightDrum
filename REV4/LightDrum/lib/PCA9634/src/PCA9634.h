@@ -122,6 +122,7 @@ namespace PCAEnums
 class PCA9634
 {
 public:
+  PCA9634() {};
   PCA9634(
     TwoWire* wire,
     uint8_t address,
