@@ -3,26 +3,20 @@
 #include "PCA9634.h"
 #include "Registers.h"
 
+#pragma region Constructors
 PCA9634::PCA9634(
   TwoWire* wire,
   uint8_t address,
-  int oePin,
-  bool extDriver = false
+  int oePin
 )
 {
-  // if (CheckAddress(address)) return;
   this->wire = wire;
   this->address = address;
   this->oePin = oePin;
   this->state = new uint8_t[8];
   this->pwmStates = new PCAEnums::PWMState[8];
   memset(this->pwmStates, (int)PCAEnums::PWMState::PWM, sizeof(int) * 8);
-
-  if (extDriver)
-  {
-    this->oeMode = PCAEnums::OutputEnMode::INVERT;
-    this->driveMode = PCAEnums::Drive::TOTEM;
-  }
+  memset(this->state, 0, sizeof(uint8_t) * 8);
 }
 
 PCA9634::~PCA9634()
@@ -30,7 +24,9 @@ PCA9634::~PCA9634()
   delete[] this->state;
   delete[] this->pwmStates;
 }
+#pragma endregion
 
+#pragma region Init
 bool PCA9634::CheckAddress(uint8_t &address)
 {
   for (auto &&add : PCA9634Const::RESERVED_ADDRESSES)
@@ -43,28 +39,35 @@ bool PCA9634::CheckAddress(uint8_t &address)
   return false;
 }
 
-bool PCA9634::Begin()
+void PCA9634::Begin(
+  PCAEnums::Drive drive,
+  PCAEnums::BlinkMode blinkMode,
+  PCAEnums::OutputEnMode oeMode
+)
 {
   pinMode(oePin, OUTPUT);
   digitalWrite(oePin, LOW);
 
   delay(10);
 
-  this->ReadSettings();
-
-  if (this->currentMode1Reg == 0b10010001) return false;
+  // this->ReadSettings();
 
   this->opMode = PCAEnums::OpMode::NORM;
+  this->blinkMode = blinkMode;
+  this->oeMode = oeMode;
+  this->settingsChanged = true;
 
   this->SendSettings();
-  return true;
 }
+#pragma endregion
 
+#pragma region Update
 void PCA9634::Update()
 {
   if (this->opMode == PCAEnums::OpMode::NORM)
   {
     this->Send(
+      // PCAEnums::AutoIncOption::AUTO_INC_ALL,
       PCAEnums::AutoIncOption::AUTO_INC_IND_REG,
       PCA9634Const::PWM0,
       this->state,
@@ -78,31 +81,38 @@ void PCA9634::Update()
     this->SendSettings();
   }
 }
+#pragma endregion
 
+#pragma region LED Output
 void PCA9634::SetLEDOutput(PCAEnums::PWMState state)
 {
   memset(this->pwmStates, (int)state, PCA9634Const::OUTPUTCOUNT);
+  this->LEDCtrlChanged = true;
 }
 
 void PCA9634::SetLEDOutput(int index, PCAEnums::PWMState state)
 {
   if (index < 0 || index > PCA9634Const::OUTPUTCOUNT) return;
   this->pwmStates[index] = state;
+  this->LEDCtrlChanged = true;
 }
 
 void PCA9634::SetLEDOutput(PCAEnums::PWMState *states)
 {
   memcpy(this->pwmStates, states, 8);
+  this->LEDCtrlChanged = true;
 }
+#pragma endregion
 
+#pragma region Enable
 void PCA9634::ToggleEnable()
 {
-  this->outEnable = !this->outEnable;
-  this->ToggleEnable(this->outEnable);
+  this->ToggleEnable(!this->outEnable);
 }
 
 void PCA9634::ToggleEnable(bool en)
 {
+  this->outEnable = en;
   digitalWrite(this->oePin, this->outEnable);
 }
 
@@ -122,7 +132,42 @@ PCAEnums::OpMode PCA9634::GetMode()
 {
   return this->opMode;
 }
+#pragma endregion
 
+#pragma region Group
+void PCA9634::SetGroupControl(PCAEnums::BlinkMode mode)
+{
+  this->blinkMode = mode;
+  this->settingsChanged = true;
+}
+
+void PCA9634::SetGroupFrequency(uint8_t freq)
+{
+  this->groupFreq = freq;
+  this->SendGroup();
+}
+
+void PCA9634::SetGroupPWM(uint8_t pwm)
+{
+  this->groupPWM = pwm;
+  this->SendGroup();
+}
+
+void PCA9634::SendGroup()
+{
+  uint8_t data[2] = {
+    this->groupPWM,
+    this->groupFreq
+  };
+  this->Send(
+    PCAEnums::AUTO_INC_ALL,
+    PCA9634Const::GRPPWM,
+    data, 2
+  );
+}
+#pragma endregion
+
+#pragma region Read
 void PCA9634::ReadSettings()
 {
   uint8_t ctrl = SetControlByte(
@@ -145,27 +190,35 @@ void PCA9634::ReadSettings()
     Serial.println("Didnt receive enough bytes.");
   }
 }
+#pragma endregion
 
+#pragma region Send
+#pragma region Config
 void PCA9634::SendSettings()
 {
   if (!this->settingsChanged) return;
-  
-  uint8_t mode1Data = Registers::SetMask(
+
+  uint8_t mode1Data = Registers::SetBit(
     0x00,
     PCA9634Const::M1_MODEMask,
     (uint8_t)this->opMode
   );
-  uint8_t mode2Data = Registers::SetMask(
-    0x00,
+  mode1Data = Registers::SetBit(
+    mode1Data,
+    PCA9634Const::M1_AutoINC,
+    (uint8_t)0x01
+  );
+  uint8_t mode2Data = Registers::SetBit(
+    0x01,
     PCA9634Const::M2_OUTDRIVEMask,
     (uint8_t)this->driveMode
   );
-  mode2Data = Registers::SetMask(
+  mode2Data = Registers::SetBit(
     mode2Data,
     PCA9634Const::M2_INVERTMask,
     (uint8_t)this->oeMode
   );
-  mode2Data = Registers::SetMask(
+  mode2Data = Registers::SetBit(
     mode2Data,
     PCA9634Const::M2_DMBLNKMask,
     (uint8_t)this->blinkMode
@@ -184,6 +237,8 @@ void PCA9634::SendSettings()
 
 void PCA9634::SendLEDOutput()
 {
+  if (!this->LEDCtrlChanged) return;
+
   uint8_t byte1 = 0;
   uint8_t byte2 = 0;
   uint8_t output[2] = {};
@@ -201,8 +256,11 @@ void PCA9634::SendLEDOutput()
     PCA9634Const::LEDOUT0,
     output, 2
   );
+  this->LEDCtrlChanged = false;
 }
+#pragma endregion
 
+#pragma region Data
 void PCA9634::Send(
   PCAEnums::AutoIncOption incOpt,
   uint8_t reg,
@@ -227,7 +285,10 @@ void PCA9634::Send(
   this->wire->write(data, len);
   this->wire->endTransmission();
 }
+#pragma endregion
+#pragma endregion
 
+#pragma region State
 void PCA9634::SetState(int index, uint8_t value)
 {
   if (index >= 0 && index < PCA9634Const::OUTPUTCOUNT)
@@ -249,11 +310,9 @@ uint8_t PCA9634::SetControlByte(PCAEnums::AutoIncOption incOpt, uint8_t reg)
 {
   return ((uint8_t)incOpt << 5) | reg;
 }
+#pragma endregion
 
 void PCA9634::Test()
 {
   this->ReadSettings();
-  Serial.print(this->currentMode1Reg);
-  Serial.print(" : ");
-  Serial.println(this->currentMode2Reg);
 }

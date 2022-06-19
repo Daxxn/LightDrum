@@ -19,6 +19,7 @@ namespace PCA9634Const
 
   #pragma region Mode2 Register Masks
   const uint8_t M1_MODEMask =      0b00010000;
+  const uint8_t M1_AutoINC =       0b10000000;
   const uint8_t M2_INVERTMask =    0b00010000;
   const uint8_t M2_OUTCHANGEMask = 0b00001000;
   const uint8_t M2_OUTDRIVEMask =  0b00000100;
@@ -58,7 +59,7 @@ namespace PCA9634Const
 
 namespace PCAEnums
 {
-  enum class OpMode
+  enum OpMode
   {
     NORM = 0,
     // Put IC into sleep mode
@@ -66,7 +67,7 @@ namespace PCAEnums
     SLEEP = 1,
   };
 
-  enum class Drive
+  enum Drive
   {
     // Sets the LED drivers to OPEN-DRAIN config
     OPEN = 0,
@@ -74,7 +75,7 @@ namespace PCAEnums
     TOTEM = 1,
   };
 
-  enum class BlinkMode
+  enum BlinkMode
   {
     DIMMING = 0,
     BLINKING = 1
@@ -88,7 +89,7 @@ namespace PCAEnums
     INVERT = 1
   };
 
-  enum class AutoIncOption
+  enum AutoIncOption
   {
     // Dont Auto-Increment
     NO_AUTO_INC         =   0b00,
@@ -102,7 +103,7 @@ namespace PCAEnums
     AUTO_INC_IND_GL_REG =   0b111,
   };
 
-  enum class PWMState
+  enum PWMState
   {
     // Driver is OFF
     OFF    = 0b00,
@@ -124,12 +125,20 @@ public:
   PCA9634(
     TwoWire* wire,
     uint8_t address,
-    int oePin,
-    bool extDriver = false
+    int oePin
   );
   ~PCA9634();
 
-  bool Begin();
+  // Start device and set config options:
+  //
+  // drive: Totem Pole or Open-Collector
+  // blinkMode: See Datasheet
+  // oeMode: Normal or inverted OE pin config
+  void Begin(
+    PCAEnums::Drive drive,
+    PCAEnums::BlinkMode blinkMode,
+    PCAEnums::OutputEnMode oeMode
+  );
 
   void Update();
 
@@ -137,21 +146,29 @@ public:
 
   void SetStates(uint8_t *buffer, int len);
 
-  // Configure all LED outputs PWM mode.
+  // Configure all LED output modes.
   void SetLEDOutput(PCAEnums::PWMState state);
 
-  // Condifure individual LED output PWM mode.
+  // Condifure individual LED output mode.
   void SetLEDOutput(int index, PCAEnums::PWMState state);
 
-  // Condifure LED output PWM modes.
+  // Condifure LED output modes.
   void SetLEDOutput(PCAEnums::PWMState *states);
 
+  void SetGroupControl(PCAEnums::BlinkMode mode);
+
+  void SetGroupFrequency(uint8_t freq);
+  void SetGroupPWM(uint8_t pwm);
+
+  // Read MODE1 & MODE2 Registers
   void ReadSettings();
 
   void ToggleEnable();
   void ToggleEnable(bool en);
 
+  // Toggle device to sleep or normal mode
   void ToggleMode(PCAEnums::OpMode mode);
+  // Toggle device to sleep or normal mode
   void ToggleMode(bool mode);
   PCAEnums::OpMode GetMode();
 
@@ -161,7 +178,11 @@ private:
   int oePin;
   bool outEnable = false;
   bool settingsChanged;
-  
+  bool LEDCtrlChanged;
+
+  uint8_t groupFreq;
+  uint8_t groupPWM;
+
   uint8_t address;
   PCAEnums::OpMode opMode = PCAEnums::OpMode::SLEEP;
   PCAEnums::Drive driveMode = PCAEnums::Drive::TOTEM;
@@ -180,6 +201,7 @@ private:
 
   void SendSettings();
   void SendLEDOutput();
+  void SendGroup();
 
   void Send(PCAEnums::AutoIncOption incOpt, uint8_t reg, uint8_t data);
   void Send(PCAEnums::AutoIncOption incOpt, uint8_t startReg, uint8_t* data, uint8_t len);

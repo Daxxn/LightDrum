@@ -35,9 +35,21 @@ int rwPin = LCDPins::RW_PIN;
 #pragma endregion
 
 #pragma region Class Definitions
-PCA9634 pwm0(&Wire, Ser::I2C::LED1_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
-PCA9634 pwm1(&Wire, Ser::I2C::LED2_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
-PCA9634 pwm2(&Wire, Ser::I2C::LED3_ADDR, Digitl::LEDPins::PWM_OE_PIN, true);
+PCA9634 pwm0(
+  &Wire,
+  Ser::I2C::LED1_ADDR,
+  Digitl::LEDPins::PWM_OE_PIN
+);
+PCA9634 pwm1(
+  &Wire,
+  Ser::I2C::LED2_ADDR,
+  Digitl::LEDPins::PWM_OE_PIN
+);
+PCA9634 pwm2(
+  &Wire,
+  Ser::I2C::LED3_ADDR,
+  Digitl::LEDPins::PWM_OE_PIN
+);
 
 CurrentSense currentMonitors[8] = 
 {
@@ -74,6 +86,10 @@ Button ModeBtn;
 #pragma region Loose Variables
 byte count = 0;
 bool flip = false;
+
+uint8_t testLEDStates[8] = {
+  32, 64, 96, 128, 160, 192, 224, 0
+};
 
 uint8_t firstState[8] = {
   200,0,200,0,
@@ -147,20 +163,37 @@ void setup() {
 
   #pragma region Init
   #pragma region PWM
-  pwm0.Begin();
+  pwm0.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
+  pwm1.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
+  pwm2.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
   // pwm1.Begin();
 
   delay(50);
 
-  pwm0.ToggleMode(PCAEnums::OpMode::NORM);
+  // pwm0.ToggleMode(PCAEnums::OpMode::NORM);
   // pwm0.ToggleEnable(true);
-  pwm0.ToggleEnable(true);
+  // pwm0.ToggleEnable(true);
   // pwm1.ToggleEnable(true);
 
   pwm0.SetLEDOutput(PCAEnums::PWMState::PWM);
-
-  pinMode(LEDPins::PWM_OE_PIN, OUTPUT);
-  digitalWrite(LEDPins::PWM_OE_PIN, LOW);
+  pwm1.SetLEDOutput(PCAEnums::PWMState::PWM);
+  pwm2.SetLEDOutput(PCAEnums::PWMState::PWM);
+  // pwm0.SetGroupFrequency(250);
+  pwm0.SetGroupPWM(127);
+  pwm1.SetGroupPWM(127);
+  pwm2.SetGroupPWM(127);
   #pragma endregion
 
   #pragma region Inicator LEDs
@@ -236,15 +269,26 @@ void loop() {
   //   // pwm1.SetStates(secondState, 8);
   // }
   // pwm0.Test();
-  pwm0.SetState(0, 1);
+  // pwm0.SetState(1, count + 10);
+  // pwm0.SetState(3, count + 200);
+  // pwm0.SetState(7, count + 120);
+
+  for (auto &&st : testLEDStates)
+  {
+    st += 10;
+  }
   
+
+  pwm0.SetStates(testLEDStates, 8);
+  pwm1.SetStates(testLEDStates, 8);
+  pwm2.SetStates(testLEDStates, 8);
   #pragma endregion
 
   // IndicatorTest();
   RelayTest();
-  // count++;
+  count++;
   #pragma endregion
   UpdateButtons();
   UpdatePWM();
-  delay(500);
+  delay(100);
 }
