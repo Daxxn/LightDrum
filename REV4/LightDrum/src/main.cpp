@@ -54,6 +54,7 @@ PCA9634 pwm2(
   Digitl::LEDPins::PWM_OE_PIN
 );
 
+#pragma region LEDs
 LEDs red[8] = {
   LEDs(1, 1), // 1
   LEDs(2, 3), // 2
@@ -86,11 +87,11 @@ LEDs blue[8] = {
   LEDs(3, 2), // 7
   LEDs(3, 4), // 8
 };
+#pragma endregion
 
 LEDString ledPWM(&pwm0, &pwm1, &pwm2, red, green, blue, 8);
 
-CurrentSense currentMonitors[8] = 
-{
+CurrentSense currentMonitors[8] = {
   CurrentSense(Anlg::CURRPins::SNS_1_PIN, senseResistance, senseGain),
   CurrentSense(Anlg::CURRPins::SNS_2_PIN, senseResistance, senseGain),
   CurrentSense(Anlg::CURRPins::SNS_3_PIN, senseResistance, senseGain),
@@ -307,6 +308,9 @@ void setup() {
   pinMode(INDPins::M_DN_PIN, OUTPUT);
   pinMode(INDPins::M_UP_PIN, OUTPUT);
   pinMode(INDPins::MODE_PIN, OUTPUT);
+
+  leds.Begin();
+  leds.Enable(true);
   #pragma endregion
 
   #pragma region Switches
@@ -346,6 +350,13 @@ void setup() {
     cm.Begin();
   }
   
+  #pragma endregion
+
+  #pragma region Audio
+  pinMode(AUDIOPins::HP_SW_PIN, INPUT_PULLUP);
+  pinMode(AUDIOPins::HP_XLR_PIN, OUTPUT);
+
+  digitalWrite(AUDIOPins::HP_XLR_PIN, LOW);
   #pragma endregion
   #pragma endregion
 
@@ -400,6 +411,12 @@ void loop() {
   ledPWM.SetRGB(1, 0, 255, 0);
   ledPWM.SetRGB(2, 0, 0, 255);
   ledPWM.SetRGB(3, 255, 255, 255);
+
+  if (count > 15)
+  {
+    count = 0;
+  }
+  leds.SetLED(count, LEDState::ON);
   #pragma endregion
 
   // IndicatorTest();
