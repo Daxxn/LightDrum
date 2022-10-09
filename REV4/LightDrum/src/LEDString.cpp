@@ -27,17 +27,17 @@ LEDString::~LEDString()
   delete[] this->pwm;
 }
 
-void LEDString::SetRGB(int channel, uint8_t r, uint8_t g, uint8_t b)
+void LEDString::SetRGB(unsigned int channel, uint8_t r, uint8_t g, uint8_t b)
 {
-  if (channel < 0 && channel > this->channels) return;
+  if (channel > this->channels) return;
   this->redStrips[channel].value = r;
   this->greenStrips[channel].value = g;
   this->blueStrips[channel].value = b;
 }
 
-void LEDString::SetColor(int channel, Color color, uint8_t value)
+void LEDString::SetColor(unsigned int channel, Color color, uint8_t value)
 {
-  if (channel < 0 && channel > this->channels) return;
+  if (channel > this->channels) return;
   if (color == Color::RED)
   {
     this->redStrips[channel].value = value;

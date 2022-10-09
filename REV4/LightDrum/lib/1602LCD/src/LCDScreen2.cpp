@@ -200,10 +200,30 @@ void LCDScreen2::SetBuffers(const uint8_t* top, const uint8_t* bot)
   this->SendLine(Line::BOT);
 }
 
+void LCDScreen2::SetBuffers(String top, String bot)
+{
+  uint8_t topBuffer[16] = {};
+  uint8_t botBuffer[16] = {};
+  top.getBytes(topBuffer, 16);
+  bot.getBytes(botBuffer, 16);
+  this->PrepareBuffer(Line::TOP, topBuffer);
+  this->PrepareBuffer(Line::BOT, botBuffer);
+  this->SendLine(Line::TOP);
+  this->SendLine(Line::BOT);
+}
+
 void LCDScreen2::SetBuffer(Line line, uint8_t* data)
 {
-  Serial.println("Prep Bfr");
+  // Serial.println("Prep Bfr");
   this->PrepareBuffer(line, data);
+  this->SendLine(line);
+}
+
+void LCDScreen2::SetBuffer(Line line, String data)
+{
+  uint8_t buffer[16] = {};
+  data.getBytes(buffer, 16);
+  this->PrepareBuffer(line, buffer);
   this->SendLine(line);
 }
 

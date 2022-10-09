@@ -50,7 +50,11 @@ public:
   void ReturnHome();
 
   void SetBuffers(const uint8_t* top, const uint8_t* bot);
+  void SetBuffers(String top, String bot);
+  
   void SetBuffer(Line line, uint8_t* data);
+  void SetBuffer(Line line, String data);
+
 
   void Test();
 private:

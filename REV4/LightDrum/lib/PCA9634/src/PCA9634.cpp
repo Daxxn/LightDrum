@@ -187,8 +187,18 @@ void PCA9634::ReadSettings()
   }
   else
   {
-    Serial.println("Didnt receive enough bytes.");
+    // Serial.println("Didnt receive enough bytes.");
   }
+}
+
+uint8_t PCA9634::GetMode1Settings()
+{
+  return this->currentMode1Reg;
+}
+
+uint8_t PCA9634::GetMode2Settings()
+{
+  return this->currentMode2Reg;
 }
 #pragma endregion
 

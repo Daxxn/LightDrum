@@ -41,8 +41,8 @@ public:
   );
   ~LEDString();
 
-  void SetRGB(int channel, uint8_t r, uint8_t g, uint8_t b);
-  void SetColor(int channel, Color color, uint8_t value);
+  void SetRGB(unsigned int channel, uint8_t r, uint8_t g, uint8_t b);
+  void SetColor(unsigned int channel, Color color, uint8_t value);
 
   void SetGlobalPWM(uint8_t pwm);
 
@@ -53,6 +53,6 @@ private:
   LEDs *redStrips;
   LEDs *greenStrips;
   LEDs *blueStrips;
-  int channels;
-  int ctrlCount;
+  unsigned int channels;
+  unsigned int ctrlCount;
 };

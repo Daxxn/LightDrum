@@ -164,6 +164,9 @@ public:
   // Read MODE1 & MODE2 Registers
   void ReadSettings();
 
+  uint8_t GetMode1Settings();
+  uint8_t GetMode2Settings();
+
   void ToggleEnable();
   void ToggleEnable(bool en);
 
