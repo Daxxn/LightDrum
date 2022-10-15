@@ -59,6 +59,7 @@ namespace PCA9634Const
 
 namespace PCAEnums
 {
+  // IC in normal or sleep mode
   enum OpMode
   {
     NORM = 0,
@@ -67,6 +68,7 @@ namespace PCAEnums
     SLEEP = 1,
   };
 
+  // LED Output driver configuration
   enum Drive
   {
     // Sets the LED drivers to OPEN-DRAIN config
@@ -75,12 +77,14 @@ namespace PCAEnums
     TOTEM = 1,
   };
 
+  // Blink modes
   enum BlinkMode
   {
     DIMMING = 0,
     BLINKING = 1
   };
 
+  // OE pin config
   enum class OutputEnMode
   {
     // OE pin NOT Inverted: Use with no external drivers
@@ -103,6 +107,7 @@ namespace PCAEnums
     AUTO_INC_IND_GL_REG =   0b111,
   };
 
+  // PWM output driver states
   enum PWMState
   {
     // Driver is OFF

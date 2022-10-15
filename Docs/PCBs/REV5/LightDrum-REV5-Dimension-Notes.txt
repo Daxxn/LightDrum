@@ -1,0 +1,22 @@
+height from top: 33.16
+len from side: 15.65
+
+possible cosin error: 0.4
+
+
+lip height: 1.48
+
+inner wall height: 39.26
+
+main PCB level: 30.18
+
+dsub center to edge: 49
+dsub outer shield width: 56.3 | 28.15
+dsub outer shield height: 9.4 | 4.7
+
+top-jack y len: 34.96
+bot-jack y len: 49.96
+jack spacing: 15
+
+jack width: 8.95
+jack: height: 10.85

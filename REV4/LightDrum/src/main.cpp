@@ -46,16 +46,16 @@ PCA9634 pwm0(
   Ser::I2C::StripA_ADDR,
   Digitl::StripPins::OE_PIN
 );
-// PCA9634 pwm1(
-//   &Wire,
-//   Ser::I2C::StripB_ADDR,
-//   Digitl::StripPins::OE_PIN
-// );
-// PCA9634 pwm2(
-//   &Wire,
-//   Ser::I2C::StripC_ADDR,
-//   Digitl::StripPins::OE_PIN
-// );
+PCA9634 pwm1(
+  &Wire,
+  Ser::I2C::StripB_ADDR,
+  Digitl::StripPins::OE_PIN
+);
+PCA9634 pwm2(
+  &Wire,
+  Ser::I2C::StripC_ADDR,
+  Digitl::StripPins::OE_PIN
+);
 
 #pragma region LEDs
 // LEDs red[8] = {
@@ -279,14 +279,26 @@ void DebugSignal(uint8_t value, int del)
 #pragma region Update Functions
 void UpdatePWM()
 {
-  // pwm0.Update();
-  delay(250);
-  pwm0.ReadSettings();
-  DebugSignal(pwm0.GetMode1Settings(), 10);
-  delay(250);
+  pwm0.Update();
+  pwm1.Update();
+  pwm2.Update();
+
+  // Testing
+  // PWM0
+  // delay(250);
+  // pwm0.ReadSettings();
+  // DebugSignal(pwm0.GetMode1Settings(), 10);
+  // delay(250);
+  // PWM1
+  // delay(250);
   // pwm1.ReadSettings();
-  // pwm1.Update();
-  // pwm2.Update();
+  // DebugSignal(pwm1.GetMode1Settings(), 10);
+  // delay(250);
+  // // PWM2
+  // delay(250);
+  // pwm2.ReadSettings();
+  // DebugSignal(pwm2.GetMode1Settings(), 10);
+  // delay(250);
 }
 
 void UpdateCurrentMonitors()
@@ -329,36 +341,36 @@ void setup() {
   #pragma region Init
   #pragma region PWM
   // Not sure if the address thing is fixed. Test later.
-  // pwm0.Begin(
-  //   PCAEnums::Drive::TOTEM,
-  //   PCAEnums::BlinkMode::DIMMING,
-  //   PCAEnums::OutputEnMode::NORM
-  // );
-  // pwm1.Begin(
-  //   PCAEnums::Drive::TOTEM,
-  //   PCAEnums::BlinkMode::DIMMING,
-  //   PCAEnums::OutputEnMode::NORM
-  // );
-  // pwm2.Begin(
-  //   PCAEnums::Drive::TOTEM,
-  //   PCAEnums::BlinkMode::DIMMING,
-  //   PCAEnums::OutputEnMode::NORM
-  // );
+  pwm0.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
+  pwm1.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
+  pwm2.Begin(
+    PCAEnums::Drive::TOTEM,
+    PCAEnums::BlinkMode::DIMMING,
+    PCAEnums::OutputEnMode::NORM
+  );
 
-  // delay(50);
+  delay(50);
 
-  // pwm0.ToggleMode(PCAEnums::OpMode::NORM);
-  // pwm0.ToggleEnable(true);
-  // pwm0.ToggleEnable(true);
-  // pwm1.ToggleEnable(true);
+  pwm0.ToggleMode(PCAEnums::OpMode::NORM);
+  pwm0.ToggleEnable(true);
+  pwm1.ToggleEnable(true);
+  pwm2.ToggleEnable(true);
 
-  // pwm0.SetLEDOutput(PCAEnums::PWMState::PWM);
-  // pwm1.SetLEDOutput(PCAEnums::PWMState::PWM);
-  // pwm2.SetLEDOutput(PCAEnums::PWMState::PWM);
-  // pwm0.SetGroupFrequency(250);
-  // pwm0.SetGroupPWM(127);
-  // pwm1.SetGroupPWM(127);
-  // pwm2.SetGroupPWM(127);
+  pwm0.SetLEDOutput(PCAEnums::PWMState::PWM);
+  pwm1.SetLEDOutput(PCAEnums::PWMState::PWM);
+  pwm2.SetLEDOutput(PCAEnums::PWMState::PWM);
+  pwm0.SetGroupFrequency(250);
+  pwm0.SetGroupPWM(127);
+  pwm1.SetGroupPWM(127);
+  pwm2.SetGroupPWM(127);
   // ledPWM.SetGlobalPWM(10);
   #pragma endregion
 

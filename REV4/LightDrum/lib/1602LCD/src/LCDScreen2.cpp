@@ -169,7 +169,6 @@ void LCDScreen2::Clear()
 
   memset(this->topBuffer, 0x20, LCDConstants::BUFFER_SIZE);
   memset(this->botBuffer, 0x20, LCDConstants::BUFFER_SIZE);
-  // this->ReturnHome();
 }
 
 void LCDScreen2::ReturnHome()
@@ -214,14 +213,16 @@ void LCDScreen2::SetBuffers(String top, String bot)
 
 void LCDScreen2::SetBuffer(Line line, uint8_t* data)
 {
-  // Serial.println("Prep Bfr");
   this->PrepareBuffer(line, data);
   this->SendLine(line);
 }
 
 void LCDScreen2::SetBuffer(Line line, String data)
 {
-  uint8_t buffer[16] = {};
+  uint8_t buffer[16] = {
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  };
   data.getBytes(buffer, 16);
   this->PrepareBuffer(line, buffer);
   this->SendLine(line);
