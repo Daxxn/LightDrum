@@ -1,0 +1,122 @@
+# REV3 Test Points
+
+- TP1 - SDA - I2C Data Line
+- TP2 - SCLK - I2C Clock Line
+- TP3 - VCC - Switching Power Supply Output
+- TP4 - 12V - Switching Power Supply Input
+- TP5 - 3V3 - Mega 3.3V Rail
+- TP6 - HOME-SW - Home Switch
+- TP7 - M-DOWN-SW - Menu Down Switch
+- TP8 - M-UP-SW - Menu Up Switch
+- TP9 - ACT-SW - Activate Switch
+- TP10 - MODE-SW - Mode Switch
+- TP11 - LED1-G - LED Ch 1 Green PWM
+- TP12 - LED1-R - LED Ch 1 Red PWM
+- TP13 - LED1-B - LED Ch 1 Blue PWM
+- TP14 - LED2-G - LED Ch 2 Green PWM
+- TP15 - LED2-R - LED Ch 2 Red PWM
+- TP16 - LED2-B - LED Ch 2 Blue PWM
+- TP17 - LED3-G - LED Ch 3 Green PWM
+- TP18 - LED3-R - LED Ch 3 Red PWM
+- TP19 - LED3-B - LED Ch 3 Blue PWM
+- TP20 - LED4-G - LED Ch 4 Green PWM
+- TP21 - LED4-R - LED Ch 4 Red PWM
+- TP22 - LED4-B - LED Ch 4 Blue PWM
+- TP23 - LED5-G - LED Ch 5 Green PWM
+- TP24 - LED5-R - LED Ch 5 Red PWM
+- TP25 - LED5-B - LED Ch 5 Blue PWM
+- TP26 - LED6-G - LED Ch 6 Green PWM
+- TP27 - LED6-R - LED Ch 6 Red PWM
+- TP28 - LED6-B - LED Ch 6 Blue PWM
+- TP29 - LED7-G - LED Ch 7 Green PWM
+- TP30 - LED7-R - LED Ch 7 Red PWM
+- TP31 - LED7-B - LED Ch 7 Blue PWM
+- TP32 - LED8-G - LED Ch 8 Green PWM
+- TP33 - LED8-R - LED Ch 8 Red PWM
+- TP34 - LED8-B - LED Ch 8 Blue PWM
+- TP35 - LED1-G-SIG - LED Ch 1 Green Signal
+- TP36 - LED1-R-SIG - LED Ch 1 Red Signal
+- TP37 - LED1-B-SIG - LED Ch 1 Blue Signal
+- TP38 - LED2-G-SIG - LED Ch 2 Green Signal
+- TP39 - LED2-R-SIG - LED Ch 2 Red Signal
+- TP40 - LED2-B-SIG - LED Ch 2 Blue Signal
+- TP41 - LED3-G-SIG - LED Ch 3 Green Signal
+- TP42 - LED3-R-SIG - LED Ch 3 Red Signal
+- TP43 - LED3-B-SIG - LED Ch 3 Blue Signal
+- TP44 - LED4-G-SIG - LED Ch 4 Green Signal
+- TP45 - LED4-R-SIG - LED Ch 4 Red Signal
+- TP46 - LED4-B-SIG - LED Ch 4 Blue Signal
+- TP47 - LED5-G-SIG - LED Ch 5 Green Signal
+- TP48 - LED5-R-SIG - LED Ch 5 Red Signal
+- TP49 - LED5-B-SIG - LED Ch 5 Blue Signal
+- TP50 - LED6-G-SIG - LED Ch 6 Green Signal
+- TP51 - LED6-R-SIG - LED Ch 6 Red Signal
+- TP52 - LED6-B-SIG - LED Ch 6 Blue Signal
+- TP53 - LED7-G-SIG - LED Ch 7 Green Signal
+- TP54 - LED7-R-SIG - LED Ch 7 Red Signal
+- TP55 - LED7-B-SIG - LED Ch 7 Blue Signal
+- TP56 - LED8-G-SIG - LED Ch 8 Green Signal
+- TP57 - LED8-R-SIG - LED Ch 8 Red Signal
+- TP58 - LED8-B-SIG - LED Ch 8 Blue Signal
+- TP59 - LED1-CURR-NEG - LED Ch 1 CS Resistor Output
+- TP60 - LED2-CURR-NEG - LED Ch 2 CS Resistor Output
+- TP61 - LED3-CURR-NEG - LED Ch 3 CS Resistor Output
+- TP62 - LED4-CURR-NEG - LED Ch 4 CS Resistor Output
+- TP63 - LED5-CURR-NEG - LED Ch 5 CS Resistor Output
+- TP64 - LED6-CURR-NEG - LED Ch 6 CS Resistor Output
+- TP65 - LED7-CURR-NEG - LED Ch 7 CS Resistor Output
+- TP66 - LED8-CURR-NEG - LED Ch 8 CS Resistor Output
+- TP67 - LED1-CURR_OUT - LED Ch 1 Current
+- TP68 - LED2-CURR_OUT - LED Ch 2 Current
+- TP69 - LED3-CURR_OUT - LED Ch 3 Current
+- TP70 - LED4-CURR_OUT - LED Ch 4 Current
+- TP71 - LED5-CURR_OUT - LED Ch 5 Current
+- TP72 - LED6-CURR_OUT - LED Ch 6 Current
+- TP73 - LED7-CURR_OUT - LED Ch 7 Current
+- TP74 - LED8-CURR_OUT - LED Ch 8 Current
+- TP75 - N$9 - MIDI Pre-OptoIsolator
+- TP76 - MIDI - MIDI Input
+- TP77 - XLR-IN - XLR Demodulated Input
+- TP78 - N$10 - XLR Negative Input
+- TP79 - N$14 - XLR Positive Input
+- TP80 - GND - XLR Ground
+- TP81 - RAW-L - Raw Audio Left Input
+- TP82 - RAW-R - Raw Audio Right Input
+- TP83 - HP-SW - Headphone Jack Switch
+- TP84 - N$22 - Raw Audio Pan Summer
+- TP85 - RAW-FILTER - Raw Audio Filter Output
+- TP86 - RAW-OUT - Raw Audio PreAmp Output
+- TP87 - N$54 - Raw Audio PreAmp Input
+- TP88 - LED-OE - STP16 Output Enable Line
+- TP89 - LED-LE - STP16 Latch Enable Line
+- TP90 - LED-CLK - STP16 Clock Line
+- TP91 - LED-SDI - STP16 Data Line
+- TP92 - N$50 - STP16 Current Limit Resistors
+- TP93 - LCD-RS - LCD Screen Register Select
+- TP94 - LCD-RW - LCD Screen Read/Write
+- TP95 - LCD-EN - LCD Screen Enable
+- TP96 - LCD-D0 - LCD Parallel Data 0
+- TP97 - LCD-D1 - LCD Parallel Data 1
+- TP98 - LCD-D2 - LCD Parallel Data 2
+- TP99 - LCD-D3 - LCD Parallel Data 3
+- TP100 - LCD-D4 - LCD Parallel Data 4
+- TP101 - LCD-D5 - LCD Parallel Data 5
+- TP102 - LCD-D6 - LCD Parallel Data 6
+- TP103 - LCD-D7 - LCD Parallel Data 7
+- TP104 - LCD-CONT - LCD Contrast POT
+- TP105 - BK-K - LCD Backlight POT
+- TP106 - ARD-VCC - BackPower Mega Side
+- TP107 - VCC - BackPower VCC Side
+- TP108 - N$56 - BackPower MOSFET Gate
+- TP109 - VDD - LED Strings Post-Relay Power Rail
+- TP110 - MAIN-RELAY - Relay MOSFET Control Signal
+- TP111 - N$19 - Relay Coil
+- TP112 - ENC1-B - Rotary Encoder 1 B Signal
+- TP113 - ENC1-B - Rotary Encoder 1 A Signal
+- TP114 - ENC1-SW - Rotary Encoder 1 Switch
+- TP115 - ENC2-B - Rotary Encoder 2 B Signal
+- TP116 - ENC2-B - Rotary Encoder 2 A Signal
+- TP117 - ENC2-SW - Rotary Encoder 2 Switch
+- TP118 - GND - Encoder Ground
+- TP119 - RESET - Reset Line
+- TP120 - MIDI-GND - MIDI Ground plane
