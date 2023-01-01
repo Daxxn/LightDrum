@@ -4458,6 +4458,9 @@
     (path "/37b1a4e5-7bc5-4d58-948d-cb24160396b1/626884c6-9d26-4ffe-abc4-be9c8d828e36"
       (reference "#PWR0131") (unit 1) (value "GND") (footprint "")
     )
+    (path "/37b1a4e5-7bc5-4d58-948d-cb24160396b1/a45321bb-fa4b-4e10-8c14-a81c1a1c318d"
+      (reference "#PWR0132") (unit 1) (value "VCC") (footprint "")
+    )
     (path "/b0a09416-9eb3-4379-98d7-ad65fe61d8d6"
       (reference "A1") (unit 1) (value "MEGA-2560-IC") (footprint "Package_QFP:TQFP-100_14x14mm_P0.5mm")
     )
