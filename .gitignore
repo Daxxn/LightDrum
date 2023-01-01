@@ -1,0 +1,15 @@
+**/*-backups/*
+**/#auto_saved_files#
+*autosave*
+*-bak
+*bck
+fp-info-cache
+*.kicad_prl
+*.000
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses

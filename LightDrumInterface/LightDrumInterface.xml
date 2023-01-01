@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Daxxn\Documents\Electrical\KiCad\Designs\Projects\LightDrum\LightDrumInterface\LightDrumInterface.kicad_sch</source>
+    <date>11/19/2022 10:03:53 PM</date>
+    <tool>Eeschema (6.0.2)</tool>
+    <textvar name="D-CAP">100nF</textvar>
+    <textvar name="LED-RES">330Ω</textvar>
+    <textvar name="P-RES">10KΩ</textvar>
+    <textvar name="R">Ω</textvar>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>LightDrumInterface</title>
+        <company>Daxxn Industries</company>
+        <rev>REV3</rev>
+        <date/>
+        <source>LightDrumInterface.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>90cbdd54-2a34-458e-a455-60a9c8a3ade7</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bcf3e2f6-5656-49ed-a347-8f6c0cb0fc00</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a74c0df-3b03-42ae-8022-ea8e04622081</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cfbf36cd-1bff-499b-89ed-1da445710ebc</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96394411-deea-4eb3-8730-a27f7024c9fe</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8666d47-4c11-497e-bb99-141c284954f1</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>554d80c8-11d0-4a8b-81d8-d5519be4c6d5</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>${D-CAP}</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5a8251c6-990c-4aa7-882e-a90ed1078347</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e6fee72-f789-4de7-a0d2-bd19cdea2ada</tstamps>
+    </comp>
+    <comp ref="D-AUDIO-SEL1">
+      <value>GREEN</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd88ceef-29a1-4c77-8338-7385da0504f2</tstamps>
+    </comp>
+    <comp ref="D-DBG1">
+      <value>RED</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de1f754a-d87f-4f5d-9823-f0dbef38b3dd</tstamps>
+    </comp>
+    <comp ref="D-STA1">
+      <value>ORANGE</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d35a2aa-23cf-43e3-8a8b-3c050906967f</tstamps>
+    </comp>
+    <comp ref="D-STRIP-EN1">
+      <value>GREEN</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f2314240-bc41-49fc-ba33-79baa630f70e</tstamps>
+    </comp>
+    <comp ref="D-VCC1">
+      <value>YELLOW</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a35796df-678b-46eb-9c63-2626607255e4</tstamps>
+    </comp>
+    <comp ref="D-VDRIVE1">
+      <value>YELLOW</value>
+      <footprint>Daxxn_LEDs:LED_PLCC-2</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>683aef9a-d2df-4654-867d-031d1e1a05f1</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>IN4848</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c28bafd9-ccad-4461-a178-94e7ee7a15da</tstamps>
+    </comp>
+    <comp ref="DA1">
+      <value>LTA-1000HR</value>
+      <footprint>Display:HDSP-48xx</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\LTA-1000HR.pdf</datasheet>
+      <libsource lib="Daxxn_Displays" part="LTA-1000HR" description="10 LED Bar Graph Display"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a34264ca-bc7b-4fdd-8084-8a4444ac7f00 8824d727-c2c3-4193-9fa2-2c499c7a804d 2b838b29-91e5-4403-94ec-fc802981d71e 98e399bd-8423-4d7e-bc40-1b9f6f0271f5 d36372ad-7ff2-48fe-b98c-626930168fbb 42aa21b9-6edf-44b6-be81-7b4a68f9ba66 72b8070d-6360-4ae2-9e52-c57614a73147 c0f2cef2-2e17-4a1b-8e67-4c43629a4a9c 612c21a0-8479-413c-b605-4cad1db182ae 1799c71f-013d-402a-b710-c5585561a246</tstamps>
+    </comp>
+    <comp ref="DS1">
+      <value>WC1602A</value>
+      <footprint>Display:WC1602A</footprint>
+      <datasheet>http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf</datasheet>
+      <libsource lib="Display_Character" part="WC1602A" description="LCD 16x2 Alphanumeric , 8 bit parallel bus, 5V VDD"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4688ff87-8262-46f4-ad96-b5f4e529cfa9</tstamps>
+    </comp>
+    <comp ref="ENC1">
+      <value>Encoder1</value>
+      <footprint>Daxxn_Switches:PEC12R</footprint>
+      <libsource lib="Device" part="RotaryEncoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fc7e44e-eaa5-446c-aee1-c1bf6217aff8</tstamps>
+    </comp>
+    <comp ref="ENC2">
+      <value>Encoder2</value>
+      <footprint>Daxxn_Switches:PEC12R</footprint>
+      <libsource lib="Device" part="RotaryEncoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>888b1335-9589-4219-94e4-32235fbe911f</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>M2.5</value>
+      <footprint>MountingHole:MountingHole_2.5mm_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a87241e0-9c77-4a8b-b263-8fdfba3f8915</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>M2.5</value>
+      <footprint>MountingHole:MountingHole_2.5mm_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c43b9530-f844-481b-9582-de35d3a89b4b</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>M2.5</value>
+      <footprint>MountingHole:MountingHole_2.5mm_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06e6f57f-1ce1-4398-aac6-943a97588e35</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>M2.5</value>
+      <footprint>MountingHole:MountingHole_2.5mm_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2333ca33-e57a-4c68-b5ee-744c500f9da5</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x04_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0379ca40-a8b5-41c6-a6e3-6a60b06d346b</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>DEBUG-CONN</value>
+      <footprint>Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>794cbc8c-880e-485f-a007-30b18356d90e</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x04_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>402b18fc-b708-4440-bdc8-de1355ce7272</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>B24B-PHDSS(LF)(SN)</value>
+      <footprint>Daxxn_Connectors:B24B-PHDSS(LF)(SN)</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x12_Odd_Even" description="Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c3e0706-bf6f-4439-96d2-237c386f133e</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>B24B-PHDSS(LF)(SN)</value>
+      <footprint>Daxxn_Connectors:B24B-PHDSS(LF)(SN)</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x12_Odd_Even" description="Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e259e2fe-6125-4da2-8880-5ff5af6e80e0</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>BRT-JMP</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_3_Bridged12" description="Jumper, 3-pole, pins 1+2 closed/bridged"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f032e077-dfa9-490e-843c-2921760c030a</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>120${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>443cd7bc-149c-4492-a9ae-2c27a9e8d034</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>560${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>322e714e-a215-426e-8ad9-189a7b7737e3</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>${LED-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d51b6ca1-c9fe-486b-96f7-7e732585228e</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>${LED-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a7c955e5-65c1-42d2-92cd-59b468ca3394</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>470${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c6c3152-35bd-4c1c-9125-2e558a903154</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>${LED-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5906e8ba-5009-407a-8f01-a36ce24a5ee4</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>3K${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ed76519-b0fd-4fc3-bdf2-d6ac73f12380</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>5.6K${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fed8db11-41bc-45e1-9f5e-be8a65826248</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>${P-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d244d6bd-37dc-4b86-9050-b5e6e28afac6</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>${P-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31501fda-373e-47a2-98c7-605ad6ce41b3</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>${P-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d375a736-0bff-495f-b85a-9ee86a97613b</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>${P-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>543807a0-d495-4ba4-ad85-9963b9783eb3</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>220${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>345c9e47-c55e-4fc0-b9cd-7bce0b98dfff</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>220${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca38d5a0-b088-43e1-acdd-b24964268d34</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>220${R}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>934ff0e5-ac53-48e9-8d78-2d6aa5a80172</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>${P-RES}</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c836998a-0b1f-404d-939f-6ab8e0738268</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>10K${R}</value>
+      <footprint>Daxxn_Switches:PT01-D120K2-B103</footprint>
+      <libsource lib="Device" part="R_Potentiometer_US" description="Potentiometer, US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>41509894-a009-4277-abe8-edde4fea1d3a</tstamps>
+    </comp>
+    <comp ref="RV2">
+      <value>1K${R}</value>
+      <footprint>Daxxn_Switches:PT01-D120K2-B103</footprint>
+      <libsource lib="Device" part="R_Potentiometer_US" description="Potentiometer, US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>78f4f164-bc1d-41f7-8f85-a60eefb629b2</tstamps>
+    </comp>
+    <comp ref="S-ACT1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e064dfaf-58d6-4d40-b7df-147d84d4a03a a579f010-dacf-42d4-98e3-764b5ef5251f</tstamps>
+    </comp>
+    <comp ref="S-BCK1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6aeb2690-fe53-43d6-88ca-adfe7a09db74 05dfa5dc-1e0b-48cf-837a-6693f652862f</tstamps>
+    </comp>
+    <comp ref="S-DWN1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8555a851-d287-40dc-9175-561cb65355de 57720542-bdde-4812-ae04-f6c39f4da1e5</tstamps>
+    </comp>
+    <comp ref="S-LFT1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e04b192f-a036-4f66-8c80-41ae2adbb248 8b02e6cb-4e88-4235-83ef-509b8e3d6638</tstamps>
+    </comp>
+    <comp ref="S-RGT1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97b729b0-0ed3-4238-aad8-5c52cebaff98 4f29d187-90ee-4ca8-b8e2-f664e7bff816</tstamps>
+    </comp>
+    <comp ref="S-UP1">
+      <value>ILS</value>
+      <footprint>Daxxn_Switches:ILS-TB</footprint>
+      <datasheet>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</datasheet>
+      <libsource lib="Daxxn_Buttons" part="ILS" description="Switch with built-in indicator LED"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c63cab0b-4e09-4b8c-abb8-14137efd4361 6543b822-f58e-4dae-90e3-419252c93ac4</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>RESET-SW</value>
+      <footprint>Daxxn_Switches:TL3365AF180QG</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2f59eb7-a13f-4c9e-8625-38ef18ce6af6</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>STP16CP05</value>
+      <footprint>Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stp16cp05.pdf</datasheet>
+      <libsource lib="Driver_LED" part="STP16CP05" description="16-bit constant current LED sink driver"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c207d20c-7e11-4b56-b953-29abe0cecc96</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>TPL0401B-10-Q1</value>
+      <footprint>Package_TO_SOT_SMD:Texas_R-PDSO-G6</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/tpl0401a-10-q1.pdf</datasheet>
+      <libsource lib="Potentiometer_Digital" part="TPL0401B-10-Q1" description="128-TAPS Single-Channel Digital Potentiometer, I2C Interface, SC-70-6"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f7dc025e-7638-48a8-8c88-ed05efbb9fbc</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>74AUP2G04</value>
+      <footprint>Package_TO_SOT_SMD:SOT-363_SC-70-6</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/74AUP2G04.pdf</datasheet>
+      <libsource lib="Daxxn_Logic" part="74AUP2G04" description="Inverter 2 Channel"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2358e2e7-116c-4bb8-9615-405e6fa86d2d</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>PC817</value>
+      <footprint>Package_DIP:DIP-4_W7.62mm</footprint>
+      <datasheet>http://www.soselectronic.cz/a_info/resource/d/pc817.pdf</datasheet>
+      <libsource lib="Isolator" part="PC817" description="DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LightDrumInterface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fbe9fadf-8b17-46c0-91a6-f160cf265f30</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x04_Male">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Male</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x12_Odd_Even">
+      <description>Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x12_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Daxxn_Buttons" part="ILS">
+      <description>Switch with built-in indicator LED</description>
+      <docs>C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</docs>
+      <footprints>
+        <fp>ILS</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">ILS</field>
+        <field name="Footprint">Daxxn_Switches:ILS-TB</field>
+        <field name="Datasheet">C:\Users\Daxxn\Documents\Electrical\Datasheets\ILS-Series.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Daxxn_Displays" part="LTA-1000HR">
+      <description>10 LED Bar Graph Display</description>
+      <docs>C:\Users\Daxxn\Documents\Electrical\Datasheets\LTA-1000HR.pdf</docs>
+      <fields>
+        <field name="Reference">DA</field>
+        <field name="Value">LTA-1000HR</field>
+        <field name="Footprint">Display:HDSP-48xx</field>
+        <field name="Datasheet">C:\Users\Daxxn\Documents\Electrical\Datasheets\LTA-1000HR.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+        <pin num="7" name="" type="passive"/>
+        <pin num="8" name="" type="passive"/>
+        <pin num="9" name="" type="passive"/>
+        <pin num="10" name="" type="passive"/>
+        <pin num="11" name="" type="passive"/>
+        <pin num="12" name="" type="passive"/>
+        <pin num="13" name="" type="passive"/>
+        <pin num="14" name="" type="passive"/>
+        <pin num="15" name="" type="passive"/>
+        <pin num="16" name="" type="passive"/>
+        <pin num="17" name="" type="passive"/>
+        <pin num="18" name="" type="passive"/>
+        <pin num="19" name="" type="passive"/>
+        <pin num="20" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Daxxn_Logic" part="74AUP2G04">
+      <description>Inverter 2 Channel</description>
+      <docs>https://www.diodes.com/assets/Datasheets/74AUP2G04.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AUP2G04</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-363_SC-70-6</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/74AUP2G04.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1A" type="unspecified"/>
+        <pin num="2" name="GND" type="unspecified"/>
+        <pin num="3" name="2A" type="unspecified"/>
+        <pin num="4" name="2Y" type="unspecified"/>
+        <pin num="5" name="VCC" type="unspecified"/>
+        <pin num="6" name="1Y" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Small">
+      <description>Diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Potentiometer_US">
+      <description>Potentiometer, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="RotaryEncoder_Switch">
+      <description>Rotary encoder, dual channel, incremental quadrate outputs, with switch</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>RotaryEncoder*Switch*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">RotaryEncoder_Switch</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="B" name="B" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+        <pin num="S1" name="S1" type="passive"/>
+        <pin num="S2" name="S2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Display_Character" part="WC1602A">
+      <description>LCD 16x2 Alphanumeric , 8 bit parallel bus, 5V VDD</description>
+      <docs>http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf</docs>
+      <footprints>
+        <fp>*WC*1602A*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">WC1602A</field>
+        <field name="Footprint">Display:WC1602A</field>
+        <field name="Datasheet">http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VSS" type="power_in"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="VO" type="input"/>
+        <pin num="4" name="RS" type="input"/>
+        <pin num="5" name="R/W" type="input"/>
+        <pin num="6" name="E" type="input"/>
+        <pin num="7" name="D0" type="input"/>
+        <pin num="8" name="D1" type="input"/>
+        <pin num="9" name="D2" type="input"/>
+        <pin num="10" name="D3" type="input"/>
+        <pin num="11" name="D4" type="input"/>
+        <pin num="12" name="D5" type="input"/>
+        <pin num="13" name="D6" type="input"/>
+        <pin num="14" name="D7" type="input"/>
+        <pin num="15" name="LED(+)" type="power_in"/>
+        <pin num="16" name="LED(-)" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Driver_LED" part="STP16CP05">
+      <description>16-bit constant current LED sink driver</description>
+      <docs>https://www.st.com/resource/en/datasheet/stp16cp05.pdf</docs>
+      <footprints>
+        <fp>QSOP*3.9x8.7mm*P0.635mm*</fp>
+        <fp>SOIC*7.5x15.4mm*P1.27mm*</fp>
+        <fp>TSSOP*4.4x7.8mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STP16CP05</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/stp16cp05.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="SDI" type="input"/>
+        <pin num="3" name="CLK" type="input"/>
+        <pin num="4" name="LE/DM1" type="input"/>
+        <pin num="5" name="~{OUT0}" type="output"/>
+        <pin num="6" name="~{OUT1}" type="output"/>
+        <pin num="7" name="~{OUT2}" type="output"/>
+        <pin num="8" name="~{OUT3}" type="output"/>
+        <pin num="9" name="~{OUT4}" type="output"/>
+        <pin num="10" name="~{OUT5}" type="output"/>
+        <pin num="11" name="~{OUT6}" type="output"/>
+        <pin num="12" name="~{OUT7}" type="output"/>
+        <pin num="13" name="~{OUT8}" type="output"/>
+        <pin num="14" name="~{OUT9}" type="output"/>
+        <pin num="15" name="~{OUT10}" type="output"/>
+        <pin num="16" name="~{OUT11}" type="output"/>
+        <pin num="17" name="~{OUT12}" type="output"/>
+        <pin num="18" name="~{OUT13}" type="output"/>
+        <pin num="19" name="~{OUT14}" type="output"/>
+        <pin num="20" name="~{OUT15}" type="output"/>
+        <pin num="21" name="~{OE/DM2}" type="input"/>
+        <pin num="22" name="SDO" type="output"/>
+        <pin num="23" name="R-EXT" type="passive"/>
+        <pin num="24" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="PC817">
+      <description>DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4</description>
+      <docs>http://www.soselectronic.cz/a_info/resource/d/pc817.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PC817</field>
+        <field name="Footprint">Package_DIP:DIP-4_W7.62mm</field>
+        <field name="Datasheet">http://www.soselectronic.cz/a_info/resource/d/pc817.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_3_Bridged12">
+      <description>Jumper, 3-pole, pins 1+2 closed/bridged</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*3Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_3_Bridged12</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Potentiometer_Digital" part="TPL0401B-10-Q1">
+      <description>128-TAPS Single-Channel Digital Potentiometer, I2C Interface, SC-70-6</description>
+      <docs>http://www.ti.com/lit/ds/symlink/tpl0401a-10-q1.pdf</docs>
+      <footprints>
+        <fp>Texas*R*PDSO*G*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPL0401B-10-Q1</field>
+        <field name="Footprint">Package_TO_SOT_SMD:Texas_R-PDSO-G6</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/tpl0401a-10-q1.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="W" type="passive"/>
+        <pin num="6" name="H" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPST">
+      <description>Single Pole Single Throw (SPST) switch</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPST</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Daxxn_Buttons">
+      <uri>C:\Users\Daxxn\Documents\Electrical\KiCad\Libraries\Symbols/Daxxn_Buttons.kicad_sym</uri>
+    </library>
+    <library logical="Daxxn_Displays">
+      <uri>C:\Users\Daxxn\Documents\Electrical\KiCad\Libraries\Symbols/Daxxn_Displays.kicad_sym</uri>
+    </library>
+    <library logical="Daxxn_Logic">
+      <uri>C:\Users\Daxxn\Documents\Electrical\KiCad\Libraries\Symbols/Daxxn_Logic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Display_Character">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Display_Character.kicad_sym</uri>
+    </library>
+    <library logical="Driver_LED">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Driver_LED.kicad_sym</uri>
+    </library>
+    <library logical="Isolator">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Isolator.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Potentiometer_Digital">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Potentiometer_Digital.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/DIAG-AUDIO-SEL">
+      <node ref="D-AUDIO-SEL1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J5" pin="21" pinfunction="Pin_21" pintype="passive"/>
+    </net>
+    <net code="2" name="/DIAG-DEBUG">
+      <node ref="J5" pin="15" pinfunction="Pin_15" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="3" name="/DIAG-STATUS">
+      <node ref="J5" pin="17" pinfunction="Pin_17" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/DIAG-STRIP-EN">
+      <node ref="J5" pin="19" pinfunction="Pin_19" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="/ENC1-A">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="ENC1" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="/ENC1-B">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="ENC1" pin="B" pinfunction="B" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/ENC1-SW">
+      <node ref="ENC1" pin="S1" pinfunction="S1" pintype="passive"/>
+      <node ref="J4" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="8" name="/ENC2-A">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="ENC2" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J4" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/ENC2-B">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="ENC2" pin="B" pinfunction="B" pintype="passive"/>
+      <node ref="J4" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="/ENC2-SW">
+      <node ref="ENC2" pin="S1" pinfunction="S1" pintype="passive"/>
+      <node ref="J4" pin="13" pinfunction="Pin_13" pintype="passive"/>
+    </net>
+    <net code="11" name="/I2C-SCLK">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J5" pin="20" pinfunction="Pin_20" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="12" name="/I2C-SDA">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J5" pin="22" pinfunction="Pin_22" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/IND-CLK">
+      <node ref="J5" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="CLK" pintype="input"/>
+    </net>
+    <net code="14" name="/IND-LE">
+      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="LE/DM1" pintype="input"/>
+    </net>
+    <net code="15" name="/IND-SDATA">
+      <node ref="J5" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SDI" pintype="input"/>
+    </net>
+    <net code="16" name="/IND-~{OE}">
+      <node ref="J5" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="~{OE/DM2}" pintype="input"/>
+    </net>
+    <net code="17" name="/MENU-ACT">
+      <node ref="J5" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="S-ACT1" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="/MENU-BACK">
+      <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="S-BCK1" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="/MENU-DOWN">
+      <node ref="J5" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="S-DWN1" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="/MENU-LEFT">
+      <node ref="J5" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="S-LFT1" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="/MENU-RIGHT">
+      <node ref="J5" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="S-RGT1" pin="1" pintype="passive"/>
+    </net>
+    <net code="22" name="/MENU-UP">
+      <node ref="J5" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="S-UP1" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="/MIDI-IN">
+      <node ref="J5" pin="18" pinfunction="Pin_18" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U4" pin="4" pintype="passive"/>
+    </net>
+    <net code="24" name="/MIDI-OUT">
+      <node ref="J5" pin="16" pinfunction="Pin_16" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="1A" pintype="unspecified"/>
+    </net>
+    <net code="25" name="/R-EXT">
+      <node ref="JP1" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="R-EXT" pintype="passive"/>
+    </net>
+    <net code="26" name="/SCR-D0">
+      <node ref="DS1" pin="7" pinfunction="D0" pintype="input"/>
+      <node ref="J4" pin="10" pinfunction="Pin_10" pintype="passive"/>
+    </net>
+    <net code="27" name="/SCR-D1">
+      <node ref="DS1" pin="8" pinfunction="D1" pintype="input"/>
+      <node ref="J4" pin="12" pinfunction="Pin_12" pintype="passive"/>
+    </net>
+    <net code="28" name="/SCR-D2">
+      <node ref="DS1" pin="9" pinfunction="D2" pintype="input"/>
+      <node ref="J4" pin="14" pinfunction="Pin_14" pintype="passive"/>
+    </net>
+    <net code="29" name="/SCR-D3">
+      <node ref="DS1" pin="10" pinfunction="D3" pintype="input"/>
+      <node ref="J4" pin="16" pinfunction="Pin_16" pintype="passive"/>
+    </net>
+    <net code="30" name="/SCR-D4">
+      <node ref="DS1" pin="11" pinfunction="D4" pintype="input"/>
+      <node ref="J4" pin="18" pinfunction="Pin_18" pintype="passive"/>
+    </net>
+    <net code="31" name="/SCR-D5">
+      <node ref="DS1" pin="12" pinfunction="D5" pintype="input"/>
+      <node ref="J4" pin="20" pinfunction="Pin_20" pintype="passive"/>
+    </net>
+    <net code="32" name="/SCR-D6">
+      <node ref="DS1" pin="13" pinfunction="D6" pintype="input"/>
+      <node ref="J4" pin="17" pinfunction="Pin_17" pintype="passive"/>
+    </net>
+    <net code="33" name="/SCR-D7">
+      <node ref="DS1" pin="14" pinfunction="D7" pintype="input"/>
+      <node ref="J4" pin="15" pinfunction="Pin_15" pintype="passive"/>
+    </net>
+    <net code="34" name="/SCR-EN">
+      <node ref="DS1" pin="6" pinfunction="E" pintype="input"/>
+      <node ref="J4" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="35" name="/SCR-RS">
+      <node ref="DS1" pin="4" pinfunction="RS" pintype="input"/>
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="36" name="/SCR-RW">
+      <node ref="DS1" pin="5" pinfunction="R/W" pintype="input"/>
+      <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="37" name="/~{RESET}">
+      <node ref="J4" pin="22" pinfunction="Pin_22" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="38" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="DS1" pin="1" pinfunction="VSS" pintype="power_in"/>
+      <node ref="ENC1" pin="C" pinfunction="C" pintype="passive"/>
+      <node ref="ENC1" pin="S2" pinfunction="S2" pintype="passive"/>
+      <node ref="ENC2" pin="C" pinfunction="C" pintype="passive"/>
+      <node ref="ENC2" pin="S2" pinfunction="S2" pintype="passive"/>
+      <node ref="H1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H2" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H3" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H4" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J4" pin="23" pinfunction="Pin_23" pintype="passive"/>
+      <node ref="J4" pin="24" pinfunction="Pin_24" pintype="passive"/>
+      <node ref="J5" pin="23" pinfunction="Pin_23" pintype="passive"/>
+      <node ref="J5" pin="24" pinfunction="Pin_24" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="S-ACT1" pin="4" pintype="passive"/>
+      <node ref="S-BCK1" pin="4" pintype="passive"/>
+      <node ref="S-DWN1" pin="4" pintype="passive"/>
+      <node ref="S-LFT1" pin="4" pintype="passive"/>
+      <node ref="S-RGT1" pin="4" pintype="passive"/>
+      <node ref="S-UP1" pin="4" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U4" pin="3" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(D-AUDIO-SEL1-Pad1)">
+      <node ref="D-AUDIO-SEL1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(D-DBG1-Pad1)">
+      <node ref="D-DBG1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(D-STA1-Pad1)">
+      <node ref="D-STA1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="42" name="Net-(D-STRIP-EN1-Pad1)">
+      <node ref="D-STRIP-EN1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="43" name="Net-(D-VCC1-Pad1)">
+      <node ref="D-VCC1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(D-VDRIVE1-Pad1)">
+      <node ref="D-VDRIVE1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="45" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U4" pin="1" pintype="passive"/>
+    </net>
+    <net code="46" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="47" name="Net-(DA1-Pad11)">
+      <node ref="DA1" pin="11" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="~{OUT9}" pintype="output"/>
+    </net>
+    <net code="48" name="Net-(DA1-Pad12)">
+      <node ref="DA1" pin="12" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="~{OUT8}" pintype="output"/>
+    </net>
+    <net code="49" name="Net-(DA1-Pad13)">
+      <node ref="DA1" pin="13" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="~{OUT7}" pintype="output"/>
+    </net>
+    <net code="50" name="Net-(DA1-Pad14)">
+      <node ref="DA1" pin="14" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="~{OUT6}" pintype="output"/>
+    </net>
+    <net code="51" name="Net-(DA1-Pad15)">
+      <node ref="DA1" pin="15" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="~{OUT5}" pintype="output"/>
+    </net>
+    <net code="52" name="Net-(DA1-Pad16)">
+      <node ref="DA1" pin="16" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="~{OUT4}" pintype="output"/>
+    </net>
+    <net code="53" name="Net-(DA1-Pad17)">
+      <node ref="DA1" pin="17" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="~{OUT3}" pintype="output"/>
+    </net>
+    <net code="54" name="Net-(DA1-Pad18)">
+      <node ref="DA1" pin="18" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="~{OUT2}" pintype="output"/>
+    </net>
+    <net code="55" name="Net-(DA1-Pad19)">
+      <node ref="DA1" pin="19" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="~{OUT1}" pintype="output"/>
+    </net>
+    <net code="56" name="Net-(DA1-Pad20)">
+      <node ref="DA1" pin="20" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="~{OUT0}" pintype="output"/>
+    </net>
+    <net code="57" name="Net-(DS1-Pad3)">
+      <node ref="DS1" pin="3" pinfunction="VO" pintype="input"/>
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(DS1-Pad16)">
+      <node ref="DS1" pin="16" pinfunction="LED(-)" pintype="power_in"/>
+      <node ref="RV2" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(J3-Pad3)">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(JP1-Pad1)">
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(JP1-Pad3)">
+      <node ref="JP1" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="W" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="64" name="Net-(R13-Pad2)">
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="U4" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="Net-(R15-Pad2)">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="2Y" pintype="unspecified"/>
+    </net>
+    <net code="66" name="Net-(S-ACT1-Pad6)">
+      <node ref="S-ACT1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="~{OUT13}" pintype="output"/>
+    </net>
+    <net code="67" name="Net-(S-BCK1-Pad6)">
+      <node ref="S-BCK1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="~{OUT10}" pintype="output"/>
+    </net>
+    <net code="68" name="Net-(S-DWN1-Pad6)">
+      <node ref="S-DWN1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="~{OUT11}" pintype="output"/>
+    </net>
+    <net code="69" name="Net-(S-LFT1-Pad6)">
+      <node ref="S-LFT1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="~{OUT12}" pintype="output"/>
+    </net>
+    <net code="70" name="Net-(S-RGT1-Pad6)">
+      <node ref="S-RGT1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="~{OUT14}" pintype="output"/>
+    </net>
+    <net code="71" name="Net-(S-UP1-Pad6)">
+      <node ref="S-UP1" pin="6" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="~{OUT15}" pintype="output"/>
+    </net>
+    <net code="72" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3" pinfunction="2A" pintype="unspecified"/>
+      <node ref="U3" pin="6" pinfunction="1Y" pintype="unspecified"/>
+    </net>
+    <net code="73" name="VCC">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D-DBG1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D-STA1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D-STRIP-EN1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D-VCC1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="DA1" pin="1" pintype="passive"/>
+      <node ref="DA1" pin="10" pintype="passive"/>
+      <node ref="DA1" pin="2" pintype="passive"/>
+      <node ref="DA1" pin="3" pintype="passive"/>
+      <node ref="DA1" pin="4" pintype="passive"/>
+      <node ref="DA1" pin="5" pintype="passive"/>
+      <node ref="DA1" pin="6" pintype="passive"/>
+      <node ref="DA1" pin="7" pintype="passive"/>
+      <node ref="DA1" pin="8" pintype="passive"/>
+      <node ref="DA1" pin="9" pintype="passive"/>
+      <node ref="DS1" pin="15" pinfunction="LED(+)" pintype="power_in"/>
+      <node ref="DS1" pin="2" pinfunction="VDD" pintype="power_in"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="S-ACT1" pin="5" pintype="passive"/>
+      <node ref="S-BCK1" pin="5" pintype="passive"/>
+      <node ref="S-DWN1" pin="5" pintype="passive"/>
+      <node ref="S-LFT1" pin="5" pintype="passive"/>
+      <node ref="S-RGT1" pin="5" pintype="passive"/>
+      <node ref="S-UP1" pin="5" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="VCC" pintype="unspecified"/>
+    </net>
+    <net code="74" name="Vdrive">
+      <node ref="D-VDRIVE1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="75" name="unconnected-(J4-Pad19)">
+      <node ref="J4" pin="19" pinfunction="Pin_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(J4-Pad21)">
+      <node ref="J4" pin="21" pinfunction="Pin_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(J5-Pad11)">
+      <node ref="J5" pin="11" pinfunction="Pin_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(J5-Pad13)">
+      <node ref="J5" pin="13" pinfunction="Pin_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(RV2-Pad1)">
+      <node ref="RV2" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U1-Pad22)">
+      <node ref="U1" pin="22" pinfunction="SDO" pintype="output+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U2-Pad6)">
+      <node ref="U2" pin="6" pinfunction="H" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
