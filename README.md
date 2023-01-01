@@ -53,7 +53,7 @@ The values used in the [BOM](./Docs/BOMs/REV6/LightDrum.csv) are the exact value
 - 6 LEDs for quick status indication
 - 2 Programmable Rotary Encoders
 
-## Firmware install
+## Firmware installation
 
 ### Hardware Requirements
 
