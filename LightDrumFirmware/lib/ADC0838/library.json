@@ -1,0 +1,13 @@
+{
+  "name": "ADC0838DriverLib",
+  "description": "ADC0838 ADC driver library.",
+  "authors": [
+      {
+          "name": "Daxxn",
+          "url": "null",
+          "maintainer": true
+      }
+  ],
+  "version": "0.0.1",
+  "frameworks": "arduino"
+}

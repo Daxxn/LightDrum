@@ -1,0 +1,13 @@
+{
+    "name": "Registers",
+    "description": "Helps construct register calls for ICs by setting the required bits according to the mask.",
+    "authors": [
+        {
+            "name": "Daxxn",
+            "url": "null",
+            "maintainer": true
+        }
+    ],
+    "version": "0.0.1",
+    "frameworks": "arduino"
+}
