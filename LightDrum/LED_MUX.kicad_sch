@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "LightDrum")
+    (rev "REV7")
+    (company "Daxxn Industries")
+  )
+
   (lib_symbols
     (symbol "74xx:74HC02" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at 0 1.27 0)

@@ -5,8 +5,8 @@
   (paper "A4")
 
   (title_block
-    (title "RGB STRIP CONTROLLER 3")
-    (rev "REV6")
+    (title "LightDrum")
+    (rev "REV7")
     (company "Daxxn Industries")
   )
 

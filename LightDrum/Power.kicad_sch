@@ -5,8 +5,8 @@
   (paper "A4")
 
   (title_block
-    (title "POWER SUPPLY")
-    (rev "REV6")
+    (title "LightDrum")
+    (rev "REV7")
     (company "Daxxn Industries")
   )
 
@@ -3338,7 +3338,7 @@
     (property "Value" "ES2A/A" (id 1) (at 92.71 41.91 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Diode_SMD:D_SMA-SMB_Universal_Handsoldering" (id 2) (at 91.44 40.64 90)
+    (property "Footprint" "Diode_SMD:D_SMA" (id 2) (at 91.44 40.64 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 91.44 40.64 90)

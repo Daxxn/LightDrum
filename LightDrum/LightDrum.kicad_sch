@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV6")
+    (rev "REV7")
     (company "Daxxn Industries")
   )
 
@@ -4747,7 +4747,7 @@
       (reference "D5") (unit 1) (value "GP DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/1cf17c4e-5921-408b-a9f8-9e373eae7d69/4e57787d-6280-4452-a223-09771d9fe58f"
-      (reference "D6") (unit 1) (value "ES2A/A") (footprint "Diode_SMD:D_SMA-SMB_Universal_Handsoldering")
+      (reference "D6") (unit 1) (value "ES2A/A") (footprint "Diode_SMD:D_SMA")
     )
     (path "/1cf17c4e-5921-408b-a9f8-9e373eae7d69/33823fd6-c5f7-46ac-ae5c-a135891f46f0/d1f9768a-51c3-4106-b1ca-df91253fb6ba"
       (reference "D7") (unit 1) (value "SSM16") (footprint "Diode_SMD:D_SMB_Handsoldering")

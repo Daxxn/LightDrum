@@ -5,7 +5,8 @@
   (paper "A4")
 
   (title_block
-    (rev "REV6")
+    (title "LightDrum")
+    (rev "REV7")
     (company "Daxxn Industries")
   )
 
