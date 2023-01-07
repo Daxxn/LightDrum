@@ -12,6 +12,7 @@
 #include "CurrentSense.h"
 #include "LEDString.h"
 #include "ADC0838.h"
+#include "Debug.h"
 
 using namespace Digitl;
 
