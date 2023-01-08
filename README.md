@@ -6,9 +6,9 @@
 
 This is my dads christmas present. (From last year...) The idea is to lay strings of LEDs on his drum set and control the strings with audio and MIDI signals. The other purpose of this project is to learn. To that end, all interface libraries are written by me and are not feature complete or fully tested.
 
-![Render 1](./Docs/Renders/REV6/LightDrum-REV6-Top1.PNG)
+![Render 1](./Docs/Renders/REV7/LightDrum-REV7_side.jpg)
 
-![Render 2](./Docs/Renders/REV6/LightDrum-REV6-Side-Internal1.PNG)
+![Render 2](./Docs/Renders/REV7/LightDrum-REV7_side2.jpg)
 
 > Current Revision: REV6
 >
