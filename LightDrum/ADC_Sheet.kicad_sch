@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV7")
+    (rev "REV8")
     (company "Daxxn Industries")
   )
 
@@ -1042,7 +1042,7 @@
     (property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" (id 2) (at 48.26 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "C:\\Users\\Daxxn\\Documents\\Electrical\\Datasheets\\ADC0831.pdf" (id 3) (at 60.96 53.34 0)
+    (property "Datasheet" "%LOCAL_DATASHEETS%\\ADC0831.pdf" (id 3) (at 60.96 53.34 0)
       (effects (font (size 0 0)) hide)
     )
     (pin "1" (uuid 2ed47819-d200-4716-8cd5-ba1e14c8bdf1))

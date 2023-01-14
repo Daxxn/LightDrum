@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV7")
+    (rev "REV8")
     (company "Daxxn Industries")
   )
 
@@ -1267,7 +1267,7 @@
     (property "Footprint" "Package_SO:VSSOP-8_3.0x3.0mm_P0.65mm" (id 2) (at 76.2 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "C:\\Users\\Daxxn\\Documents\\Electrical\\Datasheets\\OPA1654.pdf" (id 3) (at 76.2 41.91 0)
+    (property "Datasheet" "%LOCAL_DATASHEETS%\\OPA1654.pdf" (id 3) (at 76.2 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4a04efb9-dc8b-47e4-9c88-d93244afa851))
