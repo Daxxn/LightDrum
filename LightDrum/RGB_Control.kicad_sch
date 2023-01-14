@@ -724,7 +724,7 @@
     (property "Sheet name" "Strip Connector" (id 0) (at 97.79 24.6884 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheet file" "LED_Connector.kicad_sch" (id 1) (at 97.79 118.3866 0)
+    (property "Sheet file" "Strip_Connector.kicad_sch" (id 1) (at 97.79 118.3866 0)
       (effects (font (size 0.5 0.5)) (justify left top))
     )
     (pin "LED3-B" input (at 97.79 58.42 180)
