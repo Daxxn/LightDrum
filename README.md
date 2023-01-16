@@ -6,13 +6,17 @@
 
 This is my dads christmas present. (From last year...) The idea is to lay strings of LEDs on his drum set and control the strings with audio and MIDI signals. The other purpose of this project is to learn. To that end, all interface libraries are written by me and are not feature complete or fully tested.
 
-![Render 1](./Docs/Renders/REV7/LightDrum-REV7_side.jpg)
+## Main PCB (WIP)
 
-![Render 2](./Docs/Renders/REV7/LightDrum-REV7_side2.jpg)
+![Render 1](./Docs/Renders/REV8/LightDrum-Main-top-fancy1.png)
 
-> Current Revision: REV6
+<!-- ## REV7 PCB Stack
+
+![Render 2](./Docs/Renders/REV7/LightDrum-REV7_side2.jpg) -->
+
+> Current Revision: REV8
 >
-> All revisions before REV4 are early prototypes and are for archival. They are not fully functional.
+> All revisions before REV6 are early prototypes and are for archival. They are not fully functional.
 
 ---
 
@@ -29,7 +33,7 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 ## Input
 - 1/8" jack audio
 - XLR Balanced audio
-- MIDI DIN
+- MIDI
 
 ## PWM channels
 
@@ -37,29 +41,29 @@ The 8 individual RGB channels are controlled with 3 [PCA9634.](https://www.nxp.c
 
 ## Power Management
 
-Each channel includes current monitoring with a high-side power override. This is all to avoid shorts and over-current conditions on the high current 12V supply.
+Each channel includes current monitoring with a high-side power override. This is all to avoid shorts and over-current conditions on the high current 12V supply. Both barrel jacks will need to be used for the LEDs to be activated. Due the large amount of power required, one barrel jack would probably melt.
 
 ## Audio Processing
 
-8 channel band-pass filtering with peak-detection circuitry to perform a basic Fourier Transform.
-
-The values used in the [BOM](./Docs/BOMs/REV6/LightDrum.csv) are the exact values needed. However, it would be prohibitively expensive if not impossible to find. The closest values I could find are detailed [here.](./Docs/BOMs/REV6/ActualFilterValues.ods)
+A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for processing. That will be used to modify the triggers from the MIDI inputs.
 
 ## User Interface
 
-- 16x2 LCD screen
+- 3.2" TFT LCD Display
 - Directional Buttons for menu navigation
-- Bar Graph for display of audio levels
+- Bar Graph for display of audio levels (or anything else I can think of.)
 - 6 LEDs for quick status indication
 - 2 Programmable Rotary Encoders
+
+The display will be a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menu rendering.
 
 ## Firmware installation
 
 ### Hardware Requirements
 
-The project is built on the Arduino framework, using the ATMEGA 2560 (Arduino MEGA). Due to size constraints, adding a USB interface with all the necessary components would not be feasable. Instead, programming is done via the ICSP connector using an ATTiny USB programmer.
+The old firmware was built with the Arduino Framework. The new MCU will be using the ST tools and HAL (Hardware Abstraction Layer) along with the other required libraries. Im using the STLink programmer due to the much better performance and debugging than the ATTiny USB programmer.
 
-### Configuration
+### OLD PIO Configuration
 
 [env:megaUSB] : Uses the built-in programmer. This is only used for the older revisions. (REV1 & REV2)
 
