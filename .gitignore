@@ -35,3 +35,6 @@ fp-info-cache
 
 *.drl
 *drl_map.gbr
+
+# Libre Office Temp file
+*~lock**.ods#
