@@ -1000,7 +1000,7 @@
   (symbol (lib_id "Daxxn_Connectors:DIN-4-SH") (at 68.58 45.72 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3044edb8-a4ee-4145-9422-d553641a5b4f)
-    (property "Reference" "J?" (id 0) (at 64.008 40.64 90)
+    (property "Reference" "J901" (id 0) (at 64.008 40.64 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "DIN-4-SH" (id 1) (at 64.008 42.418 90)
