@@ -8,7 +8,9 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 
 ## Main PCB (WIP)
 
-![Render 1](./Docs/Renders/REV8/LightDrum-Main-top-fancy1.png)
+![Render 1](./Docs/Renders/REV8/LightDrum-Main-top-fancy2.png)
+
+![Render 2](./Docs/Renders/REV8/LightDrum-Main-bot-fancy1.png)
 
 <!-- ## REV7 PCB Stack
 
@@ -24,15 +26,19 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 
 ---
 
+### The "Fun" of routing out BGA packages
+
+![Headache](./Docs/Renders/REV8/my-brain-hurts3.JPG)
+
 ## Features
 
 ### Output
 - 8 Individual LED String Channels
-- 1 Amp per Channel rating
+- 1 Amp Rating per Channel
 
 ## Input
-- 1/8" jack audio
-- XLR Balanced audio
+- 1/8" jack Audio
+- XLR Balanced Audio
 - MIDI
 
 ## PWM channels
@@ -45,23 +51,22 @@ Each channel includes current monitoring with a high-side power override. This i
 
 ## Audio Processing
 
-A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for processing. That will be used to modify the triggers from the MIDI inputs.
+A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for processing. That will be used to modify the triggers from the MIDI inputs and run processing techniques like beat detection and filtering.
 
 ## User Interface
 
 - 3.2" TFT LCD Display
 - Directional Buttons for menu navigation
 - Bar Graph for display of audio levels (or anything else I can think of.)
-- 6 LEDs for quick status indication
 - 2 Programmable Rotary Encoders
 
-The display will be a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menu rendering.
+The display will contain a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menuing.
 
 ## Firmware installation
 
 ### Hardware Requirements
 
-The old firmware was built with the Arduino Framework. The new MCU will be using the ST tools and HAL (Hardware Abstraction Layer) along with the other required libraries. Im using the STLink programmer due to the much better performance and debugging than the ATTiny USB programmer.
+The old firmware was built with the Arduino Framework. The new MCU will be using the ST IDE, toolchain, and HAL (Hardware Abstraction Layer) along with the other required libraries. Im using the STLink programmer due to the much better performance and debugging than the ATTiny USB programmer.
 
 ### OLD PIO Configuration
 
