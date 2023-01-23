@@ -5244,7 +5244,7 @@
   (symbol (lib_id "Daxxn_Transistors:NX6008NBKWX") (at 43.18 104.14 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1ced415f-0747-444b-b381-7376e238b873)
-    (property "Reference" "Q?" (id 0) (at 39.37 96.774 90)
+    (property "Reference" "Q104" (id 0) (at 39.37 96.774 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "NX6008NBKWX" (id 1) (at 39.37 100.33 90)
@@ -5302,7 +5302,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 46.99 55.88 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2711e1f6-046d-4600-a8b7-296406d77134)
-    (property "Reference" "R?" (id 0) (at 46.482 55.118 0)
+    (property "Reference" "R101" (id 0) (at 46.482 55.118 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (id 1) (at 48.006 55.118 0)
@@ -5422,7 +5422,7 @@
   (symbol (lib_id "power:VCC") (at 19.05 48.26 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2db2092c-e86e-4c06-aa4c-63004e9a67c1)
-    (property "Reference" "#PWR?" (id 0) (at 19.05 52.07 0)
+    (property "Reference" "#PWR0113" (id 0) (at 19.05 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 19.05 44.45 0))
@@ -5944,7 +5944,7 @@
   (symbol (lib_id "power:GND") (at 50.8 57.15 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5fc230e0-10ee-42a1-a520-f5bafdb43b47)
-    (property "Reference" "#PWR?" (id 0) (at 50.8 63.5 0)
+    (property "Reference" "#PWR0114" (id 0) (at 50.8 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 50.8 60.96 0))
@@ -6109,7 +6109,7 @@
   (symbol (lib_id "Daxxn_Transistors:NX6008NBKWX") (at 43.18 68.58 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 699356be-5985-4c5b-9c3b-dbc611950920)
-    (property "Reference" "Q?" (id 0) (at 39.37 61.214 90)
+    (property "Reference" "Q102" (id 0) (at 39.37 61.214 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "NX6008NBKWX" (id 1) (at 39.37 64.77 90)
@@ -6218,7 +6218,7 @@
   (symbol (lib_id "power:VCC") (at 19.05 66.04 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 72f36ba7-6f80-4786-b8f9-8ff18bb7ca17)
-    (property "Reference" "#PWR?" (id 0) (at 19.05 69.85 0)
+    (property "Reference" "#PWR0115" (id 0) (at 19.05 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 19.05 62.23 0))
@@ -6320,7 +6320,7 @@
   (symbol (lib_id "Daxxn_Transistors:NX6008NBKWX") (at 43.18 50.8 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8559c401-8108-473e-8062-8498de33c98b)
-    (property "Reference" "Q?" (id 0) (at 39.37 43.434 90)
+    (property "Reference" "Q101" (id 0) (at 39.37 43.434 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "NX6008NBKWX" (id 1) (at 39.37 46.99 90)
@@ -6447,7 +6447,7 @@
   (symbol (lib_id "power:VCC") (at 19.05 83.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8b811374-e6bc-4c96-8902-d0b6fa816f1d)
-    (property "Reference" "#PWR?" (id 0) (at 19.05 87.63 0)
+    (property "Reference" "#PWR0120" (id 0) (at 19.05 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 19.05 80.01 0))
@@ -6876,7 +6876,7 @@
   (symbol (lib_id "power:VCC") (at 63.5 129.54 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid aec29ed3-cfa4-4567-adae-ae98dbd0cf03)
-    (property "Reference" "#PWR?" (id 0) (at 63.5 133.35 0)
+    (property "Reference" "#PWR0125" (id 0) (at 63.5 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 63.5 125.73 0))
@@ -6892,7 +6892,7 @@
   (symbol (lib_id "power:GND") (at 50.8 74.93 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b055cfbd-aaaa-4a95-9053-bf798c0177d5)
-    (property "Reference" "#PWR?" (id 0) (at 50.8 81.28 0)
+    (property "Reference" "#PWR0117" (id 0) (at 50.8 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 50.8 78.74 0))
@@ -6924,7 +6924,7 @@
   (symbol (lib_id "power:VCC") (at 19.05 101.6 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b4c225ad-e827-4a31-b9b7-3282dc721378)
-    (property "Reference" "#PWR?" (id 0) (at 19.05 105.41 0)
+    (property "Reference" "#PWR0123" (id 0) (at 19.05 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 19.05 97.79 0))
@@ -6988,7 +6988,7 @@
   (symbol (lib_id "power:VCC") (at 68.58 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bc17299f-799d-498c-9ca1-4e5440cfd37b)
-    (property "Reference" "#PWR?" (id 0) (at 68.58 101.6 0)
+    (property "Reference" "#PWR0122" (id 0) (at 68.58 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 68.58 93.98 0))
@@ -7039,7 +7039,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 46.99 73.66 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bf4cff6c-21cb-4a5d-99f4-6942ab9e64e5)
-    (property "Reference" "R?" (id 0) (at 46.482 72.898 0)
+    (property "Reference" "R102" (id 0) (at 46.482 72.898 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (id 1) (at 48.006 72.898 0)
@@ -7253,7 +7253,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 83.82 99.06 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid cfac4e22-efe4-42ef-ae3c-1944f0bd69a4)
-    (property "Reference" "R?" (id 0) (at 83.312 98.298 0)
+    (property "Reference" "R104" (id 0) (at 83.312 98.298 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1.3K" (id 1) (at 84.836 98.298 0)
@@ -7291,7 +7291,7 @@
   (symbol (lib_id "Daxxn_Transistors:NX6008NBKWX") (at 43.18 86.36 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid cfeee7be-2400-4092-86c2-9a70a6ab90b4)
-    (property "Reference" "Q?" (id 0) (at 39.37 78.994 90)
+    (property "Reference" "Q103" (id 0) (at 39.37 78.994 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "NX6008NBKWX" (id 1) (at 39.37 82.55 90)
@@ -7333,7 +7333,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 46.99 109.22 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d323c7ea-0642-4ca8-8e7b-1ce61d467ef2)
-    (property "Reference" "R?" (id 0) (at 46.482 108.458 0)
+    (property "Reference" "R105" (id 0) (at 46.482 108.458 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (id 1) (at 48.006 108.458 0)
@@ -7551,7 +7551,7 @@
   (symbol (lib_id "Device:LED") (at 74.93 99.06 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e250b904-d665-4a0d-8c92-0e65088f11b3)
-    (property "Reference" "D-VDD?" (id 0) (at 74.93 101.6 0))
+    (property "Reference" "D-VDD101" (id 0) (at 74.93 101.6 0))
     (property "Value" "YELLOW" (id 1) (at 74.93 96.52 0))
     (property "Footprint" "LED_SMD:LED_0805_2012Metric" (id 2) (at 74.93 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -7597,7 +7597,7 @@
   (symbol (lib_id "power:GND") (at 50.8 110.49 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e667a5ec-366a-4288-91a2-277c7e9196a3)
-    (property "Reference" "#PWR?" (id 0) (at 50.8 116.84 0)
+    (property "Reference" "#PWR0124" (id 0) (at 50.8 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 50.8 114.3 0))
@@ -7629,7 +7629,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 46.99 91.44 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid eb8e23cb-b865-4f9c-a810-ad7217236063)
-    (property "Reference" "R?" (id 0) (at 46.482 90.678 0)
+    (property "Reference" "R103" (id 0) (at 46.482 90.678 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (id 1) (at 48.006 90.678 0)
@@ -7699,7 +7699,7 @@
   (symbol (lib_id "power:GND") (at 50.8 92.71 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f5b73b02-6571-4caa-9971-bcc6876f232e)
-    (property "Reference" "#PWR?" (id 0) (at 50.8 99.06 0)
+    (property "Reference" "#PWR0121" (id 0) (at 50.8 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 50.8 96.52 0))
@@ -7974,8 +7974,20 @@
     (path "/1a9b614c-4246-46ed-a5a0-63c778b3c695"
       (reference "#PWR0112") (unit 1) (value "VDD") (footprint "")
     )
+    (path "/2db2092c-e86e-4c06-aa4c-63004e9a67c1"
+      (reference "#PWR0113") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/5fc230e0-10ee-42a1-a520-f5bafdb43b47"
+      (reference "#PWR0114") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/72f36ba7-6f80-4786-b8f9-8ff18bb7ca17"
+      (reference "#PWR0115") (unit 1) (value "VCC") (footprint "")
+    )
     (path "/497065c1-01f6-48e3-9313-ef2f6dbe7aa8"
       (reference "#PWR0116") (unit 1) (value "VDD") (footprint "")
+    )
+    (path "/b055cfbd-aaaa-4a95-9053-bf798c0177d5"
+      (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
     )
     (path "/c1f6b845-af99-4e96-9917-68856b0c6190"
       (reference "#PWR0118") (unit 1) (value "VDD") (footprint "")
@@ -7983,35 +7995,23 @@
     (path "/677b3683-212d-404c-a086-88eb9f09178a"
       (reference "#PWR0119") (unit 1) (value "VDD") (footprint "")
     )
-    (path "/2db2092c-e86e-4c06-aa4c-63004e9a67c1"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/5fc230e0-10ee-42a1-a520-f5bafdb43b47"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/72f36ba7-6f80-4786-b8f9-8ff18bb7ca17"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
     (path "/8b811374-e6bc-4c96-8902-d0b6fa816f1d"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/aec29ed3-cfa4-4567-adae-ae98dbd0cf03"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/b055cfbd-aaaa-4a95-9053-bf798c0177d5"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/b4c225ad-e827-4a31-b9b7-3282dc721378"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/bc17299f-799d-498c-9ca1-4e5440cfd37b"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/e667a5ec-366a-4288-91a2-277c7e9196a3"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0120") (unit 1) (value "VCC") (footprint "")
     )
     (path "/f5b73b02-6571-4caa-9971-bcc6876f232e"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/bc17299f-799d-498c-9ca1-4e5440cfd37b"
+      (reference "#PWR0122") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/b4c225ad-e827-4a31-b9b7-3282dc721378"
+      (reference "#PWR0123") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/e667a5ec-366a-4288-91a2-277c7e9196a3"
+      (reference "#PWR0124") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/aec29ed3-cfa4-4567-adae-ae98dbd0cf03"
+      (reference "#PWR0125") (unit 1) (value "VCC") (footprint "")
     )
     (path "/90cbdd54-2a34-458e-a455-60a9c8a3ade7"
       (reference "C1") (unit 1) (value "${D-CAP}") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -8056,7 +8056,7 @@
       (reference "D-VCC1") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0805_2012Metric")
     )
     (path "/e250b904-d665-4a0d-8c92-0e65088f11b3"
-      (reference "D-VDD?") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0805_2012Metric")
+      (reference "D-VDD101") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0805_2012Metric")
     )
     (path "/683aef9a-d2df-4654-867d-031d1e1a05f1"
       (reference "D-VDRIVE1") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0805_2012Metric")
@@ -8124,17 +8124,17 @@
     (path "/f032e077-dfa9-490e-843c-2921760c030a"
       (reference "JP1") (unit 1) (value "BRT-JMP") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
-    (path "/1ced415f-0747-444b-b381-7376e238b873"
-      (reference "Q?") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
+    (path "/8559c401-8108-473e-8062-8498de33c98b"
+      (reference "Q101") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
     )
     (path "/699356be-5985-4c5b-9c3b-dbc611950920"
-      (reference "Q?") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
-    )
-    (path "/8559c401-8108-473e-8062-8498de33c98b"
-      (reference "Q?") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
+      (reference "Q102") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
     )
     (path "/cfeee7be-2400-4092-86c2-9a70a6ab90b4"
-      (reference "Q?") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
+      (reference "Q103") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
+    )
+    (path "/1ced415f-0747-444b-b381-7376e238b873"
+      (reference "Q104") (unit 1) (value "NX6008NBKWX") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70")
     )
     (path "/322e714e-a215-426e-8ad9-189a7b7737e3"
       (reference "R2") (unit 1) (value "560${R}") (footprint "Resistor_SMD:R_0805_2012Metric")
@@ -8182,19 +8182,19 @@
       (reference "R17") (unit 1) (value "${P-RES}") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/2711e1f6-046d-4600-a8b7-296406d77134"
-      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R101") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/bf4cff6c-21cb-4a5d-99f4-6942ab9e64e5"
-      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
-    )
-    (path "/cfac4e22-efe4-42ef-ae3c-1944f0bd69a4"
-      (reference "R?") (unit 1) (value "1.3K") (footprint "Resistor_SMD:R_0805_2012Metric")
-    )
-    (path "/d323c7ea-0642-4ca8-8e7b-1ce61d467ef2"
-      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R102") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/eb8e23cb-b865-4f9c-a810-ad7217236063"
-      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R103") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/cfac4e22-efe4-42ef-ae3c-1944f0bd69a4"
+      (reference "R104") (unit 1) (value "1.3K") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/d323c7ea-0642-4ca8-8e7b-1ce61d467ef2"
+      (reference "R105") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/a579f010-dacf-42d4-98e3-764b5ef5251f"
       (reference "S-ACT1") (unit 1) (value "ILS") (footprint "Daxxn_Switches:ILS-TB")
