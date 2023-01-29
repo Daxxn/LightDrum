@@ -719,12 +719,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "AUDIO",
-        "nets": [
-          "/Audio Inputs/HP+",
-          "/Audio Inputs/HP-",
-          "/Audio Inputs/XLR+",
-          "/Audio Inputs/XLR-"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.179832,
@@ -742,24 +737,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "CURR-MON",
-        "nets": [
-          "/RGB_Control/Strip Current Monitors/S1-CURR+",
-          "/RGB_Control/Strip Current Monitors/S1-CURR-",
-          "/RGB_Control/Strip Current Monitors/S2-CURR+",
-          "/RGB_Control/Strip Current Monitors/S2-CURR-",
-          "/RGB_Control/Strip Current Monitors/S3-CURR+",
-          "/RGB_Control/Strip Current Monitors/S3-CURR-",
-          "/RGB_Control/Strip Current Monitors/S4-CURR+",
-          "/RGB_Control/Strip Current Monitors/S4-CURR-",
-          "/RGB_Control/Strip Current Monitors/S5-CURR+",
-          "/RGB_Control/Strip Current Monitors/S5-CURR-",
-          "/RGB_Control/Strip Current Monitors/S6-CURR+",
-          "/RGB_Control/Strip Current Monitors/S6-CURR-",
-          "/RGB_Control/Strip Current Monitors/S7-CURR+",
-          "/RGB_Control/Strip Current Monitors/S7-CURR-",
-          "/RGB_Control/Strip Current Monitors/S8-CURR+",
-          "/RGB_Control/Strip Current Monitors/S8-CURR-"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.19304,
@@ -886,7 +864,7 @@
     ],
     [
       "0b4455a9-9524-4969-89d6-fafc6f740fef",
-      "Audio Inputs"
+      "AUDIO INPUTS"
     ],
     [
       "7f4e9734-e24e-4821-971a-aa27c706cb90",
@@ -910,7 +888,7 @@
     ],
     [
       "c5b6f44f-b454-4d73-ae8d-4f0249b04054",
-      "RGB_Control"
+      "RGB CONTROL"
     ],
     [
       "33823fd6-c5f7-46ac-ae5c-a135891f46f0",
@@ -918,15 +896,15 @@
     ],
     [
       "1cf17c4e-5921-408b-a9f8-9e373eae7d69",
-      "Power"
-    ],
-    [
-      "47dd7232-a18b-43ab-b8d2-1101988d95b2",
-      "Test Points"
+      "POWER"
     ],
     [
       "37b1a4e5-7bc5-4d58-948d-cb24160396b1",
-      "Interface Connectors"
+      "INTERFACE CONNECTOR"
+    ],
+    [
+      "47dd7232-a18b-43ab-b8d2-1101988d95b2",
+      "TEST POINTS"
     ]
   ],
   "text_variables": {}
