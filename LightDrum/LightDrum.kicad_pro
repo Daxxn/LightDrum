@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.19999999999999998
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -206,7 +206,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0508,
+        "min_clearance": 0.127,
         "min_copper_edge_clearance": 0.19999999999999998,
         "min_hole_clearance": 0.15239999999999998,
         "min_hole_to_hole": 0.09999999999999999,
@@ -214,7 +214,7 @@
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.0,
         "min_through_hole_diameter": 0.19999999999999998,
-        "min_track_width": 0.07619999999999999,
+        "min_track_width": 0.127,
         "min_via_annular_width": 0.13,
         "min_via_diameter": 0.39999999999999997,
         "solder_mask_clearance": 0.0,
@@ -223,8 +223,7 @@
       },
       "track_widths": [
         0.0,
-        0.08,
-        0.115,
+        0.127,
         0.15,
         0.2,
         0.22,
@@ -245,11 +244,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.31,
-          "drill": 0.15
-        },
-        {
-          "diameter": 0.46,
+          "diameter": 0.47,
           "drill": 0.2
         },
         {
