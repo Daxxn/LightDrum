@@ -8,15 +8,15 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 
 ## Main PCB (WIP)
 
-![Render 1](./Docs/Renders/REV8/LightDrum-Main-top-fancy2.png)
+![Render 1](./Docs/Renders/REV9/LightDrum-Main-TOP-fancy1.png)
 
-![Render 2](./Docs/Renders/REV8/LightDrum-Main-bot-fancy1.png)
+![Render 2](./Docs/Renders/REV9/LightDrum-Main-BOT-fancy1.png)
 
 <!-- ## REV7 PCB Stack
 
 ![Render 2](./Docs/Renders/REV7/LightDrum-REV7_side2.jpg) -->
 
-> Current Revision: REV8
+> Current Revision: REV9
 >
 > All revisions before REV6 are early prototypes and are for archival. They are not fully functional.
 
@@ -26,9 +26,15 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 
 ---
 
-### The "Fun" of routing out BGA packages
+# The "Fun" of routing out BGA packages
 
 ![Headache](./Docs/Renders/REV8/my-brain-hurts3.JPG)
+
+My brain hurt after this layout.
+
+I want to use a BGA packaged STM32. Except the small size and the tolerance required makes the PCB manufacturing cost incredibly expensive. (Like $289 expensive.) I had to go with an STM32F412 in a TQFP100 package instead.
+
+![New PCB](./Docs/Renders/REV9/LightDrum-Main-CLOSE-fancy1.png)
 
 ## Features
 
@@ -55,10 +61,13 @@ A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for proce
 
 ## User Interface
 
+![Interface Top](./Docs/Renders/REV9/LightDrum-Interface-TOP-fancy1.png)
+
 - 3.2" TFT LCD Display
-- Directional Buttons for menu navigation
+- Navigation Hat Switch for menu navigation
 - Bar Graph for display of audio levels (or anything else I can think of.)
 - 2 Programmable Rotary Encoders
+- AAAAnd, a reset switch. For when things go horribly wrong.
 
 The display will contain a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menuing.
 
