@@ -3,9 +3,9 @@ AR checking written on:
 'action_menu_annular_check.py'
 version = 1.7.2
 Testing PCB for Annular Rings
-TH Pads >= 0.127 Vias >= 0.0762
+TH Pads >= 0.125 Vias >= 0.13
 PHD margin on PTH = 0
 
-VIAS that Pass = 250; Fails = 0
-TH PADS that Pass = 82; Fails = 0
+VIAS that Pass = 562; Fails = 0
+TH PADS that Pass = 86; Fails = 0
 NPTH PADS that Pass = 0; Fails = 0

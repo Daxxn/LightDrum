@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.3
+          "min_clearance": 0.35
         }
       },
       "diff_pair_dimensions": [
@@ -163,11 +163,13 @@
         "silk_overlap|-3701252|14948748|4f7f7840-aa25-41cd-aa10-bd601d5f6db7|24290a54-eef2-4f89-8f3f-1ae83c7826cf",
         "silk_overlap|-6848749|14651251|e3ec0ceb-5827-401b-9d76-1ecf4d69489e|b2d09f9c-a574-427d-84e5-4cdce42c82a1",
         "silk_overlap|13100000|31046359|93811de6-6841-48dc-8a33-144689abbe2d|78707606-6b8b-4ce4-a7d2-1bf1feaf3571",
+        "silk_overlap|13100000|33046359|1d23547b-6c35-445c-986a-feeaeb6cae16|c8cb7605-e6fd-4a25-b6cc-b814c417952b",
         "silk_overlap|13220000|33046359|c8cb7605-e6fd-4a25-b6cc-b814c417952b|1d23547b-6c35-445c-986a-feeaeb6cae16",
         "silk_overlap|13980000|33046359|c205b9fe-aec5-4744-a17c-637ba0bcb93e|78c6b884-c072-410e-ae69-52d92c4b084a",
         "silk_overlap|14100000|31250000|291865a4-943c-40a4-9be4-d93c38fd49d3|f84c5fbc-178f-4ed9-a40a-94d5883df775",
         "silk_overlap|14100000|31250000|2da883f5-344a-46e9-baa2-515f73fc05c4|f84c5fbc-178f-4ed9-a40a-94d5883df775",
         "silk_overlap|14100000|31250000|c68c1db6-701a-4608-96a3-78a45e908e8e|f84c5fbc-178f-4ed9-a40a-94d5883df775",
+        "silk_overlap|14100000|33046359|78c6b884-c072-410e-ae69-52d92c4b084a|c205b9fe-aec5-4744-a17c-637ba0bcb93e",
         "silk_overlap|3519047|30750000|408ffcf4-8c1f-4343-a9f6-5aaa2b407a50|54e95d1b-cf80-4694-b856-bb3055c39ab8",
         "silk_overlap|869634|38250|ac0056d9-6ee4-4ea2-a7b1-9b652b67994b|91c84404-f0e2-4529-ab70-294f65f78e61"
       ],
@@ -851,7 +853,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "../Docs/Schematics/REV7/",
+    "plot_directory": "../Docs/Schematics/REV9/",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
     "subpart_first_id": 65,
