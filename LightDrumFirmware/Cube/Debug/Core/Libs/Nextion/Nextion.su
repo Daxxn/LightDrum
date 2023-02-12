@@ -1,0 +1,3 @@
+../Core/Libs/Nextion/Nextion.cpp:10:1:Nextion::Nextion()	16	static
+../Core/Libs/Nextion/Nextion.cpp:14:1:Nextion::~Nextion()	16	static
+../Core/Libs/Nextion/Nextion.cpp:14:1:virtual Nextion::~Nextion()	16	static

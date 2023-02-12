@@ -1,0 +1,3 @@
+../Core/Src/MainWrapper.cpp:24:6:void ToggleTest(uint8_t, int)	24	static
+../Core/Src/MainWrapper.cpp:39:6:void Init()	4	static
+../Core/Src/MainWrapper.cpp:49:6:void Main()	8	static

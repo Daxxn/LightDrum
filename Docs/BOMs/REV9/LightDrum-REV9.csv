@@ -69,7 +69,7 @@
 "L1001","2.2uH","Daxxn_Passives:LQH3NPN","~","2","Device","L",""
 "L1002","10uH","Capacitor_SMD:C_1210_3225Metric","~","2","Device","L",""
 "L1003","22uH","Daxxn_Passives:PA4341","~","2","Device","L",""
-"L1004","10uH","Capacitor_SMD:C_1210_3225Metric","~","2","Device","L",""
+"L1004","1uH","Capacitor_SMD:C_1210_3225Metric","~","2","Device","L",""
 "Q101","RQ5A030AP","Package_TO_SOT_SMD:SOT-23","%LOCAL_DATASHEETS%\RQ5A030AP.pdf","3","Daxxn_Transistors","RQ5A030AP","0704-0001"
 "Q201","NX6008NBKWX","Package_TO_SOT_SMD:SOT-323_SC-70","%LOCAL_DATASHEETS%/NX6008NBKW.pdf","3","Daxxn_Transistors","NX6008NBKWX","0703-0004"
 "Q202","NX6008NBKWX","Package_TO_SOT_SMD:SOT-323_SC-70","%LOCAL_DATASHEETS%/NX6008NBKW.pdf","3","Daxxn_Transistors","NX6008NBKWX","0703-0004"
