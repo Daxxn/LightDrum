@@ -32,6 +32,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "MainWrapper.h"
+#include "Utils.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -65,8 +66,6 @@ void Error_Handler(void);
 #define AUDIO_SRC_IND_GPIO_Port GPIOE
 #define EEPROM_WP_Pin GPIO_PIN_1
 #define EEPROM_WP_GPIO_Port GPIOC
-#define GRAPH_SDI_Pin GPIO_PIN_3
-#define GRAPH_SDI_GPIO_Port GPIOC
 #define XLR_SEL_IND_Pin GPIO_PIN_0
 #define XLR_SEL_IND_GPIO_Port GPIOA
 #define HP_SEL_IND_Pin GPIO_PIN_1
@@ -91,8 +90,10 @@ void Error_Handler(void);
 #define STRIP8_CURR_GPIO_Port GPIOB
 #define STRIP4_CURR_Pin GPIO_PIN_1
 #define STRIP4_CURR_GPIO_Port GPIOB
-#define GRAPH_SCK_Pin GPIO_PIN_10
-#define GRAPH_SCK_GPIO_Port GPIOB
+#define XLR_ADC_CS_Pin GPIO_PIN_9
+#define XLR_ADC_CS_GPIO_Port GPIOE
+#define HP_ADC_CS_Pin GPIO_PIN_10
+#define HP_ADC_CS_GPIO_Port GPIOE
 #define ENC2_B_Pin GPIO_PIN_12
 #define ENC2_B_GPIO_Port GPIOB
 #define ENC2_A_Pin GPIO_PIN_13

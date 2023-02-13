@@ -4814,7 +4814,7 @@
     (pin "37" (uuid 8f694937-7b7b-42b7-9e51-41aca5e88cc0) (alternate "BOOT1"))
     (pin "38" (uuid 13f933d9-fd08-4e19-99cb-dd07fba7e365))
     (pin "39" (uuid 8fc8a14a-e7b0-41c7-9f4b-3e8aa1b03e6b))
-    (pin "4" (uuid 15afba1f-f62a-4e39-9f09-2c8e26a6598c) (alternate "TIM9-CH1"))
+    (pin "4" (uuid 15afba1f-f62a-4e39-9f09-2c8e26a6598c))
     (pin "40" (uuid b17a1402-a7be-4793-adfc-a80ec1c2f1d6))
     (pin "41" (uuid 25ed97b9-f27e-435b-8264-2a3f534a27e9))
     (pin "42" (uuid 5c6166ed-f4f5-401b-a14d-ec8a6680f94a))

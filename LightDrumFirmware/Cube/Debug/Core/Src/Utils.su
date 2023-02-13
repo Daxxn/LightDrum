@@ -1,0 +1,4 @@
+../Core/Src/Utils.cpp:11:6:void Pin::Write(GPIO_PinState)	16	static
+../Core/Src/Utils.cpp:16:15:GPIO_PinState Pin::Read()	16	static
+../Core/Src/Utils.cpp:21:6:void Pin::Toggle()	16	static
+../Core/Src/Utils.cpp:26:6:void Pin::Clear()	16	static

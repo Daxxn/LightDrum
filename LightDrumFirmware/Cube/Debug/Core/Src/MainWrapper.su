@@ -1,3 +1,12 @@
-../Core/Src/MainWrapper.cpp:24:6:void ToggleTest(uint8_t, int)	24	static
-../Core/Src/MainWrapper.cpp:39:6:void Init()	4	static
-../Core/Src/MainWrapper.cpp:49:6:void Main()	8	static
+../Core/Inc/Utils.h:24:2:Pin::Pin()	16	static
+../Core/Inc/Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	24	static
+../Core/Inc/ShiftRegs.h:43:2:ShiftRegs::ShiftRegs()	16	static
+../Core/Src/MainWrapper.cpp:48:6:void ToggleTest(uint8_t, int)	24	static
+../Core/Src/MainWrapper.cpp:59:6:void EaseInDebug()	16	static
+../Core/Src/MainWrapper.cpp:68:6:void EaseInStatus()	16	static
+../Core/Inc/ShiftRegs.h:40:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	16	static
+../Core/Src/MainWrapper.cpp:81:6:void Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, SPI_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*)	112	static
+../Core/Src/MainWrapper.cpp:118:6:void Main()	8	static
+../Core/Src/MainWrapper.cpp:154:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/MainWrapper.cpp:154:1:cpp)	8	static
+../Core/Src/MainWrapper.cpp:154:1:cpp)	8	static

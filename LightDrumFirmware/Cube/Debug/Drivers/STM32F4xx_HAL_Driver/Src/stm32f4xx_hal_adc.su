@@ -1,5 +1,7 @@
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:311:19:HAL_ADC_Init	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:405:19:HAL_ADC_DeInit	24	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:474:19:HAL_ADC_RegisterCallback	32	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:576:19:HAL_ADC_UnRegisterCallback	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:662:13:HAL_ADC_MspInit	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:677:13:HAL_ADC_MspDeInit	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c:716:19:HAL_ADC_Start	24	static

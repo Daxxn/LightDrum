@@ -5,8 +5,8 @@
  *      Author: Daxxn
  */
 
-#ifndef LIBS_PCA9634_PCA9634_H_
-#define LIBS_PCA9634_PCA9634_H_
+#ifndef INC_PCA9634_H_
+#define INC_PCA9634_H_
 
 /*
  *
@@ -18,4 +18,4 @@ public:
 	virtual ~PCA9634();
 };
 
-#endif /* LIBS_PCA9634_PCA9634_H_ */
+#endif /* INC_PCA9634_H_ */
