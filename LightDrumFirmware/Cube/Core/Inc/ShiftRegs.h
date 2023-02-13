@@ -17,12 +17,6 @@
 
 typedef enum
 {
-	MSB = 0,
-	LSB = 1
-}DataDirection;
-
-typedef enum
-{
 	OFF = 0,
 	ON = 1
 }LEDState;
@@ -41,10 +35,11 @@ class ShiftRegs
 {
 public:
 	ShiftRegs() {};
-	ShiftRegs(SPI_HandleTypeDef *spi, Pin OEPin, Pin LEPin, DataDirection dir);
+	ShiftRegs(SPI_HandleTypeDef *spi, Pin OEPin, Pin LEPin);
 	virtual ~ShiftRegs();
 
 	void Init();
+	void IndicatorTest();
 
 	void SetBuffer(uint8_t *buffer);
 
@@ -61,12 +56,10 @@ public:
 private:
 	Pin OEPin;
 	Pin LEPin;
-	uint16_t _temp;
+	uint16_t _number;
 	SPI_HandleTypeDef *_spi;
-	DataDirection _dir;
 
 	uint8_t *_buffer;
-	ShiftRegUnion *_union;
 
 	uint8_t GetValue(size_t index);
 };

@@ -60,8 +60,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define VDDA_PG_Pin GPIO_PIN_3
-#define VDDA_PG_GPIO_Port GPIOE
 #define AUDIO_SRC_IND_Pin GPIO_PIN_5
 #define AUDIO_SRC_IND_GPIO_Port GPIOE
 #define EEPROM_WP_Pin GPIO_PIN_1
@@ -98,18 +96,25 @@ void Error_Handler(void);
 #define ENC2_B_GPIO_Port GPIOB
 #define ENC2_A_Pin GPIO_PIN_13
 #define ENC2_A_GPIO_Port GPIOB
+#define ENC2_A_EXTI_IRQn EXTI15_10_IRQn
 #define ENC1_A_Pin GPIO_PIN_14
 #define ENC1_A_GPIO_Port GPIOB
+#define ENC1_A_EXTI_IRQn EXTI15_10_IRQn
 #define ENC2_SW_Pin GPIO_PIN_8
 #define ENC2_SW_GPIO_Port GPIOD
+#define ENC2_SW_EXTI_IRQn EXTI9_5_IRQn
 #define MENU_RIGHT_Pin GPIO_PIN_9
 #define MENU_RIGHT_GPIO_Port GPIOD
+#define MENU_RIGHT_EXTI_IRQn EXTI9_5_IRQn
 #define MENU_ACT_Pin GPIO_PIN_10
 #define MENU_ACT_GPIO_Port GPIOD
+#define MENU_ACT_EXTI_IRQn EXTI15_10_IRQn
 #define MENU_BACK_Pin GPIO_PIN_11
 #define MENU_BACK_GPIO_Port GPIOD
+#define MENU_BACK_EXTI_IRQn EXTI15_10_IRQn
 #define MENU_UP_Pin GPIO_PIN_12
 #define MENU_UP_GPIO_Port GPIOD
+#define MENU_UP_EXTI_IRQn EXTI15_10_IRQn
 #define GRAPH_LE_Pin GPIO_PIN_13
 #define GRAPH_LE_GPIO_Port GPIOD
 #define MENU_LEFT_Pin GPIO_PIN_14
@@ -132,14 +137,18 @@ void Error_Handler(void);
 #define SCREEN_RX_GPIO_Port GPIOA
 #define MENU_DOWN_Pin GPIO_PIN_3
 #define MENU_DOWN_GPIO_Port GPIOD
+#define MENU_DOWN_EXTI_IRQn EXTI3_IRQn
 #define ENC1_B_Pin GPIO_PIN_4
 #define ENC1_B_GPIO_Port GPIOD
 #define ENC1_SW_Pin GPIO_PIN_5
 #define ENC1_SW_GPIO_Port GPIOD
+#define ENC1_SW_EXTI_IRQn EXTI9_5_IRQn
 #define HP_VREF_IRQ_Pin GPIO_PIN_0
 #define HP_VREF_IRQ_GPIO_Port GPIOE
-#define XLR_VREF_IRQ_Pin GPIO_PIN_1
-#define XLR_VREF_IRQ_GPIO_Port GPIOE
+#define HP_VREF_IRQ_EXTI_IRQn EXTI0_IRQn
+#define XLR_VRE_FIRQ_Pin GPIO_PIN_1
+#define XLR_VRE_FIRQ_GPIO_Port GPIOE
+#define XLR_VRE_FIRQ_EXTI_IRQn EXTI1_IRQn
 
 /* USER CODE BEGIN Private defines */
 

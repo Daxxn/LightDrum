@@ -21,7 +21,20 @@ void Init(
 	UART_HandleTypeDef *in_huart2
 );
 
+void InitTest();
+
 void Main();
+
+void MenuUpInterruptCallback();
+void MenuDownInterruptCallback();
+void MenuLeftInterruptCallback();
+void MenuRightInterruptCallback();
+void MenuActInterruptCallback();
+void MenuBackInterruptCallback();
+void Enc1SwInterruptCallback();
+void Enc2SwInterruptCallback();
+void Enc1TurnInterruptCallback();
+void Enc2TurnInterruptCallback();
 
 
 #endif /* INC_MAINWRAPPER_H_ */

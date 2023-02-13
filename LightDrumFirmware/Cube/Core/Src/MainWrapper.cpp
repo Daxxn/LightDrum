@@ -13,6 +13,7 @@
 #include "Nextion.h"
 #include "ShiftRegs.h"
 #include "Utils.h"
+#include "Button.h"
 
 ADC_HandleTypeDef *currentADCHandle;
 DMA_HandleTypeDef *currentADCMemHandle;
@@ -31,10 +32,22 @@ UART_HandleTypeDef *midiHandle;
 ShiftRegs shiftReg;
 Nextion screen = Nextion();
 
+Button menuUp = Button();
+Button menuDown = Button();
+
 uint8_t ledCount = 0;
 
 uint8_t count = 0;
 uint8_t page = 0;
+
+GPIO_PinState menuLeftPrev = GPIO_PIN_RESET;
+
+#define NAV_BACKLIGHT 0
+#define MENU_BACK_IND 1
+#define MENU_DOWN_IND 2
+#define MENU_UP_IND   3
+#define MENU_LEFT_IND 4
+#define MENU_RIGHT_IND 5
 
 const int delay = 50;
 const int i = 127;
@@ -105,11 +118,15 @@ void Init(
 	midiHandle = in_huart2;
 
 	screen.Startup(screenHandle);
-	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE, LSB);
+	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
 
 	shiftReg.Init();
 }
 
+void InitTest()
+{
+	shiftReg.IndicatorTest();
+}
 
 /**
   * @brief C++ Main Loop Function
@@ -117,38 +134,96 @@ void Init(
   */
 void Main()
 {
-	shiftReg.ToggleValue(ledCount);
-//	shiftReg.SetValue(0, ledCount);
-	shiftReg.Update();
-	ledCount++;
-	if (ledCount == 16)
-	{
-		ledCount = 0;
-	}
 
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 10000);
-//
-//	HAL_Delay(50);
-//	screen.SetProgressBar(0, count);
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 20000);
-//	screen.SetNumber(0, count);
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 30000);
-//	HAL_Delay(50);
+
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 10000);
+
+	HAL_Delay(50);
+	screen.SetProgressBar(0, count);
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 20000);
+	screen.SetNumber(0, count);
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 30000);
+	HAL_Delay(50);
 //	screen.SetPage(1);
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 40000);
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 40000);
 //	for (size_t i = 0; i < 50; ++i)
 //	{
 //		uint8_t val = (uint8_t)round(sin(i) * 40 + 127);
 //		screen.UpdateGraph(1, 0, val);
 //		screen.SetNumber(0, val);
 //	}
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 50000);
+	HAL_Delay(100);
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 50000);
 //	HAL_Delay(250);
 //	screen.HomePage();
-//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 60000);
-//	count++;
-//	if (count > 100)
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 60000);
+	count++;
+	if (count > 100)
+	{
+		count = 0;
+	}
+
+	static GPIO_PinState menuLeft = HAL_GPIO_ReadPin(MENU_LEFT_GPIO_Port, MENU_LEFT_Pin);
+	if (menuLeft != menuLeftPrev)
+	{
+		if (menuLeft == GPIO_PIN_SET)
+		{
+			shiftReg.SetValue(ON, MENU_LEFT_IND);
+		}
+		else
+		{
+			shiftReg.SetValue(OFF, MENU_LEFT_IND);
+		}
+	}
+	menuLeftPrev = menuLeft;
+	shiftReg.Update();
+}
+
+void MenuUpInterruptCallback()
+{
+	shiftReg.ToggleValue(MENU_UP_IND);
+}
+void MenuDownInterruptCallback()
+{
+	shiftReg.ToggleValue(MENU_DOWN_IND);
+}
+// Pin moved for next revision. Right now the pin is set as GPIO.
+// Shares the same interrupt channel as the ENC1_A pin.
+//void MenuLeftInterruptCallback()
+//{
+//
+//}
+void MenuRightInterruptCallback()
+{
+	shiftReg.ToggleValue(MENU_RIGHT_IND);
+}
+void MenuActInterruptCallback()
+{
+	shiftReg.ToggleValue(8);
+}
+void MenuBackInterruptCallback()
+{
+	shiftReg.ToggleValue(MENU_BACK_IND);
+}
+void Enc1SwInterruptCallback()
+{
+	shiftReg.ToggleValue(6);
+}
+void Enc2SwInterruptCallback()
+{
+	shiftReg.ToggleValue(7);
+}
+void Enc1TurnInterruptCallback()
+{
+	// Need to move to an "Encoder" class.
+//	static GPIO_PinState enc1b = HAL_GPIO_ReadPin(ENC1_B_GPIO_Port, ENC1_B_Pin);
+//	if (enc1b == GPIO_PIN_SET)
 //	{
-//		count = 0;
+//
 //	}
+}
+void Enc2TurnInterruptCallback()
+{
+	// Need to move to an "Encoder" class.
+//	static GPIO_PinState enc2b = HAL_GPIO_ReadPin(ENC2_B_GPIO_Port, ENC2_B_Pin);
 }

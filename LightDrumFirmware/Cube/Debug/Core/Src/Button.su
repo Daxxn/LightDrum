@@ -1,0 +1,3 @@
+../Core/Src/Button.cpp:11:1:Button::Button()	16	static
+../Core/Src/Button.cpp:15:1:Button::~Button()	16	static
+../Core/Src/Button.cpp:15:1:virtual Button::~Button()	16	static

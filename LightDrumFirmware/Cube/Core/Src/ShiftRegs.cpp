@@ -9,14 +9,13 @@
 #include "main.h"
 #include "bitset"
 
-ShiftRegs::ShiftRegs(SPI_HandleTypeDef *spi, Pin OEPin, Pin LEPin, DataDirection dir)
+ShiftRegs::ShiftRegs(SPI_HandleTypeDef *spi, Pin OEPin, Pin LEPin)
 {
 	this->_spi = spi;
-	this->_dir = dir;
 	this->OEPin = OEPin;
 	this->LEPin = LEPin;
 	this->_buffer = new uint8_t[2] {0,0};
-	this->_union = new ShiftRegUnion();
+	this->_number = 0;
 }
 
 ShiftRegs::~ShiftRegs()
@@ -31,6 +30,22 @@ void ShiftRegs::Init()
 	this->LEPin.Clear();
 }
 
+void ShiftRegs::IndicatorTest()
+{
+	uint8_t count = 0;
+	for (int i = 0; i < 32; ++i) {
+
+		ToggleValue(count);
+		Update();
+		count++;
+		if (count >= 16)
+		{
+			count = 0;
+		}
+		HAL_Delay(50);
+	}
+}
+
 void ShiftRegs::SetValue(LEDState value, size_t index)
 {
 	this->SetValue((uint8_t)value, index);
@@ -40,11 +55,11 @@ void ShiftRegs::SetValue(uint8_t value, size_t index)
 {
 	if (value == 1)
 	{
-		this->_union->number |= 1 << index;
+		this->_number |= 1 << index;
 	}
 	else
 	{
-		this->_union->number &= ~(1 << index);
+		this->_number &= ~(1 << index);
 	}
 //	this->_temp = 1 << index;
 	// I dont trust this...
@@ -58,31 +73,18 @@ void ShiftRegs::ToggleValue(size_t index)
 
 void ShiftRegs::Clear()
 {
-	this->_union->number = 0;
+	this->_number = 0;
 }
 
 uint8_t ShiftRegs::GetValue(size_t index)
 {
-	return (this->_union->number >> index) & 1;
+	return (this->_number >> index) & 1;
 }
 
 void ShiftRegs::Update()
 {
-//	Something went incredibly silly. The connection to the debugger is lost and the thing starts
-//	writing a bunch of junk data to the leds. Its probably an issue with the union. REMOVE IT!
-	if (this->_dir == DataDirection::MSB)
-	{
-		this->_buffer[0] = this->_union->upper;
-		this->_buffer[1] = this->_union->lower;
-	}
-	else
-	{
-		this->_buffer[0] = this->_union->lower;
-		this->_buffer[1] = this->_union->upper;
-	}
-//	static uint8_t buffer[2] = {0, 0};
-//	buffer[0] = this->_temp & 0xFF;
-//	buffer[1] = (this->_temp & 0xFF00) >> 8;
+	this->_buffer[0] = this->_number & 0xFF;
+	this->_buffer[1] = (this->_number & 0xFF00) >> 8;
 	this->OEPin.Write(GPIO_PIN_SET);
 	this->LEPin.Write(GPIO_PIN_SET);
 //	HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_SET);

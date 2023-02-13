@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-53f88be0-df26-4aa6-9752-ec37d070e052" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1085 51.6162">
+  <defs>
+    <style>
+      .uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869, .uuid-b4559eb5-c733-4cdf-950a-f8df70fe1b87 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869, .uuid-4b2bce5f-c6a8-4320-a20a-c1cfb0feb592 {
+        fill: none;
+      }
+
+      .uuid-b4559eb5-c733-4cdf-950a-f8df70fe1b87 {
+        fill: #fff;
+      }
+
+      .uuid-083a8ab9-a241-4ccf-a5ed-2eba2ce26c1a {
+        clip-path: url(#uuid-8c311a72-3753-4f14-85fe-00073c7a4729);
+      }
+
+      .uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95 {
+        fill: #231f20;
+      }
+    </style>
+    <clipPath id="uuid-8c311a72-3753-4f14-85fe-00073c7a4729">
+      <polygon class="uuid-4b2bce5f-c6a8-4320-a20a-c1cfb0feb592" points="10.6422 35.4659 5.5172 12.7992 17.1006 10.0909 27.1422 15.0824 21.3912 41.7529 12.4312 42.0326 10.6422 35.4659"/>
+    </clipPath>
+  </defs>
+  <path class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" d="m8.0425,48.3092v-7.9644c0-4.6554-.3956-8.5806-5.7528-18.4807C-3.2614,11.4083,4.878.5,16.0297.5s19.4127,10.9995,13.74,21.3642c-6.194,10.4478-5.7528,18.4807-5.7528,18.4807v7.9644s-2.1147,2.8069-7.9872,2.8069-7.9872-2.8069-7.9872-2.8069Z"/>
+  <ellipse class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" cx="16.0542" cy="40.3448" rx="7.9874" ry="1.8939"/>
+  <g>
+    <ellipse class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" cx="16.0297" cy="14.8547" rx="3.941" ry=".9843"/>
+    <ellipse class="uuid-b4559eb5-c733-4cdf-950a-f8df70fe1b87" cx="16.0297" cy="17.6261" rx="3.941" ry=".9843"/>
+    <rect class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" x="11.7462" y="14.8547" width=".685" height="2.7714"/>
+    <rect class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" x="19.6281" y="14.8547" width=".685" height="2.7714"/>
+    <rect class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" x="12.0887" y="15.6203" width="7.8819" height="2.6667" rx=".5729" ry=".5729"/>
+  </g>
+  <g class="uuid-083a8ab9-a241-4ccf-a5ed-2eba2ce26c1a">
+    <g>
+      <ellipse class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" cx="10.0535" cy="16.6082" rx="1" ry="1.5102" transform="translate(-2.8453 2.0987) rotate(-10.4489)"/>
+      <ellipse class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" cx="11.7157" cy="25.6216" rx=".9306" ry="9.1654" transform="translate(-4.4524 2.5496) rotate(-10.4489)"/>
+      <rect class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" x="12.367" y="24.2561" width="1.8611" height="19.8863" transform="translate(-5.9818 2.9787) rotate(-10.4489)"/>
+    </g>
+    <g>
+      <ellipse class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" cx="22.0097" cy="16.6108" rx="1.5102" ry="1" transform="translate(2.016 35.6002) rotate(-80.5662)"/>
+      <ellipse class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" cx="20.5074" cy="25.6522" rx="9.1654" ry=".9306" transform="translate(-8.1592 41.6776) rotate(-80.5662)"/>
+      <rect class="uuid-f5f5ef8d-ca9e-4ed6-a04d-f1daa57f0e95" x="18.1472" y="24.3133" width="1.8611" height="19.8863" transform="translate(5.8729 -2.6637) rotate(9.4338)"/>
+    </g>
+  </g>
+  <path class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" d="m8.067,42.2387c4.4701,2.6667,13.2826,2.75,15.9744.7708"/>
+  <path class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" d="m8.067,44.517c4.4701,2.6667,13.2826,2.75,15.9744.7708"/>
+  <path class="uuid-df7c07fa-83c0-4626-b5e9-bbbe004b4869" d="m8.0425,46.7953c4.4701,2.6667,13.2826,2.75,15.9744.7708"/>
+</svg>

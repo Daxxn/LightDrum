@@ -49,6 +49,7 @@ SPI_HandleTypeDef hspi5;
 
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim6;
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
@@ -69,13 +70,45 @@ static void MX_SPI5_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	switch (GPIO_Pin) {
+		case ENC1_A_Pin:
+			Enc1TurnInterruptCallback();
+			break;
+		case ENC2_A_Pin:
+			Enc2TurnInterruptCallback();
+			break;
+		case MENU_UP_Pin:
+			MenuUpInterruptCallback();
+			break;
+		case MENU_DOWN_Pin:
+			MenuDownInterruptCallback();
+			break;
+			// Pin moved for next revision. Right now the pin is set as GPIO.
+			// Shares the same interrupt channel as the ENC1_A pin.
+//		case MENU_LEFT_Pin:
+//			MenuLeftInterruptCallback();
+//			break;
+		case MENU_RIGHT_Pin:
+			MenuRightInterruptCallback();
+			break;
+		case MENU_ACT_Pin:
+			MenuActInterruptCallback();
+			break;
+		case MENU_BACK_Pin:
+			MenuBackInterruptCallback();
+		default:
+			break;
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -124,6 +157,7 @@ int main(void)
   MX_TIM3_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
@@ -132,6 +166,9 @@ int main(void)
 
   HAL_GPIO_WritePin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_SET);
+
+  // For Itit tests
+  InitTest();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -491,6 +528,48 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 0;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 255;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_OnePulse_Init(&htim6, TIM_OPMODE_SINGLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -601,12 +680,6 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : VDDA_PG_Pin HP_VREF_IRQ_Pin XLR_VREF_IRQ_Pin */
-  GPIO_InitStruct.Pin = VDDA_PG_Pin|HP_VREF_IRQ_Pin|XLR_VREF_IRQ_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
-
   /*Configure GPIO pins : AUDIO_SRC_IND_Pin XLR_ADC_CS_Pin HP_ADC_CS_Pin */
   GPIO_InitStruct.Pin = AUDIO_SRC_IND_Pin|XLR_ADC_CS_Pin|HP_ADC_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -629,15 +702,15 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : ENC2_A_Pin ENC1_A_Pin */
   GPIO_InitStruct.Pin = ENC2_A_Pin|ENC1_A_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : ENC2_SW_Pin MENU_RIGHT_Pin MENU_ACT_Pin MENU_BACK_Pin
-                           MENU_UP_Pin MENU_LEFT_Pin MENU_DOWN_Pin ENC1_SW_Pin */
+                           MENU_UP_Pin MENU_DOWN_Pin ENC1_SW_Pin */
   GPIO_InitStruct.Pin = ENC2_SW_Pin|MENU_RIGHT_Pin|MENU_ACT_Pin|MENU_BACK_Pin
-                          |MENU_UP_Pin|MENU_LEFT_Pin|MENU_DOWN_Pin|ENC1_SW_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+                          |MENU_UP_Pin|MENU_DOWN_Pin|ENC1_SW_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
@@ -647,6 +720,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : MENU_LEFT_Pin */
+  GPIO_InitStruct.Pin = MENU_LEFT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(MENU_LEFT_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : HP_SW_Pin */
   GPIO_InitStruct.Pin = HP_SW_Pin;
@@ -659,6 +738,28 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ENC1_B_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : HP_VREF_IRQ_Pin XLR_VRE_FIRQ_Pin */
+  GPIO_InitStruct.Pin = HP_VREF_IRQ_Pin|XLR_VRE_FIRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 }
 
