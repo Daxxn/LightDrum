@@ -22,10 +22,6 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 
 ![Render 3](./Docs/Renders/REV9/LightDrum-Interface-SIDE-fancy1.png)
 
----
-
-![New PCB](./Docs/Renders/REV9/LightDrum-Interface-SIDE-fancy1.png)
-
 ## Features
 
 ### Output
