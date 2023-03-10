@@ -6,35 +6,25 @@
 
 This is my dads christmas present. (From last year...) The idea is to lay strings of LEDs on his drum set and control the strings with audio and MIDI signals. The other purpose of this project is to learn. To that end, all interface libraries are written by me and are not feature complete or fully tested.
 
-## Main PCB (WIP)
+> Current Revision: REV10
+>
+> All revisions before REV8 are early prototypes and are for archival. They are not fully functional.
+
+# Renders
+
+## Main PCB
 
 ![Render 1](./Docs/Renders/REV9/LightDrum-Main-TOP-fancy1.png)
 
-![Render 2](./Docs/Renders/REV9/LightDrum-Main-BOT-fancy1.png)
+![Render 2](./Docs/Renders/REV9/LightDrum-Main-CLOSE-fancy1.png)
 
-<!-- ## REV7 PCB Stack
+## Interface PCB
 
-![Render 2](./Docs/Renders/REV7/LightDrum-REV7_side2.jpg) -->
-
-> Current Revision: REV9
->
-> All revisions before REV6 are early prototypes and are for archival. They are not fully functional.
+![Render 3](./Docs/Renders/REV9/LightDrum-Interface-SIDE-fancy1.png)
 
 ---
 
-[Docs](./Docs/)
-
----
-
-# The "Fun" of routing out BGA packages
-
-![Headache](./Docs/Renders/REV8/my-brain-hurts3.JPG)
-
-My brain hurt after this layout.
-
-I want to use a BGA packaged STM32. Except the small size and the tolerance required makes the PCB manufacturing cost incredibly expensive. (Like $289 expensive.) I had to go with an STM32F412 in a TQFP100 package instead.
-
-![New PCB](./Docs/Renders/REV9/LightDrum-Main-CLOSE-fancy1.png)
+![New PCB](./Docs/Renders/REV9/LightDrum-Interface-SIDE-fancy1.png)
 
 ## Features
 
@@ -61,8 +51,6 @@ A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for proce
 
 ## User Interface
 
-![Interface Top](./Docs/Renders/REV9/LightDrum-Interface-TOP-fancy1.png)
-
 - 3.2" TFT LCD Display
 - Navigation Hat Switch for menu navigation
 - Bar Graph for display of audio levels (or anything else I can think of.)
@@ -70,6 +58,18 @@ A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for proce
 - AAAAnd, a reset switch. For when things go horribly wrong.
 
 The display will contain a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menuing.
+
+---
+
+## Documentation
+
+- [Docs](./Docs/)
+
+- [Interactive BOMs](./Docs/BOMs/REV10/)
+
+- TODO: Link to a usage and theory of operation doc.
+
+---
 
 ## Firmware installation
 
