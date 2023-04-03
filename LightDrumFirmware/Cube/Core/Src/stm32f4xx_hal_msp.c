@@ -23,6 +23,9 @@
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
+extern DMA_HandleTypeDef hdma_adc1;
+
+extern DMA_HandleTypeDef hdma_spi5_rx;
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
@@ -123,6 +126,25 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* ADC1 DMA Init */
+    /* ADC1 Init */
+    hdma_adc1.Instance = DMA2_Stream0;
+    hdma_adc1.Init.Channel = DMA_CHANNEL_0;
+    hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_adc1.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_adc1.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_adc1.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_adc1.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_adc1.Init.Mode = DMA_CIRCULAR;
+    hdma_adc1.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_adc1.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_adc1) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(hadc,DMA_Handle,hdma_adc1);
+
   /* USER CODE BEGIN ADC1_MspInit 1 */
 
   /* USER CODE END ADC1_MspInit 1 */
@@ -162,6 +184,8 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
 
     HAL_GPIO_DeInit(GPIOB, STRIP8_CURR_Pin|STRIP4_CURR_Pin);
 
+    /* ADC1 DMA DeInit */
+    HAL_DMA_DeInit(hadc->DMA_Handle);
   /* USER CODE BEGIN ADC1_MspDeInit 1 */
 
   /* USER CODE END ADC1_MspDeInit 1 */
@@ -345,6 +369,28 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
     GPIO_InitStruct.Alternate = GPIO_AF6_SPI5;
     HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
+    /* SPI5 DMA Init */
+    /* SPI5_RX Init */
+    hdma_spi5_rx.Instance = DMA2_Stream3;
+    hdma_spi5_rx.Init.Channel = DMA_CHANNEL_2;
+    hdma_spi5_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_spi5_rx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_spi5_rx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_spi5_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_spi5_rx.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_spi5_rx.Init.Mode = DMA_CIRCULAR;
+    hdma_spi5_rx.Init.Priority = DMA_PRIORITY_VERY_HIGH;
+    hdma_spi5_rx.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
+    hdma_spi5_rx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_HALFFULL;
+    hdma_spi5_rx.Init.MemBurst = DMA_MBURST_SINGLE;
+    hdma_spi5_rx.Init.PeriphBurst = DMA_PBURST_SINGLE;
+    if (HAL_DMA_Init(&hdma_spi5_rx) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(hspi,hdmarx,hdma_spi5_rx);
+
   /* USER CODE BEGIN SPI5_MspInit 1 */
 
   /* USER CODE END SPI5_MspInit 1 */
@@ -393,6 +439,8 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     */
     HAL_GPIO_DeInit(GPIOE, GPIO_PIN_2|GPIO_PIN_6|GPIO_PIN_13);
 
+    /* SPI5 DMA DeInit */
+    HAL_DMA_DeInit(hspi->hdmarx);
   /* USER CODE BEGIN SPI5_MspDeInit 1 */
 
   /* USER CODE END SPI5_MspDeInit 1 */
