@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV10")
+    (rev "REV11")
     (company "Daxxn Industries")
   )
 
@@ -107,7 +107,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
@@ -147,7 +147,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
@@ -199,7 +199,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"VDD\"" (at 0 0 0)
@@ -251,7 +251,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"VDDA\"" (at 0 0 0)
@@ -303,7 +303,7 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
+      (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_description" "Power symbol creates a global label with name \"Vdrive\"" (at 0 0 0)
@@ -528,6 +528,9 @@
     (property "Datasheet" "~" (at 33.02 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5002-ND" (at 33.02 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 4359b7a4-307f-44d9-bc90-08ecddf86538))
     (pin "2" (uuid df1ac818-5ad4-4813-a730-b91ea4484e6b))
     (instances
@@ -554,6 +557,9 @@
     (property "Datasheet" "~" (at 58.42 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5000-ND" (at 58.42 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid bf6ea2e0-7127-499a-95ca-b702c8f40e5b))
     (instances
       (project "LightDrum"
@@ -577,6 +583,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 33.02 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "SupplierPN" "36-5002-ND" (at 33.02 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5551477c-683c-4929-badf-25b188b151b9))
@@ -630,6 +639,9 @@
     (property "Datasheet" "~" (at 27.94 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5002-ND" (at 27.94 49.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid ba839c3f-8b8b-45f9-9080-28849b683dd6))
     (instances
       (project "LightDrum"
@@ -655,6 +667,9 @@
     (property "Datasheet" "~" (at 58.42 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5000-ND" (at 58.42 40.64 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid e129d55f-998e-446d-8733-02e810650538))
     (instances
       (project "LightDrum"
@@ -678,6 +693,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 27.94 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "SupplierPN" "36-5002-ND" (at 27.94 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dcd0a202-028e-4eb3-8dce-75dddcf641a1))
@@ -780,6 +798,9 @@
     (property "Datasheet" "~" (at 58.42 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5001-ND" (at 58.42 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 4735a440-0d7d-44fd-b86e-22a423d15f6a))
     (instances
       (project "LightDrum"
@@ -805,6 +826,9 @@
     (property "Datasheet" "~" (at 58.42 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "SupplierPN" "36-5000-ND" (at 58.42 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 1c021a78-2e94-4a60-8f4e-5bba095189e1))
     (instances
       (project "LightDrum"
@@ -828,6 +852,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 58.42 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "SupplierPN" "36-5000-ND" (at 58.42 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f99dd4d2-e011-43fe-b2a7-f55fa4e5a418))

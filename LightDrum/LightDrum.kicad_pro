@@ -1120,8 +1120,28 @@
       ""
     ],
     [
+      "97311934-873d-4d1e-ba68-f7e43f64afbc",
+      "MICROCONTROLLER"
+    ],
+    [
+      "37b1a4e5-7bc5-4d58-948d-cb24160396b1",
+      "INTERFACE CONNECTOR"
+    ],
+    [
+      "1cf17c4e-5921-408b-a9f8-9e373eae7d69",
+      "POWER"
+    ],
+    [
+      "33823fd6-c5f7-46ac-ae5c-a135891f46f0",
+      "LED_Power_Control"
+    ],
+    [
       "0b4455a9-9524-4969-89d6-fafc6f740fef",
       "AUDIO INPUTS"
+    ],
+    [
+      "c5b6f44f-b454-4d73-ae8d-4f0249b04054",
+      "RGB CONTROL"
     ],
     [
       "7f4e9734-e24e-4821-971a-aa27c706cb90",
@@ -1142,26 +1162,6 @@
     [
       "c531f82f-a257-4f09-9fb4-dd6a683aa13c",
       "Strip Current Monitors"
-    ],
-    [
-      "c5b6f44f-b454-4d73-ae8d-4f0249b04054",
-      "RGB CONTROL"
-    ],
-    [
-      "97311934-873d-4d1e-ba68-f7e43f64afbc",
-      "MICROCONTROLLER"
-    ],
-    [
-      "33823fd6-c5f7-46ac-ae5c-a135891f46f0",
-      "LED_Power_Control"
-    ],
-    [
-      "1cf17c4e-5921-408b-a9f8-9e373eae7d69",
-      "POWER"
-    ],
-    [
-      "37b1a4e5-7bc5-4d58-948d-cb24160396b1",
-      "INTERFACE CONNECTOR"
     ],
     [
       "47dd7232-a18b-43ab-b8d2-1101988d95b2",
