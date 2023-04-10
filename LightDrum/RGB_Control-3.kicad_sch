@@ -1194,112 +1194,112 @@
 
   (label "LED8-G-SIG" (at 96.52 45.72 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 0ab154d0-985e-47c1-bdcb-66f1aac7abf0)
-  )
-  (label "LED4-R-SIG" (at 55.88 35.56 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 2d6d13ce-6e1d-4c9c-9a41-95b1bd03f849)
-  )
-  (label "LED7-B-SIG" (at 147.32 45.72 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 351e3a7a-b184-40fb-8e7c-a41220805e82)
-  )
-  (label "LED8-G-SIG" (at 55.88 45.72 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 4269780b-5b74-407f-a011-494875f49cfe)
-  )
-  (label "LED3-B-SIG" (at 172.72 45.72 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 4509753b-ba59-4a0b-b81f-de5808ccb134)
-  )
-  (label "LED4-B-SIG" (at 134.62 69.85 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 7d35ab09-7a37-4bad-9d8f-2c819de394b1)
-  )
-  (label "LED8-R-SIG" (at 55.88 38.1 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 92ad181e-b1a7-4c03-b19a-21b7a8232ca7)
-  )
-  (label "LED4-B-SIG" (at 55.88 40.64 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 9748d978-f359-49d8-934f-84c1ad28c6ad)
-  )
-  (label "LED7-B-SIG" (at 55.88 50.8 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 976a3090-c982-4b63-b115-18a7ea1ddb91)
-  )
-  (label "LED4-R-SIG" (at 185.42 69.85 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid a1e23859-2403-4acf-a07a-8bcc8fb66884)
-  )
-  (label "LED4-G-SIG" (at 55.88 48.26 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid b4055cbf-f33a-4954-a541-b4ff01d4e801)
-  )
-  (label "LED8-B-SIG" (at 55.88 43.18 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid be613a63-b399-4ebe-b302-37c77dbbc9d0)
-  )
-  (label "LED4-G-SIG" (at 121.92 45.72 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c113aa7a-d7f4-443c-ac4b-b35e875ce11b)
-  )
-  (label "LED8-B-SIG" (at 109.22 69.85 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c28b7817-f61a-4610-a0d3-cd607ad483e9)
+    (uuid 07081d6e-110e-4d61-a7d6-2508c1e8f521)
   )
   (label "LED8-R-SIG" (at 160.02 69.85 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c6c00fca-dace-48f2-b1ff-b5eea90b5a21)
+    (uuid 0a8fa721-71c4-475f-b366-897301794251)
+  )
+  (label "LED8-G-SIG" (at 55.88 45.72 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 0a9d7297-be26-48d6-b230-ea0e73bb116f)
+  )
+  (label "LED4-B-SIG" (at 55.88 40.64 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2150e5fb-a2ac-4ac9-971d-102d50281432)
   )
   (label "LED3-B-SIG" (at 55.88 53.34 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid e258e7b5-f5c8-4709-9571-361153276408)
+    (uuid 215e8798-f2d1-42cf-966b-4641636a9096)
+  )
+  (label "LED8-B-SIG" (at 55.88 43.18 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2c857bbd-2d26-4a78-98cc-f7c4a5846465)
+  )
+  (label "LED4-B-SIG" (at 134.62 69.85 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 399f9cf0-89d0-44ab-b118-777478167b1e)
+  )
+  (label "LED4-G-SIG" (at 121.92 45.72 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 4d0d0175-a08a-480d-b23c-68e61565bae0)
+  )
+  (label "LED7-B-SIG" (at 147.32 45.72 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 73dc3986-d505-401a-9611-2bae2d315e16)
+  )
+  (label "LED8-B-SIG" (at 109.22 69.85 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 787ce0c1-0959-4c1c-85ac-ac06c70d6d85)
+  )
+  (label "LED7-B-SIG" (at 55.88 50.8 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 7ce128c0-bf95-42a9-b468-d40c96947b0c)
+  )
+  (label "LED4-R-SIG" (at 55.88 35.56 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid a28ff866-c337-437b-8f22-53f516ce6845)
+  )
+  (label "LED8-R-SIG" (at 55.88 38.1 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid cedf346c-9803-4557-90e1-dbad0246476a)
+  )
+  (label "LED4-G-SIG" (at 55.88 48.26 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid f34f2ac7-47ff-4d73-a37e-fa903b8bbf23)
+  )
+  (label "LED3-B-SIG" (at 172.72 45.72 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid fce1e110-7b73-4fcd-9a5d-a64e6df319ee)
+  )
+  (label "LED4-R-SIG" (at 185.42 69.85 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid fe172af2-f8b5-41f9-a0c7-c9390075b9d3)
   )
 
-  (hierarchical_label "LED8-G" (shape output) (at 102.87 48.26 0) (fields_autoplaced)
+  (hierarchical_label "LED7-B" (shape output) (at 153.67 48.26 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 2c293739-af90-4506-a077-6971b36838c7)
+    (uuid 007a1f93-fa6c-4829-98dd-11713a451f87)
   )
   (hierarchical_label "PWM-~{OE}_{PWM}" (shape input) (at 34.29 38.1 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 3a8992eb-d5d7-480e-a573-2bc3f49efde8)
   )
-  (hierarchical_label "LED7-B" (shape output) (at 153.67 48.26 0) (fields_autoplaced)
+  (hierarchical_label "LED8-G" (shape output) (at 102.87 48.26 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 65bcd932-7633-4b7d-ab32-72d34ac7c9f0)
+    (uuid 40901202-60f2-4b1a-9b3e-2eca91e7c519)
   )
-  (hierarchical_label "LED4-G" (shape output) (at 128.27 48.26 0) (fields_autoplaced)
+  (hierarchical_label "LED3-B" (shape output) (at 179.07 48.26 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 6d66479f-c9ac-4db3-86de-177b4f8195b5)
+    (uuid 4f21e6d2-a3af-4ebb-8de4-ae8048e98d3c)
+  )
+  (hierarchical_label "LED8-R" (shape output) (at 166.37 72.39 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7dcbb18e-553b-415b-93ef-60c8d008904b)
   )
   (hierarchical_label "FI2C-SCLK_{S}" (shape input) (at 34.29 33.02 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 83f6338d-c042-420a-9471-2f026801cf02)
   )
-  (hierarchical_label "LED3-B" (shape output) (at 179.07 48.26 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 9637edc4-717f-4d84-b24a-a578da22d3c9)
-  )
-  (hierarchical_label "LED4-R" (shape output) (at 191.77 72.39 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 98fd3d37-8392-433b-a987-3e2b26ea8513)
-  )
   (hierarchical_label "LED8-B" (shape output) (at 115.57 72.39 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c1514d1a-4a1d-43a9-a993-758e9f6a9a12)
+    (uuid a4ccc4a7-a4df-4121-a7cd-58e42aeef5dc)
+  )
+  (hierarchical_label "LED4-B" (shape output) (at 140.97 72.39 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d97ef4ce-d961-4b23-876b-b939000ee0cc)
   )
   (hierarchical_label "FI2C-SDA_{S}" (shape input) (at 34.29 35.56 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid e16bb42b-26ba-4716-b1b3-4f537d073167)
   )
-  (hierarchical_label "LED8-R" (shape output) (at 166.37 72.39 0) (fields_autoplaced)
+  (hierarchical_label "LED4-G" (shape output) (at 128.27 48.26 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid e76de836-049a-49d8-846c-3936a0828299)
+    (uuid eab7a894-2e7c-45bd-824c-c80a0dd090a2)
   )
-  (hierarchical_label "LED4-B" (shape output) (at 140.97 72.39 0) (fields_autoplaced)
+  (hierarchical_label "LED4-R" (shape output) (at 191.77 72.39 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid f9794d0c-cdf9-464a-b8a8-5c278c19c4fa)
+    (uuid edbe8ec9-3bd4-486b-9edd-e71b6a60ae50)
   )
 
   (netclass_flag "" (length 2.54) (shape round) (at 71.12 64.77 180) (fields_autoplaced)
@@ -1313,7 +1313,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 134.62 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 04841a76-b5ce-4f4e-99a6-85bf1d5bc749)
-    (property "Reference" "R510" (at 133.35 72.898 0)
+    (property "Reference" "R93" (at 133.35 72.898 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 133.35 74.676 0)
@@ -1333,7 +1333,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R510") (unit 1)
+          (reference "R93") (unit 1)
         )
       )
     )
@@ -1342,7 +1342,7 @@
   (symbol (lib_id "Daxxn_IC:PCA9634_TSSOP20") (at 45.72 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0ac24b5f-a492-4727-b09a-6441a395b376)
-    (property "Reference" "U501" (at 45.974 27.432 0)
+    (property "Reference" "U11" (at 45.974 27.432 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PCA9634_TSSOP20" (at 45.974 29.21 0)
@@ -1383,7 +1383,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "U501") (unit 1)
+          (reference "U11") (unit 1)
         )
       )
     )
@@ -1392,7 +1392,7 @@
   (symbol (lib_id "power:VDD") (at 20.32 43.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 13800472-7bfe-49d3-942d-a0e640386362)
-    (property "Reference" "#PWR0130" (at 20.32 46.99 0)
+    (property "Reference" "#PWR089" (at 20.32 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 20.32 39.37 0)
@@ -1408,7 +1408,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "#PWR0130") (unit 1)
+          (reference "#PWR089") (unit 1)
         )
       )
     )
@@ -1417,7 +1417,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 176.53 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 226bf123-59d9-40e7-84ef-cf53dc241498)
-    (property "Reference" "Q504" (at 179.07 54.61 0)
+    (property "Reference" "Q23" (at 179.07 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 179.07 52.07 0)
@@ -1441,7 +1441,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q504") (unit 1)
+          (reference "Q23") (unit 1)
         )
       )
     )
@@ -1450,7 +1450,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 172.72 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3204d7a2-a7cb-4548-a9df-e867daed9ebe)
-    (property "Reference" "R504" (at 171.45 48.768 0)
+    (property "Reference" "R87" (at 171.45 48.768 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 171.45 50.546 0)
@@ -1470,7 +1470,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R504") (unit 1)
+          (reference "R87") (unit 1)
         )
       )
     )
@@ -1479,7 +1479,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 138.43 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32d04985-6ea0-438a-af4d-e6b450d4e54f)
-    (property "Reference" "Q506" (at 140.97 78.74 0)
+    (property "Reference" "Q25" (at 140.97 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 140.97 76.2 0)
@@ -1503,7 +1503,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q506") (unit 1)
+          (reference "Q25") (unit 1)
         )
       )
     )
@@ -1512,7 +1512,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 134.62 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3398e349-04cc-4302-926e-2957af5da2c6)
-    (property "Reference" "R514" (at 133.35 80.518 0)
+    (property "Reference" "R97" (at 133.35 80.518 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 133.35 82.296 0)
@@ -1532,7 +1532,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R514") (unit 1)
+          (reference "R97") (unit 1)
         )
       )
     )
@@ -1541,7 +1541,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 96.52 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3fcc6e94-2410-4178-b2d5-0f166d2f4f28)
-    (property "Reference" "R505" (at 95.25 56.388 0)
+    (property "Reference" "R88" (at 95.25 56.388 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 95.25 58.166 0)
@@ -1561,7 +1561,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R505") (unit 1)
+          (reference "R88") (unit 1)
         )
       )
     )
@@ -1570,7 +1570,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 189.23 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4ae93fd1-ee8c-4fea-af83-c66f433c739f)
-    (property "Reference" "Q508" (at 191.77 78.74 0)
+    (property "Reference" "Q27" (at 191.77 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 191.77 76.2 0)
@@ -1594,7 +1594,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q508") (unit 1)
+          (reference "Q27") (unit 1)
         )
       )
     )
@@ -1603,7 +1603,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 125.73 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4b553f90-1704-4974-82f6-5b4b90ddc650)
-    (property "Reference" "Q502" (at 128.27 54.61 0)
+    (property "Reference" "Q21" (at 128.27 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 128.27 52.07 0)
@@ -1627,7 +1627,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q502") (unit 1)
+          (reference "Q21") (unit 1)
         )
       )
     )
@@ -1636,7 +1636,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 185.42 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4e5fc217-c5c5-4bdb-a6c3-2aef07fee36f)
-    (property "Reference" "R516" (at 184.15 80.518 0)
+    (property "Reference" "R99" (at 184.15 80.518 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 184.15 82.296 0)
@@ -1656,7 +1656,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R516") (unit 1)
+          (reference "R99") (unit 1)
         )
       )
     )
@@ -1665,7 +1665,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 121.92 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5569e73d-c487-4665-b865-004a53ccd24f)
-    (property "Reference" "R506" (at 120.65 56.388 0)
+    (property "Reference" "R89" (at 120.65 56.388 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 120.65 58.166 0)
@@ -1685,7 +1685,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R506") (unit 1)
+          (reference "R89") (unit 1)
         )
       )
     )
@@ -1694,7 +1694,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 185.42 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 62672555-813a-44e1-a7c5-538ed1038939)
-    (property "Reference" "R512" (at 184.15 72.898 0)
+    (property "Reference" "R95" (at 184.15 72.898 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 184.15 74.676 0)
@@ -1714,7 +1714,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R512") (unit 1)
+          (reference "R95") (unit 1)
         )
       )
     )
@@ -1723,7 +1723,7 @@
   (symbol (lib_id "power:GND") (at 190.5 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7259b64f-db60-46ce-bc57-ff2b6dd582bd)
-    (property "Reference" "#PWR0504" (at 190.5 92.71 0)
+    (property "Reference" "#PWR091" (at 190.5 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 90.17 0)
@@ -1739,7 +1739,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "#PWR0504") (unit 1)
+          (reference "#PWR091") (unit 1)
         )
       )
     )
@@ -1748,7 +1748,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 160.02 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 802e28c4-91e8-4c0a-afe7-7e19ac8a82ff)
-    (property "Reference" "R511" (at 158.75 72.898 0)
+    (property "Reference" "R94" (at 158.75 72.898 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 158.75 74.676 0)
@@ -1768,7 +1768,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R511") (unit 1)
+          (reference "R94") (unit 1)
         )
       )
     )
@@ -1777,7 +1777,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 151.13 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8c55fe35-9281-47e6-8fd3-51cb00e16774)
-    (property "Reference" "Q503" (at 153.67 54.61 0)
+    (property "Reference" "Q22" (at 153.67 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 153.67 52.07 0)
@@ -1801,7 +1801,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q503") (unit 1)
+          (reference "Q22") (unit 1)
         )
       )
     )
@@ -1810,7 +1810,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 113.03 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 91751204-61dd-4979-a0c3-2e7a1a670ff3)
-    (property "Reference" "Q505" (at 115.57 78.74 0)
+    (property "Reference" "Q24" (at 115.57 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 115.57 76.2 0)
@@ -1834,7 +1834,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q505") (unit 1)
+          (reference "Q24") (unit 1)
         )
       )
     )
@@ -1843,7 +1843,7 @@
   (symbol (lib_id "power:GND") (at 45.72 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 91950760-76bc-4191-91ad-05690254dae6)
-    (property "Reference" "#PWR0503" (at 45.72 71.12 0)
+    (property "Reference" "#PWR090" (at 45.72 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 45.72 68.58 0)
@@ -1859,7 +1859,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "#PWR0503") (unit 1)
+          (reference "#PWR090") (unit 1)
         )
       )
     )
@@ -1868,7 +1868,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 172.72 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9bd75c40-7221-4153-a8fb-6393ce14f11f)
-    (property "Reference" "R508" (at 171.45 56.388 0)
+    (property "Reference" "R91" (at 171.45 56.388 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 171.45 58.166 0)
@@ -1888,7 +1888,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R508") (unit 1)
+          (reference "R91") (unit 1)
         )
       )
     )
@@ -1897,7 +1897,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 100.33 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a0a24471-e26e-4011-932c-2e6e0ae2910a)
-    (property "Reference" "Q501" (at 102.87 54.61 0)
+    (property "Reference" "Q20" (at 102.87 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 102.87 52.07 0)
@@ -1921,7 +1921,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q501") (unit 1)
+          (reference "Q20") (unit 1)
         )
       )
     )
@@ -1930,7 +1930,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 160.02 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a4d95bba-4985-4ade-b7fd-add53fafe8b4)
-    (property "Reference" "R515" (at 158.75 80.518 0)
+    (property "Reference" "R98" (at 158.75 80.518 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 158.75 82.296 0)
@@ -1950,7 +1950,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R515") (unit 1)
+          (reference "R98") (unit 1)
         )
       )
     )
@@ -1959,7 +1959,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 121.92 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a77451ef-4d4a-4c04-89c7-72a495be6c18)
-    (property "Reference" "R502" (at 120.65 48.768 0)
+    (property "Reference" "R85" (at 120.65 48.768 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 120.65 50.546 0)
@@ -1979,7 +1979,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R502") (unit 1)
+          (reference "R85") (unit 1)
         )
       )
     )
@@ -1988,7 +1988,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 109.22 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b21caf9d-6d7b-476c-af1a-eac8e697e329)
-    (property "Reference" "R513" (at 107.95 80.518 0)
+    (property "Reference" "R96" (at 107.95 80.518 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 107.95 82.296 0)
@@ -2008,7 +2008,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R513") (unit 1)
+          (reference "R96") (unit 1)
         )
       )
     )
@@ -2017,7 +2017,7 @@
   (symbol (lib_id "power:VDD") (at 45.72 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b3dadec6-f8bc-49f3-b1d5-d9ef59ffa12d)
-    (property "Reference" "#PWR0129" (at 45.72 30.48 0)
+    (property "Reference" "#PWR088" (at 45.72 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 45.72 22.86 0)
@@ -2033,7 +2033,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "#PWR0129") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -2042,7 +2042,7 @@
   (symbol (lib_id "Daxxn_Transistors:PMXB43UNEZ") (at 163.83 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bf22a74f-43f3-4f25-943d-6558d94a29c6)
-    (property "Reference" "Q507" (at 166.37 78.74 0)
+    (property "Reference" "Q26" (at 166.37 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PMXB43UNEZ" (at 166.37 76.2 0)
@@ -2066,7 +2066,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "Q507") (unit 1)
+          (reference "Q26") (unit 1)
         )
       )
     )
@@ -2075,7 +2075,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 109.22 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c82e3264-f05b-451d-874e-a9a3cabd8f40)
-    (property "Reference" "R509" (at 107.95 72.898 0)
+    (property "Reference" "R92" (at 107.95 72.898 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 107.95 74.676 0)
@@ -2095,7 +2095,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R509") (unit 1)
+          (reference "R92") (unit 1)
         )
       )
     )
@@ -2104,7 +2104,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 147.32 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d4f58606-1d19-4aa7-9cb8-77490ec0899f)
-    (property "Reference" "R507" (at 146.05 56.388 0)
+    (property "Reference" "R90" (at 146.05 56.388 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 146.05 58.166 0)
@@ -2124,7 +2124,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R507") (unit 1)
+          (reference "R90") (unit 1)
         )
       )
     )
@@ -2133,7 +2133,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 147.32 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d985bb77-23d0-4b83-860a-8f9ef6137884)
-    (property "Reference" "R503" (at 146.05 48.768 0)
+    (property "Reference" "R86" (at 146.05 48.768 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 146.05 50.546 0)
@@ -2153,7 +2153,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R503") (unit 1)
+          (reference "R86") (unit 1)
         )
       )
     )
@@ -2162,7 +2162,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 96.52 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dfeebe64-25df-43a9-a987-b871c6fb4761)
-    (property "Reference" "R501" (at 95.25 48.768 0)
+    (property "Reference" "R84" (at 95.25 48.768 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 95.25 50.546 0)
@@ -2182,7 +2182,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/0e37c9c0-d317-4196-88ac-cfb2db6cd68d"
-          (reference "R501") (unit 1)
+          (reference "R84") (unit 1)
         )
       )
     )

@@ -2354,7 +2354,7 @@
     (uuid 0b397084-3e2f-4b13-996e-3627b7748cb0)
   )
   (polyline (pts (xy 16.51 156.21) (xy 16.51 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 0b456675-f052-443d-91b1-5cb8c29639c6)
   )
 
@@ -2363,7 +2363,7 @@
     (uuid 0bd32deb-bb4f-4466-84da-d33be659fff4)
   )
   (polyline (pts (xy 22.86 161.29) (xy 30.48 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 0c8674c4-d718-4371-801a-a2073a85cbe7)
   )
 
@@ -2380,7 +2380,7 @@
     (uuid 0dc25610-f21f-4383-b330-50c52ecfed92)
   )
   (polyline (pts (xy 16.51 153.67) (xy 16.51 149.86))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 0e8ca494-6978-4e13-b2d2-f78eef42526d)
   )
 
@@ -2405,7 +2405,7 @@
     (uuid 133dada5-8fc1-4b0e-b062-f1299a94616a)
   )
   (polyline (pts (xy 22.86 168.91) (xy 22.86 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 13568619-b11d-437e-92b8-f6ef9296c720)
   )
 
@@ -2414,7 +2414,7 @@
     (uuid 1384e66d-f4fb-49bc-9220-d29d2d8ba5e1)
   )
   (polyline (pts (xy 16.51 168.91) (xy 22.86 168.91))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 13d9d77e-4fc1-48be-9738-615e2144ced8)
   )
 
@@ -2427,7 +2427,7 @@
     (uuid 15cceb97-84e5-4d56-8ce7-24591149a342)
   )
   (polyline (pts (xy 22.86 156.21) (xy 22.86 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 162831d0-581d-40b3-b9bd-a6751a32edea)
   )
 
@@ -2533,7 +2533,7 @@
     (uuid 2393b37e-5230-4580-a3da-d24622ae3283)
   )
   (polyline (pts (xy 30.48 158.75) (xy 104.14 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 2410fb64-e4a8-4904-87cd-a53430f9d1cc)
   )
 
@@ -2542,7 +2542,7 @@
     (uuid 26127fe0-4f96-42e4-84a7-41d86c6b4b70)
   )
   (polyline (pts (xy 104.14 158.75) (xy 104.14 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 266415ab-d3ec-4866-aabb-cdb875745a1d)
   )
 
@@ -2583,7 +2583,7 @@
     (uuid 2dbbba07-960f-4953-a202-06ae37b05a68)
   )
   (polyline (pts (xy 16.51 166.37) (xy 16.51 168.91))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 2e6d276d-4310-4571-80f7-61f7eb3ba8d9)
   )
 
@@ -2613,7 +2613,7 @@
     (uuid 32757553-17e4-472a-9efb-905b2283ce20)
   )
   (polyline (pts (xy 104.14 163.83) (xy 104.14 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 347c52ca-6038-45b4-9562-35cc625f9f49)
   )
 
@@ -2626,7 +2626,7 @@
     (uuid 34fe5e57-55af-425d-83c3-3170c509da90)
   )
   (polyline (pts (xy 30.48 156.21) (xy 104.14 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 352eb8ad-841a-4bc2-bc6f-789f4d0523af)
   )
 
@@ -2721,7 +2721,7 @@
     (uuid 41d511eb-2c78-4f49-a884-38996cf13cb6)
   )
   (polyline (pts (xy 30.48 158.75) (xy 22.86 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 41d9d148-118e-4141-bb33-423adc3d2e4f)
   )
 
@@ -2734,7 +2734,7 @@
     (uuid 42e27995-da69-4faa-b4a1-f6fd39215d6f)
   )
   (polyline (pts (xy 16.51 149.86) (xy 104.14 149.86))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 43444e9a-bae9-40cf-9b81-319a03f956d5)
   )
 
@@ -2809,11 +2809,11 @@
     (uuid 5763eba8-a033-42c5-a456-d38c525bffa6)
   )
   (polyline (pts (xy 30.48 153.67) (xy 30.48 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 57655cd4-aa3f-4540-981d-319b93748c9b)
   )
   (polyline (pts (xy 16.51 163.83) (xy 16.51 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 58f72c4a-6a0e-48ce-933a-362d1f74e4da)
   )
 
@@ -2826,7 +2826,7 @@
     (uuid 5aa3164f-c5bc-4c1b-ad8c-7215ab96423e)
   )
   (polyline (pts (xy 16.51 153.67) (xy 22.86 153.67))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 5af4cb24-9978-4619-bbcd-74f2d7e63961)
   )
 
@@ -2835,7 +2835,7 @@
     (uuid 5bac9f0d-72e9-4b6f-8c01-31749b92a3dd)
   )
   (polyline (pts (xy 22.86 153.67) (xy 30.48 153.67))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 5cadd4c9-ee6a-4a57-aab1-3e71af44aef1)
   )
 
@@ -2848,7 +2848,7 @@
     (uuid 5f6bef9c-acb8-4536-8df4-d016b4fd8b00)
   )
   (polyline (pts (xy 104.14 168.91) (xy 104.14 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 6021ae75-2325-4527-9532-0aec3a941e9b)
   )
   (polyline (pts (xy 97.79 53.34) (xy 97.79 57.15))
@@ -2856,7 +2856,7 @@
     (uuid 612adff9-382e-4eef-8337-7f20a321deea)
   )
   (polyline (pts (xy 16.51 166.37) (xy 22.86 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 614e6fc4-8386-48f6-bfa1-3f7c5b7f7440)
   )
   (polyline (pts (xy 144.78 16.51) (xy 144.78 20.32))
@@ -2918,7 +2918,7 @@
     (uuid 6a9fdaf5-ca76-4e27-9f5a-47979a32c813)
   )
   (polyline (pts (xy 29.21 168.91) (xy 104.14 168.91))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 6b6dd478-78b5-4012-96a6-de7f75e0a6d4)
   )
   (polyline (pts (xy 279.4 57.15) (xy 97.79 57.15))
@@ -3001,7 +3001,7 @@
     (uuid 78d42d36-01e1-44e0-94f7-cc309be0b109)
   )
   (polyline (pts (xy 22.86 156.21) (xy 30.48 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 78f2bb8e-e235-4ce6-94eb-9cbaa1029e87)
   )
 
@@ -3030,7 +3030,7 @@
     (uuid 7c9d7721-f5ca-4ec4-95d6-671d6cc9bad4)
   )
   (polyline (pts (xy 22.86 163.83) (xy 22.86 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 7d8f2dd1-5fec-4eb4-a3d2-b24a5edcbc58)
   )
 
@@ -3048,7 +3048,7 @@
     (uuid 7ff6c21d-76ed-45bf-a9cc-6bafb46bd699)
   )
   (polyline (pts (xy 104.14 166.37) (xy 104.14 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 7ff786cf-7778-4f2d-a506-2b77645f7c14)
   )
 
@@ -3093,7 +3093,7 @@
     (uuid 8715a77d-8a08-425b-bdeb-3dc892dc1dda)
   )
   (polyline (pts (xy 22.86 166.37) (xy 22.86 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 874c9327-118d-486b-ac31-346cb8eec141)
   )
 
@@ -3102,7 +3102,7 @@
     (uuid 87885cd5-d701-4f17-897a-9e2aebd6ecb5)
   )
   (polyline (pts (xy 30.48 166.37) (xy 30.48 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 87ab63b8-222b-48f0-b0f9-d4e2271a143f)
   )
 
@@ -3148,7 +3148,7 @@
     (uuid 8fda3798-d029-4a0a-9912-9dd886bbcbd7)
   )
   (polyline (pts (xy 22.86 153.67) (xy 22.86 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 900b2245-9026-4bd3-8b01-3e4cf218240c)
   )
 
@@ -3165,7 +3165,7 @@
     (uuid 90af1703-6e39-43b9-8532-a9aca1a12468)
   )
   (polyline (pts (xy 22.86 166.37) (xy 30.48 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 90c15062-6006-4428-bd7e-95074481d057)
   )
 
@@ -3174,7 +3174,7 @@
     (uuid 9172c72c-172b-4b71-a9c4-1fc80755cd1f)
   )
   (polyline (pts (xy 16.51 163.83) (xy 22.86 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 91983089-0785-48ec-a499-42c509c89e8f)
   )
 
@@ -3238,7 +3238,7 @@
     (uuid 99d32511-98bc-4617-b3b0-2bd118c44dd5)
   )
   (polyline (pts (xy 104.14 156.21) (xy 104.14 153.67))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid 9b727de1-caf5-4e03-b1c0-2cbb68f5e654)
   )
 
@@ -3267,7 +3267,7 @@
     (uuid 9fd03000-1a5a-4d6c-b5d8-6a7175a29525)
   )
   (polyline (pts (xy 16.51 161.29) (xy 22.86 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid a157bc59-f87e-444a-9202-571bfe47cb50)
   )
 
@@ -3296,7 +3296,7 @@
     (uuid a3aa3a16-2c76-41aa-b7b9-418201710782)
   )
   (polyline (pts (xy 30.48 161.29) (xy 104.14 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid a3d37b76-0ee2-4318-a89b-71d6e25781b1)
   )
 
@@ -3309,7 +3309,7 @@
     (uuid a4190fd5-aedc-4a96-ab6c-8185a99b05d7)
   )
   (polyline (pts (xy 30.48 156.21) (xy 30.48 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid a44fe9a2-8c9c-4e4f-85c7-5a0b82d9c8d2)
   )
 
@@ -3327,7 +3327,7 @@
     (uuid a80d8788-da15-481a-9ed5-07efb76988a7)
   )
   (polyline (pts (xy 30.48 168.91) (xy 30.48 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid a8943896-8f59-40ae-a250-d99bc15ec6eb)
   )
 
@@ -3340,7 +3340,7 @@
     (uuid aad5c305-142b-411f-a1db-312e301883c4)
   )
   (polyline (pts (xy 16.51 153.67) (xy 16.51 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid abdd41b3-17ea-4dc1-8d8b-53f34468f624)
   )
   (polyline (pts (xy 97.79 99.06) (xy 52.07 99.06))
@@ -3357,7 +3357,7 @@
     (uuid ad66d122-1420-46ba-ade1-83f7cc58ff85)
   )
   (polyline (pts (xy 30.48 163.83) (xy 30.48 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid adc0fbac-3982-4092-a886-ab047445140d)
   )
 
@@ -3390,7 +3390,7 @@
     (uuid b222ba1d-e853-462a-9121-6fbfcac744f9)
   )
   (polyline (pts (xy 30.48 166.37) (xy 104.14 166.37))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid b241c129-b212-41a1-b11f-0e5764e657cf)
   )
 
@@ -3420,11 +3420,11 @@
     (uuid b7014a4d-eed4-4c65-b684-0ec30849afa7)
   )
   (polyline (pts (xy 30.48 153.67) (xy 104.14 153.67))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid b7459677-6f18-4707-a638-e613b007ff60)
   )
   (polyline (pts (xy 22.86 158.75) (xy 16.51 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid b7dc7a8a-1808-4020-bbca-962bd95f52bb)
   )
 
@@ -3470,7 +3470,7 @@
     (uuid be4c0b85-4d34-4afb-90a9-3556e7fe0049)
   )
   (polyline (pts (xy 104.14 161.29) (xy 104.14 158.75))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid bf1ffb44-6f37-4762-96f9-6a97846cf1af)
   )
 
@@ -3540,7 +3540,7 @@
     (uuid c8b36af5-e583-4368-8b2d-a45887f90769)
   )
   (polyline (pts (xy 16.51 158.75) (xy 16.51 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid c8dd0d77-a9cc-457a-9137-b1525debbad2)
   )
 
@@ -3583,11 +3583,11 @@
     (uuid cd8a939e-4fc3-42ee-ae0d-969fa903fbc4)
   )
   (polyline (pts (xy 16.51 156.21) (xy 22.86 156.21))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid cd8d75f5-faae-4884-b746-6f3aedbb940d)
   )
   (polyline (pts (xy 30.48 158.75) (xy 30.48 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid cfe7021d-d35d-43ff-8b43-108fc18a1011)
   )
 
@@ -3653,7 +3653,7 @@
     (uuid dcc4d384-ec44-479e-a779-8d1482cd7710)
   )
   (polyline (pts (xy 22.86 163.83) (xy 30.48 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid dcc9beb1-4199-4113-a2d6-4e6d2a1c94d5)
   )
 
@@ -3743,7 +3743,7 @@
     (uuid eca24e48-b7e9-4a76-8bbb-f2e955b7e642)
   )
   (polyline (pts (xy 16.51 161.29) (xy 16.51 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid ecf873e1-d86d-46ec-8869-7f55a6b387a2)
   )
 
@@ -3814,7 +3814,7 @@
     (uuid f90a48dc-1daa-4473-a10f-53d62b5acfe7)
   )
   (polyline (pts (xy 22.86 168.91) (xy 29.21 168.91))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid fa2f2835-adb3-4dcb-9590-2245a835169e)
   )
 
@@ -3823,7 +3823,7 @@
     (uuid fa4c624b-383f-467a-9ff4-e51e3ae6d273)
   )
   (polyline (pts (xy 104.14 149.86) (xy 104.14 153.67))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid fae95366-ee87-484e-b718-a162fdefe303)
   )
 
@@ -3832,7 +3832,7 @@
     (uuid fbd9a0a8-08f1-4386-9b93-37ca265a51ad)
   )
   (polyline (pts (xy 22.86 158.75) (xy 22.86 161.29))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid fc38f19e-b712-431b-879d-d6ad1959d8f2)
   )
 
@@ -3841,7 +3841,7 @@
     (uuid fdac017b-2c78-48f6-be3f-45b103f011a7)
   )
   (polyline (pts (xy 30.48 163.83) (xy 104.14 163.83))
-    (stroke (width 0) (type solid))
+    (stroke (width 0.1) (type solid))
     (uuid fe84f6e0-c9d2-4974-9978-df5376ea5e46)
   )
 
@@ -3854,23 +3854,23 @@
     (uuid ff2dfdb8-e9e4-4b78-93ea-cb3f3c8ec623)
   )
 
-  (text "Vdrive" (at 22.86 158.75 0)
+  (text "Vdrive" (at 22.606 158.496 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 00f6e221-ec1d-466e-8c35-95c4c04c3b0a)
   )
-  (text "+3.3V_{DC}" (at 30.48 166.37 0)
+  (text "+3.3V_{DC}" (at 30.226 166.116 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 05e71621-2fb7-40bd-9bee-909f6e6f11cf)
   )
-  (text "VAA" (at 22.86 163.83 0)
+  (text "VAA" (at 22.606 163.576 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 1088fcab-6e42-4dc2-82f2-0a6ce20fae41)
   )
-  (text "+3.3V_{DC}" (at 30.48 168.91 0)
+  (text "+3.3V_{DC}" (at 30.226 168.656 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 16c1ff19-5203-4cb2-ad48-1b35823c79b6)
   )
-  (text "+12V_{DC}" (at 30.48 158.75 0)
+  (text "+12V_{DC}" (at 30.226 158.496 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 2e596fd1-79e5-4c61-af7d-39e4f290cd2d)
   )
@@ -3878,20 +3878,20 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 412ed966-14f7-4481-b64a-ee02782871cc)
   )
-  (text "VDD" (at 22.86 166.37 0)
+  (text "VDD" (at 22.606 166.116 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 41d7f859-d438-47d0-b228-b5121f4bc2ff)
   )
   (text "Main power rail from external 200_{W} power brick."
-    (at 31.75 156.21 0)
+    (at 31.75 155.956 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 59566b62-5c6f-4e8f-845a-000b70712684)
   )
-  (text "VDDA" (at 22.86 168.91 0)
+  (text "VDDA" (at 22.606 168.656 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6152d58e-1ada-497a-ab85-560399fc9ade)
   )
-  (text "Switched power for LED strips." (at 31.75 158.75 0)
+  (text "Switched power for LED strips." (at 31.75 158.496 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 629b2d2a-9897-42c8-a6c4-3aa90a26c5e3)
   )
@@ -3908,11 +3908,11 @@
     (uuid 877b43f2-e586-4e84-b222-19255bd821fe)
   )
   (text "3.3v supply for the audio ADC and analog front end."
-    (at 31.75 163.83 0)
+    (at 31.75 163.576 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9af7037d-f1b6-4ba5-9516-2f97074c6153)
   )
-  (text "+5V_{DC}" (at 30.48 161.29 0)
+  (text "+5V_{DC}" (at 30.226 161.036 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid a40b696c-5959-4cf3-87c2-33a1de367567)
   )
@@ -3920,7 +3920,7 @@
     (effects (font (size 2 2)) (justify left bottom))
     (uuid abfee153-6564-4769-a472-2e05ec52f143)
   )
-  (text "VCC" (at 22.86 161.29 0)
+  (text "VCC" (at 22.606 161.036 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid acb1210a-9bd5-48a1-8718-4feb78cf844f)
   )
@@ -3928,21 +3928,21 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ad4c3099-1f05-4e16-aa7b-9276b0b37e18)
   )
-  (text "+12V_{DC}" (at 30.48 156.21 0)
+  (text "+12V_{DC}" (at 30.226 155.956 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid adc6a1be-42c4-4ad1-a629-c4c53dbe5919)
   )
-  (text "+12V" (at 22.86 156.21 0)
+  (text "+12V" (at 22.606 155.956 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid be078dba-cc91-4233-bf03-0a5f2562b4fc)
   )
   (text "Filtered analog supply, used for the current monitors and STM32 ADCs."
-    (at 31.75 168.91 0)
+    (at 31.75 168.656 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c1e0a551-732e-497b-b67f-778538e7869e)
   )
   (text "5v supply for internal digital circuitry and LCD screen."
-    (at 31.75 161.29 0)
+    (at 31.75 161.036 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid cb317311-671a-4ea1-a6a1-2ca293c8549a)
   )
@@ -3954,11 +3954,11 @@
     (effects (font (size 2 2)) (justify left bottom))
     (uuid e2260907-3242-4a2c-8214-54471dc337bf)
   )
-  (text "Main digital supply." (at 31.75 166.37 0)
+  (text "Main digital supply." (at 31.75 166.116 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid eedb7522-b14f-4217-a132-f3afe80e70c2)
   )
-  (text "+3.3V_{DC}" (at 30.48 163.83 0)
+  (text "+3.3V_{DC}" (at 30.226 163.576 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid f992638a-ce8b-4fbf-9196-6156f6cebe24)
   )
@@ -4004,7 +4004,7 @@
   (symbol (lib_id "Device:C_Small") (at 90.17 33.02 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0020f2a8-e5be-4639-a7c2-ebaf20e0360b)
-    (property "Reference" "C1010" (at 89.662 30.226 90)
+    (property "Reference" "C18" (at 89.662 30.226 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10nF" (at 90.932 32.004 90)
@@ -4024,7 +4024,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1010") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -4033,7 +4033,7 @@
   (symbol (lib_id "power:VDDA") (at 76.2 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 015032fc-4760-4899-a152-f379ba59d0f4)
-    (property "Reference" "#PWR01003" (at 76.2 113.03 0)
+    (property "Reference" "#PWR048" (at 76.2 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDDA" (at 76.2 105.41 0)
@@ -4049,7 +4049,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01003") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -4058,7 +4058,7 @@
   (symbol (lib_id "Device:C_Small") (at 156.21 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0188ba07-165d-4964-b54d-b1a8581d5906)
-    (property "Reference" "C1012" (at 156.21 31.496 0)
+    (property "Reference" "C20" (at 156.21 31.496 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 156.21 34.544 0)
@@ -4078,7 +4078,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1012") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -4087,7 +4087,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 177.8 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0564fb65-4641-48b0-81bf-8deca98634ec)
-    (property "Reference" "R1003" (at 179.07 31.242 0)
+    (property "Reference" "R15" (at 179.07 31.242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100K" (at 179.07 33.02 0)
@@ -4107,7 +4107,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1003") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -4116,7 +4116,7 @@
   (symbol (lib_id "Device:C_Small") (at 25.4 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0d1830ce-d705-452a-bd79-872fd1abb5e2)
-    (property "Reference" "C1030" (at 25.654 135.636 0)
+    (property "Reference" "C40" (at 25.654 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 25.654 138.938 0)
@@ -4136,7 +4136,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1030") (unit 1)
+          (reference "C40") (unit 1)
         )
       )
     )
@@ -4145,7 +4145,7 @@
   (symbol (lib_id "Device:L") (at 99.06 36.83 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 138338e6-0dd8-41b4-bb20-1a1d55c153ca)
-    (property "Reference" "L1003" (at 99.06 33.274 90)
+    (property "Reference" "L3" (at 99.06 33.274 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22uH" (at 99.06 35.052 90)
@@ -4165,7 +4165,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "L1003") (unit 1)
+          (reference "L3") (unit 1)
         )
       )
     )
@@ -4174,7 +4174,7 @@
   (symbol (lib_id "Device:C_Small") (at 48.26 33.02 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 17142b6a-920c-4cbb-ad1c-9a1a07ffac00)
-    (property "Reference" "C1009" (at 48.26 31.496 0)
+    (property "Reference" "C17" (at 48.26 31.496 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (at 48.26 34.544 0)
@@ -4194,7 +4194,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1009") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -4203,7 +4203,7 @@
   (symbol (lib_id "Device:C_Small") (at 36.83 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 177e2bff-be16-424d-b435-6a3950ab356e)
-    (property "Reference" "C1034" (at 37.084 135.636 0)
+    (property "Reference" "C41" (at 37.084 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 37.084 138.938 0)
@@ -4223,7 +4223,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1034") (unit 1)
+          (reference "C41") (unit 1)
         )
       )
     )
@@ -4232,7 +4232,7 @@
   (symbol (lib_id "Daxxn_Regulators:AP3401") (at 185.42 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 19191b17-de60-4cc7-8b22-563ba2681a14)
-    (property "Reference" "U1001" (at 185.42 22.606 0)
+    (property "Reference" "U2" (at 185.42 22.606 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AP3401" (at 185.42 24.384 0)
@@ -4257,7 +4257,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "U1001") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -4266,7 +4266,7 @@
   (symbol (lib_id "Device:C_Small") (at 128.27 40.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1abc2a0e-4580-4633-b1a2-f245a6e1e18b)
-    (property "Reference" "C1017" (at 128.27 39.116 0)
+    (property "Reference" "C25" (at 128.27 39.116 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 128.27 42.164 0)
@@ -4286,7 +4286,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1017") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -4295,7 +4295,7 @@
   (symbol (lib_id "power:GND") (at 140.97 93.98 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 21d9c1b5-2609-414f-bd10-46783c4e125e)
-    (property "Reference" "#PWR0136" (at 147.32 93.98 0)
+    (property "Reference" "#PWR046" (at 147.32 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.78 93.98 0)
@@ -4311,7 +4311,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR0136") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -4320,7 +4320,7 @@
   (symbol (lib_id "Device:C_Small") (at 74.93 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 241ff47b-e2da-4adf-8705-9c367d1bce4b)
-    (property "Reference" "C1040" (at 75.184 135.636 0)
+    (property "Reference" "C47" (at 75.184 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 75.184 138.938 0)
@@ -4340,7 +4340,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1040") (unit 1)
+          (reference "C47") (unit 1)
         )
       )
     )
@@ -4349,7 +4349,7 @@
   (symbol (lib_id "power:VDDA") (at 19.05 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2529c22b-2329-4d28-98a1-e2048d85401b)
-    (property "Reference" "#PWR0137" (at 19.05 71.12 0)
+    (property "Reference" "#PWR041" (at 19.05 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDDA" (at 19.05 63.5 0)
@@ -4365,7 +4365,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR0137") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -4374,7 +4374,7 @@
   (symbol (lib_id "power:GND") (at 76.2 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 26f2ee89-dbc6-4245-9319-00faba2e7fb7)
-    (property "Reference" "#PWR01007" (at 76.2 52.07 0)
+    (property "Reference" "#PWR037" (at 76.2 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 50.8 0)
@@ -4390,7 +4390,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01007") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -4399,7 +4399,7 @@
   (symbol (lib_id "Device:C_Small") (at 135.89 87.63 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 27e728bb-3e61-4689-8808-9c17c69c6b2c)
-    (property "Reference" "C1025" (at 135.89 86.106 0)
+    (property "Reference" "C35" (at 135.89 86.106 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4.7uF" (at 135.89 89.408 0)
@@ -4419,7 +4419,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1025") (unit 1)
+          (reference "C35") (unit 1)
         )
       )
     )
@@ -4428,7 +4428,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 166.37 72.39 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2bbfdc73-49b4-40fa-920e-8137594def25)
-    (property "Reference" "R1009" (at 165.1 71.882 0)
+    (property "Reference" "R20" (at 165.1 71.882 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "402K" (at 165.1 73.66 0)
@@ -4448,7 +4448,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1009") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -4457,7 +4457,7 @@
   (symbol (lib_id "Device:C_Small") (at 63.5 40.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2cbc70c1-a508-4de7-9a0d-0abd016233d6)
-    (property "Reference" "C1013" (at 63.5 39.116 0)
+    (property "Reference" "C21" (at 63.5 39.116 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "220nF" (at 63.5 42.418 0)
@@ -4477,7 +4477,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1013") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -4486,7 +4486,7 @@
   (symbol (lib_id "Daxxn_IC:INA4181") (at 19.05 77.47 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3254256c-6519-4739-8eb8-16dc53626683)
-    (property "Reference" "U701" (at 21.59 72.39 0)
+    (property "Reference" "U5" (at 21.59 72.39 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "INA4181 A2" (at 21.59 82.55 0)
@@ -4502,6 +4502,9 @@
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "SupplierPN" "296-49082-1-ND" (at 19.05 77.47 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Schematic" "" (at 19.05 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "10" (uuid 78a8868f-9075-43e2-999d-86090cf9c990))
@@ -4527,7 +4530,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "U701") (unit 5)
+          (reference "U5") (unit 5)
         )
       )
     )
@@ -4536,7 +4539,7 @@
   (symbol (lib_id "Device:C_Small") (at 55.88 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 330721ff-f5e8-47ae-b32b-304b2ed8edc8)
-    (property "Reference" "C1037" (at 56.134 135.636 0)
+    (property "Reference" "C44" (at 56.134 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 56.134 138.938 0)
@@ -4556,7 +4559,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1037") (unit 1)
+          (reference "C44") (unit 1)
         )
       )
     )
@@ -4565,7 +4568,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 54.61 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 33dd1cbe-ceda-4df6-a136-a1a82e11d412)
-    (property "Reference" "R1007" (at 55.88 40.132 0)
+    (property "Reference" "R18" (at 55.88 40.132 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "15K" (at 55.88 41.91 0)
@@ -4585,7 +4588,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1007") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -4594,7 +4597,7 @@
   (symbol (lib_id "Device:C_Small") (at 237.49 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3cd276a3-ac3c-45f2-850f-81f21e4e86ac)
-    (property "Reference" "C1003" (at 237.49 30.226 0)
+    (property "Reference" "C10" (at 237.49 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 237.49 33.274 0)
@@ -4614,7 +4617,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1003") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -4623,7 +4626,7 @@
   (symbol (lib_id "Device:C_Small") (at 63.5 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3fcb2d65-c13e-4e97-977d-ebd49229492b)
-    (property "Reference" "C1027" (at 63.754 114.046 0)
+    (property "Reference" "C37" (at 63.754 114.046 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 63.754 117.348 0)
@@ -4643,7 +4646,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1027") (unit 1)
+          (reference "C37") (unit 1)
         )
       )
     )
@@ -4652,7 +4655,7 @@
   (symbol (lib_id "Device:C_Small") (at 36.83 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4116067e-cd86-4049-9ffd-3c74b56de483)
-    (property "Reference" "C1020" (at 36.83 75.946 0)
+    (property "Reference" "C34" (at 36.83 75.946 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 36.83 78.994 0)
@@ -4672,7 +4675,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1020") (unit 1)
+          (reference "C34") (unit 1)
         )
       )
     )
@@ -4681,7 +4684,7 @@
   (symbol (lib_id "Device:C_Small") (at 109.22 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 41a2e0b3-437c-41a4-b7f5-77143446b452)
-    (property "Reference" "C13" (at 109.22 67.056 0)
+    (property "Reference" "C28" (at 109.22 67.056 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 109.22 70.358 0)
@@ -4707,7 +4710,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C13") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -4716,7 +4719,7 @@
   (symbol (lib_id "Device:D_Schottky_Small") (at 91.44 40.64 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4e57787d-6280-4452-a223-09771d9fe58f)
-    (property "Reference" "D1001" (at 92.71 39.37 90)
+    (property "Reference" "D1" (at 92.71 39.37 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SK36AHE3" (at 92.71 41.91 90)
@@ -4736,7 +4739,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "D1001") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -4745,7 +4748,7 @@
   (symbol (lib_id "Device:C_Small") (at 81.28 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 50da7e60-47b2-48a4-97b6-b8fe2875f725)
-    (property "Reference" "C1041" (at 81.534 135.636 0)
+    (property "Reference" "C48" (at 81.534 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 81.534 138.938 0)
@@ -4765,7 +4768,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1041") (unit 1)
+          (reference "C48") (unit 1)
         )
       )
     )
@@ -4774,7 +4777,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 25.4 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51a6d6da-ad0c-4ae8-88dd-849820f7f1c1)
-    (property "Reference" "C1006" (at 25.4 31.496 0)
+    (property "Reference" "C14" (at 25.4 31.496 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47uF" (at 25.4 34.798 0)
@@ -4794,7 +4797,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1006") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -4803,7 +4806,7 @@
   (symbol (lib_id "power:GND") (at 123.19 78.74 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 539b9d7c-594c-4261-a156-b7dc5878868b)
-    (property "Reference" "#PWR014" (at 123.19 85.09 0)
+    (property "Reference" "#PWR043" (at 123.19 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 123.19 82.55 0)
@@ -4819,7 +4822,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -4828,7 +4831,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 165.1 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5596d1c4-7bea-42c6-8f2b-a161601bf2ef)
-    (property "Reference" "R1002" (at 166.37 31.242 0)
+    (property "Reference" "R14" (at 166.37 31.242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100K" (at 166.37 33.02 0)
@@ -4848,7 +4851,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1002") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -4857,7 +4860,7 @@
   (symbol (lib_id "Device:L") (at 259.08 27.94 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 560d12da-a4a2-4ede-a718-7b7e8e631728)
-    (property "Reference" "L1004" (at 259.08 24.384 90)
+    (property "Reference" "L2" (at 259.08 24.384 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100nH" (at 259.08 26.162 90)
@@ -4877,7 +4880,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "L1004") (unit 1)
+          (reference "L2") (unit 1)
         )
       )
     )
@@ -4886,7 +4889,7 @@
   (symbol (lib_id "Device:C_Small") (at 58.42 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5b802156-d124-44c8-ac24-d9eea4b9d669)
-    (property "Reference" "C1026" (at 58.42 114.046 0)
+    (property "Reference" "C36" (at 58.42 114.046 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 58.42 117.348 0)
@@ -4906,7 +4909,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1026") (unit 1)
+          (reference "C36") (unit 1)
         )
       )
     )
@@ -4915,7 +4918,7 @@
   (symbol (lib_id "Device:C_Small") (at 229.87 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5c5e7a0d-84f7-4d4e-9975-754b5f7a6a1b)
-    (property "Reference" "C1002" (at 229.87 30.226 0)
+    (property "Reference" "C9" (at 229.87 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 229.87 33.274 0)
@@ -4935,7 +4938,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1002") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -4944,7 +4947,7 @@
   (symbol (lib_id "Device:C_Small") (at 105.41 68.58 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5df15a39-01dc-439f-9b7f-b8f175e3316e)
-    (property "Reference" "C1022" (at 105.156 66.802 0)
+    (property "Reference" "C27" (at 105.156 66.802 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 105.156 70.612 0)
@@ -4970,7 +4973,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1022") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -4979,7 +4982,7 @@
   (symbol (lib_id "Device:C_Small") (at 182.88 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f269f4e-d919-4dd1-a9b3-601306495a1b)
-    (property "Reference" "C1005" (at 182.88 67.056 0)
+    (property "Reference" "C30" (at 182.88 67.056 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF" (at 182.88 70.358 0)
@@ -5005,7 +5008,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1005") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -5014,7 +5017,7 @@
   (symbol (lib_id "power:VDD") (at 58.42 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f6aebcc-8ce9-4e77-b9de-95c77b1476e5)
-    (property "Reference" "#PWR06" (at 58.42 113.03 0)
+    (property "Reference" "#PWR047" (at 58.42 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 58.42 105.41 0)
@@ -5030,7 +5033,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -5039,7 +5042,7 @@
   (symbol (lib_id "Daxxn_IC:INA4181") (at 34.29 77.47 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f9488a5-1a46-4297-9437-9ed7c88729d0)
-    (property "Reference" "U702" (at 36.83 72.39 0)
+    (property "Reference" "U6" (at 36.83 72.39 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "INA4181 A2" (at 36.83 82.55 0)
@@ -5055,6 +5058,9 @@
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "SupplierPN" "296-49082-1-ND" (at 34.29 77.47 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Schematic" "" (at 34.29 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "10" (uuid 53021135-0960-4185-9dc3-abd75e363127))
@@ -5080,7 +5086,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "U702") (unit 5)
+          (reference "U6") (unit 5)
         )
       )
     )
@@ -5089,7 +5095,7 @@
   (symbol (lib_id "Device:C_Small") (at 190.5 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5fb5b21c-62d7-414c-8b80-5c3534b28fbf)
-    (property "Reference" "C5" (at 190.5 67.056 0)
+    (property "Reference" "C31" (at 190.5 67.056 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 190.5 70.358 0)
@@ -5115,7 +5121,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C5") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -5124,7 +5130,7 @@
   (symbol (lib_id "Device:C_Small") (at 210.82 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 61c81547-dd47-4caa-ab14-d2dfb41cd60c)
-    (property "Reference" "C1001" (at 210.82 30.226 0)
+    (property "Reference" "C8" (at 210.82 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22pF" (at 210.82 33.274 0)
@@ -5144,7 +5150,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1001") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -5153,7 +5159,7 @@
   (symbol (lib_id "power:VCC") (at 105.41 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6c100d4c-2d71-4d49-a76c-256fa51c369f)
-    (property "Reference" "#PWR0135" (at 105.41 67.31 0)
+    (property "Reference" "#PWR039" (at 105.41 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 105.41 59.69 0)
@@ -5169,7 +5175,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR0135") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -5178,7 +5184,7 @@
   (symbol (lib_id "power:+12V") (at 21.59 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6eecc080-9dd2-4623-aa71-01b19ec1329b)
-    (property "Reference" "#PWR01005" (at 21.59 31.75 0)
+    (property "Reference" "#PWR035" (at 21.59 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 21.59 24.13 0)
@@ -5194,7 +5200,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01005") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -5203,7 +5209,7 @@
   (symbol (lib_id "power:VDD") (at 270.51 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6efb02cb-aed6-429c-af06-f4533adb3c63)
-    (property "Reference" "#PWR01004" (at 270.51 30.48 0)
+    (property "Reference" "#PWR034" (at 270.51 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 270.51 22.86 0)
@@ -5219,7 +5225,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01004") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -5228,7 +5234,7 @@
   (symbol (lib_id "Device:L") (at 205.74 27.94 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 75271a1a-64c7-4094-84e6-6640e0ccb547)
-    (property "Reference" "L1001" (at 205.74 24.384 90)
+    (property "Reference" "L1" (at 205.74 24.384 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2.2uH" (at 205.74 26.162 90)
@@ -5248,7 +5254,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "L1001") (unit 1)
+          (reference "L1") (unit 1)
         )
       )
     )
@@ -5257,7 +5263,7 @@
   (symbol (lib_id "Device:C_Small") (at 254 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 77b7977e-7e4e-4bc4-8df8-835c7beeda15)
-    (property "Reference" "C1042" (at 254 30.226 0)
+    (property "Reference" "C12" (at 254 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF" (at 254 33.274 0)
@@ -5277,7 +5283,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1042") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -5286,7 +5292,7 @@
   (symbol (lib_id "Device:C_Small") (at 43.18 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7925d7ea-6d26-4aa9-bbd9-c41474a5eda4)
-    (property "Reference" "C1035" (at 43.434 135.636 0)
+    (property "Reference" "C42" (at 43.434 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 43.434 138.938 0)
@@ -5306,7 +5312,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1035") (unit 1)
+          (reference "C42") (unit 1)
         )
       )
     )
@@ -5315,7 +5321,7 @@
   (symbol (lib_id "Daxxn_Regulators:TPS7A94") (at 140.97 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 84c3238a-2b1a-4760-9b9c-71a9e7d539ea)
-    (property "Reference" "U1003" (at 140.97 60.706 0)
+    (property "Reference" "U4" (at 140.97 60.706 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TPS7A94" (at 140.97 62.484 0)
@@ -5344,7 +5350,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "U1003") (unit 1)
+          (reference "U4") (unit 1)
         )
       )
     )
@@ -5353,7 +5359,7 @@
   (symbol (lib_id "power:VAA") (at 208.28 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8dbe3d55-8875-4788-859f-208217bfc6b8)
-    (property "Reference" "#PWR07" (at 208.28 67.31 0)
+    (property "Reference" "#PWR040" (at 208.28 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VAA" (at 208.28 59.69 0)
@@ -5369,7 +5375,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -5378,7 +5384,7 @@
   (symbol (lib_id "power:VCC") (at 148.59 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8ecf4ac1-3117-45ed-8f8b-cbf3b941c9c8)
-    (property "Reference" "#PWR01002" (at 148.59 30.48 0)
+    (property "Reference" "#PWR033" (at 148.59 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 148.59 22.86 0)
@@ -5394,7 +5400,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01002") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -5403,7 +5409,7 @@
   (symbol (lib_id "power:GND") (at 63.5 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 90c1f8ad-eb40-44fc-8426-3962c9dcbb54)
-    (property "Reference" "#PWR01011" (at 63.5 127 0)
+    (property "Reference" "#PWR049" (at 63.5 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 63.5 124.46 0)
@@ -5419,7 +5425,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01011") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
     )
@@ -5428,7 +5434,7 @@
   (symbol (lib_id "power:GND") (at 19.05 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 96348172-7191-47f2-a334-25b95b868689)
-    (property "Reference" "#PWR01010" (at 19.05 95.25 0)
+    (property "Reference" "#PWR045" (at 19.05 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 19.05 92.71 0)
@@ -5444,7 +5450,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01010") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -5453,7 +5459,7 @@
   (symbol (lib_id "Device:C_Small") (at 172.72 68.58 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 964730e4-f3b5-4b22-be10-c2178aaa9f43)
-    (property "Reference" "C1023" (at 172.72 67.056 0)
+    (property "Reference" "C29" (at 172.72 67.056 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 172.72 70.358 0)
@@ -5479,7 +5485,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1023") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
     )
@@ -5488,7 +5494,7 @@
   (symbol (lib_id "Device:C_Small") (at 200.66 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 99456aba-0c69-4d34-8391-6a22612f5719)
-    (property "Reference" "C1024" (at 200.66 67.056 0)
+    (property "Reference" "C32" (at 200.66 67.056 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 200.66 70.358 0)
@@ -5514,7 +5520,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1024") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -5523,7 +5529,7 @@
   (symbol (lib_id "Device:C_Small") (at 81.28 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9b125cf5-3078-40df-9327-8f7e0c9fa6ba)
-    (property "Reference" "C1029" (at 81.28 119.126 0)
+    (property "Reference" "C39" (at 81.28 119.126 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 81.28 122.428 0)
@@ -5543,7 +5549,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1029") (unit 1)
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -5552,7 +5558,7 @@
   (symbol (lib_id "power:GND") (at 76.2 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c14a754-dfb2-426e-b8fd-ac0bd6fcaae0)
-    (property "Reference" "#PWR01012" (at 76.2 132.08 0)
+    (property "Reference" "#PWR050" (at 76.2 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 129.54 0)
@@ -5568,7 +5574,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01012") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
     )
@@ -5577,7 +5583,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 148.59 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c8f4c4f-1515-4c8d-8638-b112369d7247)
-    (property "Reference" "C1011" (at 148.59 31.496 0)
+    (property "Reference" "C19" (at 148.59 31.496 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 148.59 34.798 0)
@@ -5597,7 +5603,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1011") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
     )
@@ -5606,7 +5612,7 @@
   (symbol (lib_id "Daxxn_Device:L") (at 69.85 111.76 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a0342dca-bea8-4fdb-b4a5-7c8c7b071ed5)
-    (property "Reference" "L1" (at 68.834 110.998 0)
+    (property "Reference" "L5" (at 68.834 110.998 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nH" (at 70.866 110.998 0)
@@ -5632,7 +5638,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "L1") (unit 1)
+          (reference "L5") (unit 1)
         )
       )
     )
@@ -5641,7 +5647,7 @@
   (symbol (lib_id "Device:C_Small") (at 33.02 33.02 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a67f0dc2-0788-47b5-b6bf-40c87ef1ef5c)
-    (property "Reference" "C1007" (at 33.02 31.496 0)
+    (property "Reference" "C15" (at 33.02 31.496 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 33.02 34.544 0)
@@ -5661,7 +5667,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1007") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
     )
@@ -5670,7 +5676,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 81.28 111.76 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a7204c7d-e53f-4ed7-a50d-1b820015c781)
-    (property "Reference" "R1011" (at 81.28 107.95 90)
+    (property "Reference" "R24" (at 81.28 107.95 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47" (at 81.28 109.728 90)
@@ -5690,7 +5696,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1011") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -5699,7 +5705,7 @@
   (symbol (lib_id "power:GND") (at 25.4 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a86f1f39-8e4e-413c-90ca-07aab3b60a2a)
-    (property "Reference" "#PWR01015" (at 25.4 148.59 0)
+    (property "Reference" "#PWR052" (at 25.4 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 25.4 146.05 0)
@@ -5715,7 +5721,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01015") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -5724,7 +5730,7 @@
   (symbol (lib_id "power:GND") (at 200.66 85.09 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ad004ef7-023e-4b21-b73b-c7103c3cf87e)
-    (property "Reference" "#PWR0141" (at 200.66 91.44 0)
+    (property "Reference" "#PWR044" (at 200.66 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 88.9 0)
@@ -5740,7 +5746,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR0141") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -5749,7 +5755,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 123.19 76.2 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aef9900c-2df0-469a-b34a-a2b4162e1b50)
-    (property "Reference" "R13" (at 121.92 75.184 0)
+    (property "Reference" "R21" (at 121.92 75.184 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100K" (at 121.92 76.962 0)
@@ -5769,7 +5775,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R13") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -5778,7 +5784,7 @@
   (symbol (lib_id "Device:C_Small") (at 62.23 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af3eac4b-4c89-4f23-aea7-f79c921a78e2)
-    (property "Reference" "C1038" (at 62.484 135.636 0)
+    (property "Reference" "C45" (at 62.484 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 62.484 138.938 0)
@@ -5798,7 +5804,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1038") (unit 1)
+          (reference "C45") (unit 1)
         )
       )
     )
@@ -5807,7 +5813,7 @@
   (symbol (lib_id "Device:C_Small") (at 121.92 40.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b0dfe574-e6ef-4d2b-88cb-21b8c87eaade)
-    (property "Reference" "C1016" (at 121.92 39.116 0)
+    (property "Reference" "C24" (at 121.92 39.116 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 121.92 42.164 0)
@@ -5827,7 +5833,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1016") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -5836,7 +5842,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 135.89 93.98 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b12bd13f-2bfa-4455-84cf-7aa742eebea2)
-    (property "Reference" "R11" (at 135.89 96.266 90)
+    (property "Reference" "R23" (at 135.89 96.266 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "20K" (at 135.89 98.044 90)
@@ -5856,7 +5862,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R11") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -5865,7 +5871,7 @@
   (symbol (lib_id "Device:C_Small") (at 76.2 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b380ce86-efbe-4306-84db-677a6b9053c4)
-    (property "Reference" "C1028" (at 76.2 119.126 0)
+    (property "Reference" "C38" (at 76.2 119.126 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 76.2 122.428 0)
@@ -5885,7 +5891,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1028") (unit 1)
+          (reference "C38") (unit 1)
         )
       )
     )
@@ -5894,7 +5900,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 166.37 80.01 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bb11ded3-8938-41a8-b556-c9928a9dde76)
-    (property "Reference" "R1010" (at 165.1 78.994 0)
+    (property "Reference" "R22" (at 165.1 78.994 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "33K" (at 165.1 80.772 0)
@@ -5914,7 +5920,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1010") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -5923,7 +5929,7 @@
   (symbol (lib_id "Device:C_Small") (at 68.58 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bd92c0e1-fd29-4e5c-b641-20b3d7b2648b)
-    (property "Reference" "C1039" (at 68.834 135.636 0)
+    (property "Reference" "C46" (at 68.834 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 68.834 138.938 0)
@@ -5943,7 +5949,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1039") (unit 1)
+          (reference "C46") (unit 1)
         )
       )
     )
@@ -5952,7 +5958,7 @@
   (symbol (lib_id "Device:C_Small") (at 49.53 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c1c8fdc0-e257-4c5f-aed8-ea385b49e4cc)
-    (property "Reference" "C1036" (at 49.784 135.636 0)
+    (property "Reference" "C43" (at 49.784 135.636 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 49.784 138.938 0)
@@ -5972,7 +5978,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1036") (unit 1)
+          (reference "C43") (unit 1)
         )
       )
     )
@@ -5981,7 +5987,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 218.44 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c4c06b7d-5582-4d55-b1b9-a7a429059c65)
-    (property "Reference" "R1004" (at 219.71 31.242 0)
+    (property "Reference" "R16" (at 219.71 31.242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "430K" (at 219.71 33.02 0)
@@ -6001,7 +6007,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1004") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -6010,7 +6016,7 @@
   (symbol (lib_id "power:VDD") (at 25.4 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c4c7f6c3-2fd5-4d42-9d99-78e62541e998)
-    (property "Reference" "#PWR01013" (at 25.4 135.89 0)
+    (property "Reference" "#PWR051" (at 25.4 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 25.4 128.27 0)
@@ -6026,7 +6032,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01013") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
     )
@@ -6035,7 +6041,7 @@
   (symbol (lib_id "Device:C_Small") (at 115.57 40.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c5cd8812-723c-4ed9-8c07-e92c06ced69e)
-    (property "Reference" "C1015" (at 115.57 39.116 0)
+    (property "Reference" "C23" (at 115.57 39.116 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 115.57 42.164 0)
@@ -6055,7 +6061,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1015") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -6064,7 +6070,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 218.44 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d15ee3ee-091a-44f2-aad7-88b3a0a707b9)
-    (property "Reference" "R1006" (at 219.71 38.862 0)
+    (property "Reference" "R17" (at 219.71 38.862 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100K" (at 219.71 40.64 0)
@@ -6084,7 +6090,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R1006") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -6093,7 +6099,7 @@
   (symbol (lib_id "Daxxn_STMicros:STM32F412VET3") (at 92.71 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d2f64933-cf91-4ce7-94aa-cacce47dab8e)
-    (property "Reference" "STM101" (at 92.71 107.95 0)
+    (property "Reference" "STM1" (at 92.71 107.95 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "STM32F412VET3" (at 92.71 105.41 0)
@@ -6217,7 +6223,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "STM101") (unit 1)
+          (reference "STM1") (unit 1)
         )
       )
     )
@@ -6226,7 +6232,7 @@
   (symbol (lib_id "Device:C_Small") (at 40.64 33.02 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d33224d4-ef7e-450f-bb67-eb5b0d36dc45)
-    (property "Reference" "C1008" (at 40.64 31.496 0)
+    (property "Reference" "C16" (at 40.64 31.496 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 40.64 34.544 0)
@@ -6246,7 +6252,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1008") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -6255,7 +6261,7 @@
   (symbol (lib_id "Device:C_Small") (at 264.16 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dda9fc37-9088-48e7-a1bd-b121bb575e78)
-    (property "Reference" "C1043" (at 264.16 30.226 0)
+    (property "Reference" "C13" (at 264.16 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 264.16 33.274 0)
@@ -6275,7 +6281,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1043") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -6284,7 +6290,7 @@
   (symbol (lib_id "Device:C_Small") (at 21.59 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e14777df-e404-4455-86f9-3fe345ccd6f6)
-    (property "Reference" "C1019" (at 21.59 75.946 0)
+    (property "Reference" "C33" (at 21.59 75.946 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 21.59 78.994 0)
@@ -6304,7 +6310,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1019") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
     )
@@ -6313,7 +6319,7 @@
   (symbol (lib_id "Device:C_Small") (at 245.11 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e5ee7903-8e00-4f17-ac98-d587e6ea4d9b)
-    (property "Reference" "C1004" (at 245.11 30.226 0)
+    (property "Reference" "C11" (at 245.11 30.226 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF" (at 245.11 33.274 0)
@@ -6333,7 +6339,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1004") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -6342,7 +6348,7 @@
   (symbol (lib_id "Daxxn_Regulators:LM22673-SOIC") (at 76.2 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e76385e2-24bc-46f7-a81c-1de808eee51c)
-    (property "Reference" "U1002" (at 76.2 22.606 0)
+    (property "Reference" "U3" (at 76.2 22.606 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LM22673-5V" (at 76.2 25.654 0)
@@ -6374,7 +6380,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "U1002") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -6383,7 +6389,7 @@
   (symbol (lib_id "Device:R_Potentiometer_Small") (at 132.08 88.9 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e9e4617b-6c22-4ed0-b0cd-c197b343bb46)
-    (property "Reference" "RV1001" (at 131.064 85.344 0)
+    (property "Reference" "RV1" (at 131.064 85.344 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7K" (at 130.81 87.122 0)
@@ -6404,7 +6410,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "RV1001") (unit 1)
+          (reference "RV1") (unit 1)
         )
       )
     )
@@ -6413,7 +6419,7 @@
   (symbol (lib_id "Device:C_Small") (at 107.95 40.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ea7ba3b3-a48a-4505-923f-d671d0a775df)
-    (property "Reference" "C1014" (at 107.95 39.116 0)
+    (property "Reference" "C22" (at 107.95 39.116 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (at 107.95 42.164 0)
@@ -6433,7 +6439,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1014") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -6442,7 +6448,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 135.89 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ef30c077-c7b9-40bd-bbf8-259753ff9a12)
-    (property "Reference" "C1018" (at 135.89 38.862 0)
+    (property "Reference" "C26" (at 135.89 38.862 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF" (at 135.89 42.418 0)
@@ -6462,7 +6468,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "C1018") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -6471,7 +6477,7 @@
   (symbol (lib_id "power:VCC") (at 135.89 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8271d91-947a-445a-834f-99ff2684bc46)
-    (property "Reference" "#PWR01006" (at 135.89 39.37 0)
+    (property "Reference" "#PWR036" (at 135.89 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 135.89 31.75 0)
@@ -6487,7 +6493,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01006") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -6496,7 +6502,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 123.19 68.58 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8908f81-8e46-4018-b6ff-ef5fbab26a3a)
-    (property "Reference" "R12" (at 121.92 68.072 0)
+    (property "Reference" "R19" (at 121.92 68.072 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1.54M" (at 121.92 69.85 0)
@@ -6516,7 +6522,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "R12") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -6525,7 +6531,7 @@
   (symbol (lib_id "power:GND") (at 191.77 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fce9bc96-4ae2-44f7-9f5b-3b95b05c7a40)
-    (property "Reference" "#PWR01008" (at 191.77 52.07 0)
+    (property "Reference" "#PWR038" (at 191.77 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 191.77 50.8 0)
@@ -6541,7 +6547,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR01008") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -6550,7 +6556,7 @@
   (symbol (lib_id "power:GND") (at 105.41 73.66 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fd68b8ea-7c59-41e4-b5f8-30f940fbd250)
-    (property "Reference" "#PWR0139" (at 105.41 80.01 0)
+    (property "Reference" "#PWR042" (at 105.41 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 105.41 77.47 0)
@@ -6566,7 +6572,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "#PWR0139") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -6575,7 +6581,7 @@
   (symbol (lib_id "Device:L") (at 195.58 64.77 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ffcc7be7-0c75-4895-8614-c163810834eb)
-    (property "Reference" "L1002" (at 195.58 61.214 90)
+    (property "Reference" "L4" (at 195.58 61.214 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100nH" (at 195.58 62.992 90)
@@ -6595,7 +6601,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69"
-          (reference "L1002") (unit 1)
+          (reference "L4") (unit 1)
         )
       )
     )

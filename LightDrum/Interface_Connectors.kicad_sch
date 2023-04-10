@@ -1971,7 +1971,7 @@
   (symbol (lib_id "power:VDD") (at 31.75 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0b047dc8-82b6-4a53-9644-58ef36323916)
-    (property "Reference" "#PWR0143" (at 31.75 48.26 0)
+    (property "Reference" "#PWR026" (at 31.75 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 31.75 40.64 0)
@@ -1987,7 +1987,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -1996,7 +1996,7 @@
   (symbol (lib_id "power:GND") (at 50.8 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 13663849-d296-444a-b58e-fb856ef43194)
-    (property "Reference" "#PWR01212" (at 50.8 100.33 0)
+    (property "Reference" "#PWR029" (at 50.8 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 50.8 97.79 0)
@@ -2012,7 +2012,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01212") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -2021,7 +2021,7 @@
   (symbol (lib_id "Daxxn_Connectors:0541323662") (at 123.19 86.36 0) (unit 1)
     (in_bom no) (on_board no) (dnp no)
     (uuid 1b88efeb-4215-454a-a1b7-5232fe82c4bb)
-    (property "Reference" "J1202" (at 124.46 38.1 0)
+    (property "Reference" "J3" (at 124.46 38.1 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0541323662" (at 124.46 40.64 0)
@@ -2076,7 +2076,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "J1202") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -2085,7 +2085,7 @@
   (symbol (lib_id "power:GND") (at 124.46 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2b418794-26a5-4733-939b-331f522e731d)
-    (property "Reference" "#PWR01216" (at 124.46 143.51 0)
+    (property "Reference" "#PWR032" (at 124.46 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 124.46 140.97 0)
@@ -2101,7 +2101,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01216") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -2110,7 +2110,7 @@
   (symbol (lib_id "power:GND") (at 50.8 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ec04959-3d4a-4f2e-bd31-1f045a4dc0ce)
-    (property "Reference" "#PWR01214" (at 50.8 120.65 0)
+    (property "Reference" "#PWR031" (at 50.8 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 50.8 118.11 0)
@@ -2126,7 +2126,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01214") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -2135,7 +2135,7 @@
   (symbol (lib_id "power:VCC") (at 100.33 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4d99f20d-c737-4c2b-bb6d-90641d39a908)
-    (property "Reference" "#PWR0122" (at 100.33 44.45 0)
+    (property "Reference" "#PWR023" (at 100.33 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 100.33 36.83 0)
@@ -2151,7 +2151,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR0122") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -2160,7 +2160,7 @@
   (symbol (lib_id "power:Vdrive") (at 88.9 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6f43c645-6c7b-4a4d-b97c-79b4ad3b59e5)
-    (property "Reference" "#PWR01208" (at 83.82 44.45 0)
+    (property "Reference" "#PWR021" (at 83.82 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Vdrive" (at 88.9 36.83 0)
@@ -2176,7 +2176,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01208") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -2185,7 +2185,7 @@
   (symbol (lib_id "power:VDD") (at 95.25 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a87d6ea-758b-41c4-94bf-39c27bf277e2)
-    (property "Reference" "#PWR01215" (at 95.25 44.45 0)
+    (property "Reference" "#PWR022" (at 95.25 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 95.25 36.83 0)
@@ -2201,7 +2201,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01215") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -2210,7 +2210,7 @@
   (symbol (lib_id "power:Vdrive") (at 81.28 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 950d8b6c-98df-421b-9782-53427bd9971d)
-    (property "Reference" "#PWR01209" (at 76.2 92.71 0)
+    (property "Reference" "#PWR028" (at 76.2 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Vdrive" (at 81.28 85.09 0)
@@ -2226,7 +2226,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01209") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -2235,7 +2235,7 @@
   (symbol (lib_id "power:VCC") (at 24.13 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a5ee3a94-fb99-45a5-89ac-231ee9da22ae)
-    (property "Reference" "#PWR0124" (at 24.13 48.26 0)
+    (property "Reference" "#PWR025" (at 24.13 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 24.13 40.64 0)
@@ -2251,7 +2251,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR0124") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -2260,7 +2260,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Male") (at 57.15 110.49 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid adcf2cf4-fb65-4173-a528-0ddfbd1f22b1)
-    (property "Reference" "J1203" (at 58.42 110.49 0)
+    (property "Reference" "J4" (at 58.42 110.49 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "PWR-CONN" (at 58.42 113.03 0)
@@ -2280,7 +2280,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "J1203") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -2289,7 +2289,7 @@
   (symbol (lib_id "power:VDD") (at 21.59 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ae1cf62c-5df0-44e8-9565-699a0ee1c38a)
-    (property "Reference" "#PWR01211" (at 21.59 92.71 0)
+    (property "Reference" "#PWR027" (at 21.59 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 21.59 85.09 0)
@@ -2305,7 +2305,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01211") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -2314,7 +2314,7 @@
   (symbol (lib_id "power:VDD") (at 105.41 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b645149d-54d7-40a9-8952-ffb4b7f8df80)
-    (property "Reference" "#PWR0123" (at 105.41 44.45 0)
+    (property "Reference" "#PWR024" (at 105.41 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VDD" (at 105.41 36.83 0)
@@ -2330,7 +2330,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR0123") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -2339,7 +2339,7 @@
   (symbol (lib_id "power:VCC") (at 50.8 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cccbcde3-6ac2-4253-a49d-34fed0fa7975)
-    (property "Reference" "#PWR01213" (at 50.8 113.03 0)
+    (property "Reference" "#PWR030" (at 50.8 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 50.8 105.41 0)
@@ -2355,7 +2355,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "#PWR01213") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -2364,7 +2364,7 @@
   (symbol (lib_id "Daxxn_Connectors:0525593652") (at 52.07 71.12 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e927961d-cba2-4474-90c2-b9531f563d2b)
-    (property "Reference" "J1201" (at 50.8 40.64 0)
+    (property "Reference" "J2" (at 50.8 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0525593652" (at 50.8 43.18 0)
@@ -2419,7 +2419,7 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/37b1a4e5-7bc5-4d58-948d-cb24160396b1"
-          (reference "J1201") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
