@@ -46,7 +46,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.0
+          "min_clearance": 0.22499999999999998
         }
       },
       "diff_pair_dimensions": [
@@ -138,6 +138,7 @@
         "courtyards_overlap|9920001|-23949999|1cd7cd32-16dd-4323-9659-fb45b936009e|c19f351c-caee-42ea-8146-efa161528a5d",
         "courtyards_overlap|9920001|-24349999|36929d10-149f-4877-bda8-a6f770a3607c|c19f351c-caee-42ea-8146-efa161528a5d",
         "footprint_type_mismatch|34600000|48900000|1bf95b8c-6488-43ef-b6f3-e4ce3141db68|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|34742500|48393750|1bf95b8c-6488-43ef-b6f3-e4ce3141db68|00000000-0000-0000-0000-000000000000",
         "lib_footprint_mismatch|34742500|49431250|1bf95b8c-6488-43ef-b6f3-e4ce3141db68|00000000-0000-0000-0000-000000000000",
         "silk_edge_clearance|129000000|54422200|9fe93927-2ac2-4cfa-9f81-2e79667567e3|7b8dc85a-6a4f-4c20-990c-c0f713657c95",
         "silk_edge_clearance|129000000|54422200|9fe93927-2ac2-4cfa-9f81-2e79667567e3|b8eb1806-5ae6-4265-b716-4df40d579f28",
@@ -260,6 +261,8 @@
         "silk_overlap|3519047|30750000|408ffcf4-8c1f-4343-a9f6-5aaa2b407a50|54e95d1b-cf80-4694-b856-bb3055c39ab8",
         "silk_overlap|39957836|49300000|e7a9371f-7343-4685-b64c-e92d2714e2be|7da92889-9bd0-4c10-ac96-345fcbd83f5c",
         "silk_overlap|39957836|49300000|e7a9371f-7343-4685-b64c-e92d2714e2be|b1c3a709-331d-4843-9247-1b12c4ffce3d",
+        "silk_overlap|39957836|49390000|7da92889-9bd0-4c10-ac96-345fcbd83f5c|e7a9371f-7343-4685-b64c-e92d2714e2be",
+        "silk_overlap|39957836|50110000|eb29a36b-bc98-46d3-8aca-ef7372eb09f7|e7a9371f-7343-4685-b64c-e92d2714e2be",
         "silk_overlap|39957836|50200000|e7a9371f-7343-4685-b64c-e92d2714e2be|db8e1df4-49e1-431b-be9c-847cf253fbcc",
         "silk_overlap|39957836|50200000|e7a9371f-7343-4685-b64c-e92d2714e2be|eb29a36b-bc98-46d3-8aca-ef7372eb09f7",
         "silk_overlap|41642164|50700000|e7a9371f-7343-4685-b64c-e92d2714e2be|ab8dfd66-297c-4ad3-b102-3fd14acb7c23",
@@ -329,6 +332,7 @@
         "solder_mask_bridge|101625000|43950000|02f50ac2-1b48-4ecb-9819-8efb0b1f2584|c3912391-2136-4b70-924f-e0cc398a6ad1",
         "solder_mask_bridge|50500000|33250000|713d978d-5490-44be-9217-74327ea64929|b37293dd-9e09-46d7-adc6-027d1657e8db",
         "solder_mask_bridge|50500000|33350000|713d978d-5490-44be-9217-74327ea64929|b37293dd-9e09-46d7-adc6-027d1657e8db",
+        "solder_mask_bridge|51300000|33350000|713d978d-5490-44be-9217-74327ea64929|7dc0bd51-e7ed-42c5-8d52-d28f58768abe",
         "solder_mask_bridge|63325000|39750000|517f1ece-8177-461c-a0bb-f72e6438f34d|ba053520-50f1-486e-a817-99e8ef63b95c",
         "solder_mask_bridge|63325000|43950000|8d5940a7-d92c-4409-8ce2-30d23cc9dea4|7335ebff-e067-4cd2-a044-463ee4345bde",
         "solder_mask_bridge|66525000|39750000|0f093242-eebe-4028-a000-7a7b837806b4|9915842a-d50f-45a3-8e4d-bbfc662559ed",
@@ -412,7 +416,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.6,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.19999999999999998,
+        "min_through_hole_diameter": 0.25,
         "min_track_width": 0.08889999999999999,
         "min_via_annular_width": 0.0,
         "min_via_diameter": 0.39999999999999997,
@@ -484,8 +488,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.47,
-          "drill": 0.2
+          "diameter": 0.45,
+          "drill": 0.3
         },
         {
           "diameter": 0.55,
