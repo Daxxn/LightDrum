@@ -56,7 +56,11 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_adc1;
-extern DMA_HandleTypeDef hdma_spi5_rx;
+extern DMA_HandleTypeDef hdma_fmpi2c1_tx;
+extern FMPI2C_HandleTypeDef hfmpi2c1;
+extern DMA_HandleTypeDef hdma_spi3_rx;
+extern RTC_HandleTypeDef hrtc;
+extern SD_HandleTypeDef hsd;
 extern TIM_HandleTypeDef htim6;
 /* USER CODE BEGIN EV */
 
@@ -201,16 +205,16 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles EXTI line0 interrupt.
+  * @brief This function handles RCC global interrupt.
   */
-void EXTI0_IRQHandler(void)
+void RCC_IRQHandler(void)
 {
-  /* USER CODE BEGIN EXTI0_IRQn 0 */
+  /* USER CODE BEGIN RCC_IRQn 0 */
 
-  /* USER CODE END EXTI0_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(HP_VREF_IRQ_Pin);
-  /* USER CODE BEGIN EXTI0_IRQn 1 */
-  /* USER CODE END EXTI0_IRQn 1 */
+  /* USER CODE END RCC_IRQn 0 */
+  /* USER CODE BEGIN RCC_IRQn 1 */
+
+  /* USER CODE END RCC_IRQn 1 */
 }
 
 /**
@@ -221,7 +225,7 @@ void EXTI1_IRQHandler(void)
   /* USER CODE BEGIN EXTI1_IRQn 0 */
 
   /* USER CODE END EXTI1_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(XLR_VRE_FIRQ_Pin);
+  HAL_GPIO_EXTI_IRQHandler(SDIO_CD_Pin);
   /* USER CODE BEGIN EXTI1_IRQn 1 */
 
   /* USER CODE END EXTI1_IRQn 1 */
@@ -238,6 +242,34 @@ void EXTI3_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(MENU_DOWN_Pin);
   /* USER CODE BEGIN EXTI3_IRQn 1 */
   /* USER CODE END EXTI3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 stream0 global interrupt.
+  */
+void DMA1_Stream0_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream0_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream0_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi3_rx);
+  /* USER CODE BEGIN DMA1_Stream0_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 stream1 global interrupt.
+  */
+void DMA1_Stream1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream1_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_fmpi2c1_tx);
+  /* USER CODE BEGIN DMA1_Stream1_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream1_IRQn 1 */
 }
 
 /**
@@ -269,9 +301,38 @@ void EXTI15_10_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(MENU_UP_Pin);
   HAL_GPIO_EXTI_IRQHandler(ENC2_A_Pin);
   HAL_GPIO_EXTI_IRQHandler(ENC1_A_Pin);
+  HAL_GPIO_EXTI_IRQHandler(MENU_LEFT_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles RTC alarms A and B interrupt through EXTI line 17.
+  */
+void RTC_Alarm_IRQHandler(void)
+{
+  /* USER CODE BEGIN RTC_Alarm_IRQn 0 */
+
+  /* USER CODE END RTC_Alarm_IRQn 0 */
+  HAL_RTC_AlarmIRQHandler(&hrtc);
+  /* USER CODE BEGIN RTC_Alarm_IRQn 1 */
+
+  /* USER CODE END RTC_Alarm_IRQn 1 */
+}
+
+/**
+  * @brief This function handles SDIO global interrupt.
+  */
+void SDIO_IRQHandler(void)
+{
+  /* USER CODE BEGIN SDIO_IRQn 0 */
+
+  /* USER CODE END SDIO_IRQn 0 */
+  HAL_SD_IRQHandler(&hsd);
+  /* USER CODE BEGIN SDIO_IRQn 1 */
+
+  /* USER CODE END SDIO_IRQn 1 */
 }
 
 /**
@@ -303,17 +364,31 @@ void DMA2_Stream0_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles DMA2 stream3 global interrupt.
+  * @brief This function handles FMPI2C1 event interrupt.
   */
-void DMA2_Stream3_IRQHandler(void)
+void FMPI2C1_EV_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA2_Stream3_IRQn 0 */
+  /* USER CODE BEGIN FMPI2C1_EV_IRQn 0 */
 
-  /* USER CODE END DMA2_Stream3_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_spi5_rx);
-  /* USER CODE BEGIN DMA2_Stream3_IRQn 1 */
+  /* USER CODE END FMPI2C1_EV_IRQn 0 */
+  HAL_FMPI2C_EV_IRQHandler(&hfmpi2c1);
+  /* USER CODE BEGIN FMPI2C1_EV_IRQn 1 */
 
-  /* USER CODE END DMA2_Stream3_IRQn 1 */
+  /* USER CODE END FMPI2C1_EV_IRQn 1 */
+}
+
+/**
+  * @brief This function handles FMPI2C1 error interrupt.
+  */
+void FMPI2C1_ER_IRQHandler(void)
+{
+  /* USER CODE BEGIN FMPI2C1_ER_IRQn 0 */
+
+  /* USER CODE END FMPI2C1_ER_IRQn 0 */
+  HAL_FMPI2C_ER_IRQHandler(&hfmpi2c1);
+  /* USER CODE BEGIN FMPI2C1_ER_IRQn 1 */
+
+  /* USER CODE END FMPI2C1_ER_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

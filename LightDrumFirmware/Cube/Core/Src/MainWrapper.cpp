@@ -9,8 +9,8 @@
  */
 
 #include <math.h>
-#include <StripCurrent.h>
 #include "main.h"
+#include "StripCurrent.h"
 #include "Nextion.h"
 #include "ShiftRegs.h"
 #include "Utils.h"
@@ -19,16 +19,28 @@
 ADC_HandleTypeDef *currentADCHandle;
 DMA_HandleTypeDef *currentADCMemHandle;
 
+FMPI2C_HandleTypeDef *stripI2cHandle;
+DMA_HandleTypeDef *dmaTXStripHandle;
 I2C_HandleTypeDef *i2cHandle;
 
-SPI_HandleTypeDef *graphHandle;
-SPI_HandleTypeDef *spiHandle;
+I2S_HandleTypeDef *audioHandle;
+DMA_HandleTypeDef *dmaRXAudioHandle;
 
+RTC_HandleTypeDef *rtcHandle;
+
+SD_HandleTypeDef *sdHandle;
+
+SPI_HandleTypeDef *graphHandle;
+
+TIM_HandleTypeDef *pwm1Handle;
 TIM_HandleTypeDef *pwm2Handle;
 TIM_HandleTypeDef *pwm3Handle;
+TIM_HandleTypeDef *pwm6Handle;
 
 UART_HandleTypeDef *screenHandle;
 UART_HandleTypeDef *midiHandle;
+UART_HandleTypeDef *dmxHandle;
+
 
 ShiftRegs shiftReg;
 Nextion screen = Nextion();
@@ -110,15 +122,22 @@ void ReadCurrent()
   * @retval None
   */
 void Init(
-		ADC_HandleTypeDef *in_hadc1,
-//		DMA_HandleTypeDef *in_hdma_adc1,
-		I2C_HandleTypeDef *in_hi2c1,
-		SPI_HandleTypeDef *in_hspi2,
-		SPI_HandleTypeDef *in_hspi5,
-		TIM_HandleTypeDef *in_htim2,
-		TIM_HandleTypeDef *in_htim3,
-		UART_HandleTypeDef *in_huart1,
-		UART_HandleTypeDef *in_huart2
+		ADC_HandleTypeDef    *in_hadc1,
+		DMA_HandleTypeDef    *in_hdma_adc1,
+		FMPI2C_HandleTypeDef *in_hfmpi2c1,
+		DMA_HandleTypeDef    *in_hdma_fmpi2c1_tx,
+		I2C_HandleTypeDef    *in_hi2c1,
+		I2S_HandleTypeDef    *in_hi2s3,
+		DMA_HandleTypeDef    *in_hdma_spi3_rx,
+		RTC_HandleTypeDef    *in_hrtc,
+		SD_HandleTypeDef     *in_hsd,
+		SPI_HandleTypeDef    *in_hspi4,
+		TIM_HandleTypeDef    *in_htim1,
+		TIM_HandleTypeDef    *in_htim2,
+		TIM_HandleTypeDef    *in_htim3,
+		UART_HandleTypeDef   *in_huart1,
+		UART_HandleTypeDef   *in_huart2,
+		UART_HandleTypeDef   *in_huart3
 	)
 {
 
@@ -126,16 +145,23 @@ void Init(
 	Pin graphOE = Pin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin);
 
 	currentADCHandle = in_hadc1;
-//	currentADCMemHandle = in_hdma_adc1;
+	currentADCMemHandle = in_hdma_adc1;
+	stripI2cHandle = in_hfmpi2c1;
+	dmaTXStripHandle = in_hdma_fmpi2c1_tx;
 	i2cHandle = in_hi2c1;
-	graphHandle = in_hspi2;
-	spiHandle = in_hspi5;
+	audioHandle = in_hi2s3;
+	dmaRXAudioHandle = in_hdma_spi3_rx;
+	rtcHandle = in_hrtc;
+	sdHandle = in_hsd;
+	graphHandle = in_hspi4;
+	pwm1Handle = in_htim1;
 	pwm2Handle = in_htim2;
 	pwm3Handle = in_htim3;
 	screenHandle = in_huart1;
 	midiHandle = in_huart2;
+	dmxHandle = in_huart3;
 
-	screen.Startup(screenHandle);
+//	screen.Startup(screenHandle);
 	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
 
 	shiftReg.Init();
@@ -143,7 +169,7 @@ void Init(
 
 void InitTest()
 {
-//	shiftReg.IndicatorTest();
+	shiftReg.IndicatorTest();
 }
 
 /**
@@ -152,7 +178,10 @@ void InitTest()
   */
 void Main()
 {
-
+	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, 0);
+	HAL_Delay(500);
+	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, UINT32_MAX / 2);
+	HAL_Delay(500);
 //		OLD Testing
 //	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 10000);
 //
@@ -199,7 +228,7 @@ void Main()
 
 //
 //	ReadCurrent();
-	shiftReg.Update();
+//	shiftReg.Update();
 }
 
 void MenuUpInterruptCallback()

@@ -1,0 +1,7 @@
+StripCurrent.cpp:10:1:StripCurrent::StripCurrent()	1
+StripCurrent.cpp:14:1:StripCurrent::~StripCurrent()	1
+StripCurrent.cpp:14:1:virtual StripCurrent::~StripCurrent()	1
+StripCurrent.cpp:18:6:void StripCurrent::Init(uint8_t*)	1
+StripCurrent.cpp:23:9:uint8_t StripCurrent::GetChannel(StripIndecies)	1
+StripCurrent.cpp:28:6:void StripCurrent::Calc()	1
+StripCurrent.cpp:33:6:void CalcAverage(uint8_t)	2

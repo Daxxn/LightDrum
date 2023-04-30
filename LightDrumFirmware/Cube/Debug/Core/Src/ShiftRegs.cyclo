@@ -1,0 +1,13 @@
+Utils.h:24:2:Pin::Pin()	1
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+ShiftRegs.cpp:12:1:ShiftRegs::ShiftRegs(SPI_HandleTypeDef*, Pin, Pin)	1
+ShiftRegs.cpp:21:1:ShiftRegs::~ShiftRegs()	2
+ShiftRegs.cpp:21:1:virtual ShiftRegs::~ShiftRegs()	1
+ShiftRegs.cpp:26:6:void ShiftRegs::Init()	1
+ShiftRegs.cpp:33:6:void ShiftRegs::IndicatorTest()	3
+ShiftRegs.cpp:49:6:void ShiftRegs::SetValue(LEDState, size_t)	1
+ShiftRegs.cpp:54:6:void ShiftRegs::SetValue(uint8_t, size_t)	2
+ShiftRegs.cpp:69:6:void ShiftRegs::ToggleValue(size_t)	1
+ShiftRegs.cpp:74:6:void ShiftRegs::Clear()	1
+ShiftRegs.cpp:79:9:uint8_t ShiftRegs::GetValue(size_t)	1
+ShiftRegs.cpp:84:6:void ShiftRegs::Update()	1

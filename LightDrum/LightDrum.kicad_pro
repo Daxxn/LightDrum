@@ -418,7 +418,7 @@
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.25,
         "min_track_width": 0.08889999999999999,
-        "min_via_annular_width": 0.0,
+        "min_via_annular_width": 0.5,
         "min_via_diameter": 0.39999999999999997,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
@@ -886,7 +886,22 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "Daxxn_Batteries",
+      "Daxxn_Diodes",
+      "Daxxn_Connectors",
+      "Daxxn_Displays",
+      "Daxxn_Enclosures",
+      "Daxxn_LEDs",
+      "Daxxn_Other",
+      "Daxxn_Packages",
+      "Daxxn_Passives",
+      "Daxxn_Protection",
+      "Daxxn_Relays",
+      "Daxxn_Standoffs",
+      "Daxxn_Switches",
+      "Daxxn_Logos_Art"
+    ],
     "pinned_symbol_libs": []
   },
   "meta": {
@@ -1174,7 +1189,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "../Docs/Schematics/REV10",
+    "plot_directory": "../Docs/Schematics/REV11",
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
