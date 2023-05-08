@@ -1,23 +1,25 @@
 Utils.h:24:2:Pin::Pin()	1
 Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	1
+StripCurrent.h:35:2:StripCurrent::StripCurrent()	1
 ShiftRegs.h:37:2:ShiftRegs::ShiftRegs()	1
-MainWrapper.cpp:79:6:void ToggleTest(uint8_t, int)	2
-MainWrapper.cpp:90:6:void EaseInDebug()	2
-MainWrapper.cpp:99:6:void EaseInStatus()	2
-MainWrapper.cpp:108:6:void ReadCurrent()	2
+MainWrapper.cpp:80:6:void ToggleTest(uint8_t, int)	2
+MainWrapper.cpp:91:6:void EaseInDebug()	2
+MainWrapper.cpp:100:6:void EaseInStatus()	2
+MainWrapper.cpp:109:6:void ReadCurrent()	2
 ShiftRegs.h:34:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	1
-MainWrapper.cpp:124:6:void Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*)	1
-MainWrapper.cpp:170:6:void InitTest()	1
-MainWrapper.cpp:179:6:void Main()	1
-MainWrapper.cpp:234:6:void MenuUpInterruptCallback()	1
-MainWrapper.cpp:238:6:void MenuDownInterruptCallback()	1
-MainWrapper.cpp:248:6:void MenuRightInterruptCallback()	1
-MainWrapper.cpp:252:6:void MenuActInterruptCallback()	1
-MainWrapper.cpp:256:6:void MenuBackInterruptCallback()	1
-MainWrapper.cpp:262:6:void Enc1SwInterruptCallback()	1
-MainWrapper.cpp:266:6:void Enc2SwInterruptCallback()	1
-MainWrapper.cpp:270:6:void Enc1TurnInterruptCallback()	1
-MainWrapper.cpp:279:6:void Enc2TurnInterruptCallback()	1
-MainWrapper.cpp:283:1:void __static_initialization_and_destruction_0(int, int)	5
-MainWrapper.cpp:283:1:cpp)	1
-MainWrapper.cpp:283:1:cpp)	1
+StripCurrent.h:32:7:constexpr StripCurrent& StripCurrent::operator=(const StripCurrent&)	1
+MainWrapper.cpp:125:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*)	1
+MainWrapper.cpp:187:6:void InitTest()	1
+MainWrapper.cpp:196:6:void Main()	1
+MainWrapper.cpp:251:6:void MenuUpInterruptCallback()	1
+MainWrapper.cpp:255:6:void MenuDownInterruptCallback()	1
+MainWrapper.cpp:265:6:void MenuRightInterruptCallback()	1
+MainWrapper.cpp:269:6:void MenuActInterruptCallback()	1
+MainWrapper.cpp:273:6:void MenuBackInterruptCallback()	1
+MainWrapper.cpp:279:6:void Enc1SwInterruptCallback()	1
+MainWrapper.cpp:283:6:void Enc2SwInterruptCallback()	1
+MainWrapper.cpp:287:6:void Enc1TurnInterruptCallback()	1
+MainWrapper.cpp:296:6:void Enc2TurnInterruptCallback()	1
+MainWrapper.cpp:300:1:void __static_initialization_and_destruction_0(int, int)	5
+MainWrapper.cpp:300:1:cpp)	1
+MainWrapper.cpp:300:1:cpp)	1

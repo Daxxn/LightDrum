@@ -36,6 +36,7 @@ TIM_HandleTypeDef *pwm1Handle;
 TIM_HandleTypeDef *pwm2Handle;
 TIM_HandleTypeDef *pwm3Handle;
 TIM_HandleTypeDef *pwm6Handle;
+TIM_HandleTypeDef *adcTimHandle;
 
 UART_HandleTypeDef *screenHandle;
 UART_HandleTypeDef *midiHandle;
@@ -48,7 +49,7 @@ Nextion screen = Nextion();
 Button menuUp = Button();
 Button menuDown = Button();
 
-StripCurrent stripCurr = StripCurrent();
+StripCurrent stripCurr;
 
 uint8_t ledCount = 0;
 
@@ -121,7 +122,7 @@ void ReadCurrent()
   * @brief C++ Initialization Function
   * @retval None
   */
-void Init(
+HAL_StatusTypeDef Init(
 		ADC_HandleTypeDef    *in_hadc1,
 		DMA_HandleTypeDef    *in_hdma_adc1,
 		FMPI2C_HandleTypeDef *in_hfmpi2c1,
@@ -135,6 +136,7 @@ void Init(
 		TIM_HandleTypeDef    *in_htim1,
 		TIM_HandleTypeDef    *in_htim2,
 		TIM_HandleTypeDef    *in_htim3,
+		TIM_HandleTypeDef    *in_htim8,
 		UART_HandleTypeDef   *in_huart1,
 		UART_HandleTypeDef   *in_huart2,
 		UART_HandleTypeDef   *in_huart3
@@ -160,11 +162,26 @@ void Init(
 	screenHandle = in_huart1;
 	midiHandle = in_huart2;
 	dmxHandle = in_huart3;
+	adcTimHandle = in_htim8;
 
 //	screen.Startup(screenHandle);
 	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
+	stripCurr = StripCurrent(currentADCHandle, adcTimHandle);
+
+	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(pwm2Handle, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(pwm2Handle, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_4);
+
+	HAL_GPIO_WritePin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_SET);
+
+	stripCurr.Init();
 
 	shiftReg.Init();
+
+	return HAL_OK;
 }
 
 void InitTest()

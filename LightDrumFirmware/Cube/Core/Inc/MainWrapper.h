@@ -8,7 +8,7 @@
 #ifndef INC_MAINWRAPPER_H_
 #define INC_MAINWRAPPER_H_
 
-void Init(
+HAL_StatusTypeDef Init(
 		ADC_HandleTypeDef    *in_hadc1,
 		DMA_HandleTypeDef    *in_hdma_adc1,
 		FMPI2C_HandleTypeDef *in_hfmpi2c1,
@@ -22,6 +22,7 @@ void Init(
 		TIM_HandleTypeDef    *in_htim1,
 		TIM_HandleTypeDef    *in_htim2,
 		TIM_HandleTypeDef    *in_htim3,
+		TIM_HandleTypeDef    *in_htim8,
 		UART_HandleTypeDef   *in_huart1,
 		UART_HandleTypeDef   *in_huart2,
 		UART_HandleTypeDef   *in_huart3
