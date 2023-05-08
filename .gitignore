@@ -18,7 +18,7 @@ fp-info-cache
 # 3D Model Files
 *.FCStd
 *.FCStd1
-./Docs/Models/**
+/Docs/Models/**
 
 #   Raw Gerber Files
 # Copper Layers
