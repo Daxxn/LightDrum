@@ -47,8 +47,7 @@ DMA_HandleTypeDef hdma_fmpi2c1_tx;
 
 I2C_HandleTypeDef hi2c1;
 
-I2S_HandleTypeDef hi2s5;
-DMA_HandleTypeDef hdma_spi5_rx;
+I2S_HandleTypeDef hi2s3;
 
 RTC_HandleTypeDef hrtc;
 
@@ -86,7 +85,7 @@ static void MX_SPI4_Init(void);
 static void MX_FMPI2C1_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_TIM1_Init(void);
-static void MX_I2S5_Init(void);
+static void MX_I2S3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -185,7 +184,7 @@ int main(void)
   MX_FMPI2C1_Init();
   MX_USART3_UART_Init();
   MX_TIM1_Init();
-  MX_I2S5_Init();
+  MX_I2S3_Init();
   /* USER CODE BEGIN 2 */
 
 //  HAL_ADC_Start_DMA(&hadc1, pData, Length);
@@ -405,36 +404,36 @@ static void MX_I2C1_Init(void)
 }
 
 /**
-  * @brief I2S5 Initialization Function
+  * @brief I2S3 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_I2S5_Init(void)
+static void MX_I2S3_Init(void)
 {
 
-  /* USER CODE BEGIN I2S5_Init 0 */
+  /* USER CODE BEGIN I2S3_Init 0 */
 
-  /* USER CODE END I2S5_Init 0 */
+  /* USER CODE END I2S3_Init 0 */
 
-  /* USER CODE BEGIN I2S5_Init 1 */
+  /* USER CODE BEGIN I2S3_Init 1 */
 
-  /* USER CODE END I2S5_Init 1 */
-  hi2s5.Instance = SPI5;
-  hi2s5.Init.Mode = I2S_MODE_MASTER_RX;
-  hi2s5.Init.Standard = I2S_STANDARD_PHILIPS;
-  hi2s5.Init.DataFormat = I2S_DATAFORMAT_32B;
-  hi2s5.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
-  hi2s5.Init.AudioFreq = I2S_AUDIOFREQ_48K;
-  hi2s5.Init.CPOL = I2S_CPOL_LOW;
-  hi2s5.Init.ClockSource = I2S_CLOCK_PLL;
-  hi2s5.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
-  if (HAL_I2S_Init(&hi2s5) != HAL_OK)
+  /* USER CODE END I2S3_Init 1 */
+  hi2s3.Instance = SPI3;
+  hi2s3.Init.Mode = I2S_MODE_MASTER_RX;
+  hi2s3.Init.Standard = I2S_STANDARD_PHILIPS;
+  hi2s3.Init.DataFormat = I2S_DATAFORMAT_32B;
+  hi2s3.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
+  hi2s3.Init.AudioFreq = I2S_AUDIOFREQ_48K;
+  hi2s3.Init.CPOL = I2S_CPOL_LOW;
+  hi2s3.Init.ClockSource = I2S_CLOCK_PLL;
+  hi2s3.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
+  if (HAL_I2S_Init(&hi2s3) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN I2S5_Init 2 */
+  /* USER CODE BEGIN I2S3_Init 2 */
 
-  /* USER CODE END I2S5_Init 2 */
+  /* USER CODE END I2S3_Init 2 */
 
 }
 
@@ -649,10 +648,6 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
-  {
-    Error_Handler();
-  }
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
@@ -685,6 +680,7 @@ static void MX_TIM2_Init(void)
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
 
@@ -704,15 +700,32 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
+  if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
+  HAL_TIM_MspPostInit(&htim2);
 
 }
 
@@ -937,9 +950,6 @@ static void MX_DMA_Init(void)
   /* DMA2_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
-  /* DMA2_Stream3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
 
 }
 
@@ -970,6 +980,9 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(DIAG_DEBUG_GPIO_Port, DIAG_DEBUG_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(DMX_EN_GPIO_Port, DMX_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : STRIP_ESHDN_Pin DIAG_DEBUG_Pin */
   GPIO_InitStruct.Pin = STRIP_ESHDN_Pin|DIAG_DEBUG_Pin;
@@ -1029,6 +1042,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(SDIO_CD_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DMX_EN_Pin */
+  GPIO_InitStruct.Pin = DMX_EN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(DMX_EN_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);

@@ -65,7 +65,6 @@ void RTC_Alarm_IRQHandler(void);
 void SDIO_IRQHandler(void);
 void TIM6_IRQHandler(void);
 void DMA2_Stream0_IRQHandler(void);
-void DMA2_Stream3_IRQHandler(void);
 void FMPI2C1_EV_IRQHandler(void);
 void FMPI2C1_ER_IRQHandler(void);
 /* USER CODE BEGIN EFP */
