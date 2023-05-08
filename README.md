@@ -4,19 +4,19 @@
 
 ---
 
-This is my dads christmas present. (From last year...) The idea is to lay strings of LEDs on his drum set and control the strings with audio and MIDI signals. The other purpose of this project is to learn. To that end, all interface libraries are written by me and are not feature complete or fully tested.
+This is my dads christmas present. (I dont even remember how long it's been...) The idea is to lay strings of LEDs on his drum set and control the strings with audio and MIDI signals. With the ability to control more lighting systems through the DMX interface. The other purpose of this project is to learn. To that end, all interface libraries are written by me and are not feature complete or fully tested.
 
-> Current Revision: REV10
+> Current Revision: `REV12`
 >
-> All revisions before REV8 are early prototypes and are for archival. They are not fully functional.
+> All revisions before REV8 are early prototypes and are for archival. They are not fully functional or feature complete.
 
 # Renders
 
 ## Main PCB
 
-![Render 1](./Docs/Renders/REV9/LightDrum-Main-TOP-fancy1.png)
+![Render 1](./Docs/Renders/REV12/LightDrum-Main-REV12-Fancy-top1.png)
 
-![Render 2](./Docs/Renders/REV9/LightDrum-Main-CLOSE-fancy1.png)
+![Render 2](./Docs/Renders/REV12/LightDrum-Main-REV12-top2.png)
 
 ## Interface PCB
 
@@ -27,15 +27,21 @@ This is my dads christmas present. (From last year...) The idea is to lay string
 ### Output
 - 8 Individual LED String Channels
 - 1 Amp Rating per Channel
+- DMX (RS-485) Interface
 
 ## Input
 - 1/8" jack Audio
 - XLR Balanced Audio
 - MIDI
+- DMX (RS-485) Interface
 
 ## PWM channels
 
 The 8 individual RGB channels are controlled with 3 [PCA9634.](https://www.nxp.com/docs/en/data-sheet/PCA9634.pdf) Providing 8-bit PWM steps per channel with overall brightness and multiplexing.
+
+## Bulk Lighting
+
+The new automitive ECU connector has allowed for more pins, hense, some extra features. This includes 3 linear LED drivers for white COB LEDs. These are very bright and can either be controlled through the user interface, MIDI, or audio.
 
 ## Power Management
 
@@ -43,17 +49,20 @@ Each channel includes current monitoring with a high-side power override. This i
 
 ## Audio Processing
 
-A 12 bit ADC with a 200KHz sample rate will send the data to the STM32 for processing. That will be used to modify the triggers from the MIDI inputs and run processing techniques like beat detection and filtering.
+The PCM1821 dual channel 32bit audio ADC handles the audio conversion and is sent to the MCU via I2S. Theres some minor filtering and impedance matching in the analog front-end. However, most of the audio processing will be handled in software.
 
 ## User Interface
 
 - 3.2" TFT LCD Display
 - Navigation Hat Switch for menu navigation
-- Bar Graph for display of audio levels (or anything else I can think of.)
-- 2 Programmable Rotary Encoders
-- AAAAnd, a reset switch. For when things go horribly wrong.
+- Bar Graphs for display of audio levels and current load (or anything else I can think of.)
+- 2 Contextual Rotary Encoders
+- AND; a reset switch. For when things go horribly wrong.
+- MicroSD card slot for loading lighting profiles and other options by the user.
 
-The display will contain a full menu to select modes, configure options, and configure inputs and outputs. I'm using a Nextion display and their GUI editor for all menuing.
+The display contains a full menu to select modes, configure options, and IO. I'm using a Nextion display and their GUI editor for all the menuing. Its not the most performant display but it does allow for easy integration of a reasonably high res, full color screen.
+
+In the future, Im planning to upgrade to a faster STM32 MCU, something like an F7, H5, or H7. Taking advantage of the TouchGFX GUI design software and integrate the screen control into the main MCU. Even with the faster MCU, it will be cheaper and increase screen performance, due to the removal of the Nextion display.
 
 ---
 
@@ -63,7 +72,7 @@ The display will contain a full menu to select modes, configure options, and con
 
 - [Interactive BOMs](./Docs/BOMs/REV10/)
 
-- TODO: Link to a usage and theory of operation doc.
+- TODO: Link to a user manual and theory of operation doc.
 
 ---
 
