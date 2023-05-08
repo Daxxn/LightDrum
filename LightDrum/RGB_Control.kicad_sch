@@ -510,7 +510,7 @@
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 7f4e9734-e24e-4821-971a-aa27c706cb90)
-    (property "Sheetname" "RGB Control 1" (at 39.37 25.4 0)
+    (property "Sheetname" "RGB Control" (at 39.37 25.4 0)
       (effects (font (size 0.8 0.8)) (justify left bottom))
     )
     (property "Sheetfile" "RGB_Control-1.kicad_sch" (at 39.37 85.09 90)
@@ -592,7 +592,7 @@
     )
     (instances
       (project "LightDrum"
-        (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054" (page "12"))
+        (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054" (page "13"))
       )
     )
   )

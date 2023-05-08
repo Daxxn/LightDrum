@@ -1214,7 +1214,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "../Docs/Schematics/REV11",
+    "plot_directory": "../Docs/Schematics/REV12",
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -1255,19 +1255,19 @@
     ],
     [
       "7f4e9734-e24e-4821-971a-aa27c706cb90",
-      "RGB Control 1"
+      "RGB Control"
     ],
     [
       "75c45b3d-e09a-41c7-88e5-ae1bbc637da8",
       "Strip Connector"
     ],
     [
-      "f487ad54-ecfd-46ce-97af-fbacfbdc739e",
-      "Solid Lights"
-    ],
-    [
       "c531f82f-a257-4f09-9fb4-dd6a683aa13c",
       "Strip Current Monitors"
+    ],
+    [
+      "f487ad54-ecfd-46ce-97af-fbacfbdc739e",
+      "Solid Lights"
     ],
     [
       "47dd7232-a18b-43ab-b8d2-1101988d95b2",
