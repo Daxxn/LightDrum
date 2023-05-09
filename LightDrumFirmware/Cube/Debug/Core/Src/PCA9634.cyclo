@@ -1,3 +1,21 @@
-PCA9634.cpp:10:1:PCA9634::PCA9634()	1
-PCA9634.cpp:14:1:PCA9634::~PCA9634()	1
-PCA9634.cpp:14:1:virtual PCA9634::~PCA9634()	1
+Utils.h:24:2:Pin::Pin()	1
+PCA9634.h:146:8:PCA9634Settings::PCA9634Settings()	1
+PCA9634.cpp:18:6:void PCA9634Settings::ToBytes(uint8_t*, size_t)	1
+PCA9634.cpp:36:17:static PCA9634Settings PCA9634Settings::FromBytes(uint8_t*, size_t)	1
+PCA9634.cpp:54:1:PCA9634::PCA9634(FMPI2C_HandleTypeDef*, Pin)	1
+PCA9634.cpp:62:1:PCA9634::~PCA9634()	2
+PCA9634.cpp:62:1:virtual PCA9634::~PCA9634()	1
+PCA9634.cpp:72:19:HAL_StatusTypeDef PCA9634::Init(PCA9634Settings)	3
+PCA9634.cpp:92:19:HAL_StatusTypeDef PCA9634::Reset()	2
+PCA9634.cpp:108:19:HAL_StatusTypeDef PCA9634::ChangeSettings(PCA9634Settings)	2
+PCA9634.cpp:118:17:PCA9634Settings PCA9634::ReadSettings()	1
+PCA9634.cpp:125:6:void PCA9634::ToggleLEDs(GPIO_PinState)	1
+PCA9634.cpp:130:6:void PCA9634::SetChannel(uint8_t, uint8_t)	1
+PCA9634.cpp:135:6:void PCA9634::SetChannelState(uint8_t, PCA9634_LEDOUT)	1
+PCA9634.cpp:140:6:void PCA9634::ResetChannels(int8_t)	2
+PCA9634.cpp:151:9:uint8_t PCA9634::GetChannel(uint8_t)	1
+PCA9634.cpp:156:19:HAL_StatusTypeDef PCA9634::Update()	2
+PCA9634.cpp:172:19:HAL_StatusTypeDef PCA9634::SendSettings(PCA9634Settings)	1
+PCA9634.cpp:185:19:HAL_StatusTypeDef PCA9634::WriteByte(PCA9634_CTRL_REGISTER, uint8_t)	1
+PCA9634.cpp:197:19:HAL_StatusTypeDef PCA9634::WriteBytes(PCA9634_AUTO_INC, PCA9634_CTRL_REGISTER, uint8_t*, size_t)	3
+PCA9634.cpp:212:9:uint8_t PCA9634::CombineCommand(PCA9634_AUTO_INC, PCA9634_CTRL_REGISTER)	1

@@ -159,7 +159,7 @@ void Error_Handler(void);
 #define DMX_EN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define FMPI2C_TIMEOUT 200
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

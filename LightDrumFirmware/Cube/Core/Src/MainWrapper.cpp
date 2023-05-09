@@ -15,6 +15,7 @@
 #include "ShiftRegs.h"
 #include "Utils.h"
 #include "Button.h"
+#include "PCA9634.h"
 
 ADC_HandleTypeDef *currentADCHandle;
 DMA_HandleTypeDef *currentADCMemHandle;
@@ -42,7 +43,6 @@ UART_HandleTypeDef *screenHandle;
 UART_HandleTypeDef *midiHandle;
 UART_HandleTypeDef *dmxHandle;
 
-
 ShiftRegs shiftReg;
 Nextion screen = Nextion();
 
@@ -50,6 +50,8 @@ Button menuUp = Button();
 Button menuDown = Button();
 
 StripCurrent stripCurr;
+
+PCA9634 ledA;
 
 uint8_t ledCount = 0;
 
@@ -145,6 +147,7 @@ HAL_StatusTypeDef Init(
 
 	Pin graphLE = Pin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin);
 	Pin graphOE = Pin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin);
+	Pin pwmOE = Pin(PWM_OE_GPIO_Port, PWM_OE_Pin, GPIO_Default_State::ACTIVE_LOW);
 
 	currentADCHandle = in_hadc1;
 	currentADCMemHandle = in_hdma_adc1;
@@ -167,6 +170,7 @@ HAL_StatusTypeDef Init(
 //	screen.Startup(screenHandle);
 	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
 	stripCurr = StripCurrent(currentADCHandle, adcTimHandle);
+	ledA = PCA9634(stripI2cHandle, pwmOE);
 
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(pwm2Handle, TIM_CHANNEL_1);
@@ -195,10 +199,11 @@ void InitTest()
   */
 void Main()
 {
-	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, 0);
-	HAL_Delay(500);
 	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, UINT32_MAX / 2);
-	HAL_Delay(500);
+	PCA9634Settings settings = ledA.ReadSettings();
+	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, UINT32_MAX / 4);
+
+
 //		OLD Testing
 //	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_2, 10000);
 //
