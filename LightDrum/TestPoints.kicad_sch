@@ -423,7 +423,7 @@
     (uuid 15a76351-1805-49d2-a6e7-f2c757d4f4dd)
   )
   (polyline (pts (xy 52.07 12.7) (xy 52.07 16.51))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 1b80cbfa-ed70-490f-abfa-b23b24cab9f2)
   )
 
@@ -465,7 +465,7 @@
     (uuid 44a87083-5d7a-4f9c-b540-93d584ebab2d)
   )
   (polyline (pts (xy 52.07 16.51) (xy 52.07 63.5))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 5a36dcc0-d61c-4831-8f95-b308dedf6208)
   )
 
@@ -483,11 +483,11 @@
     (uuid 71e64fb2-022a-4f3a-96c9-85ce291f5865)
   )
   (polyline (pts (xy 12.7 12.7) (xy 12.7 16.51))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 76d22fc5-755a-482c-8705-1a2bc77ad138)
   )
   (polyline (pts (xy 74.93 16.51) (xy 74.93 63.5))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 7d8d21d2-60b7-454e-8521-178a79cc75e1)
   )
 
@@ -496,7 +496,7 @@
     (uuid 81c0252b-2448-4eb7-b0ef-225d1c10bbd7)
   )
   (polyline (pts (xy 74.93 63.5) (xy 52.07 63.5))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 82c05047-9738-41da-b6ec-be9cada6948c)
   )
 
@@ -509,7 +509,7 @@
     (uuid 896e6c40-672a-4379-a5a5-2d9d692ffea7)
   )
   (polyline (pts (xy 12.7 12.7) (xy 52.07 12.7))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid 92ceb259-8031-4e8c-84f4-bb3849e47831)
   )
 
@@ -522,7 +522,7 @@
     (uuid aaa824d8-ac75-448d-a78a-f1782b50dd71)
   )
   (polyline (pts (xy 52.07 12.7) (xy 74.93 12.7))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid b72d3dff-046f-4e5b-9439-e31d8c53f532)
   )
 
@@ -539,7 +539,7 @@
     (uuid c43d3f84-062d-42f2-b885-3eb236a4f926)
   )
   (polyline (pts (xy 12.7 63.5) (xy 52.07 63.5))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid cde10339-e525-446c-8afb-f9ec1f6f015c)
   )
 
@@ -552,11 +552,11 @@
     (uuid d7546c98-af65-43f9-9cd1-581ddf687169)
   )
   (polyline (pts (xy 74.93 12.7) (xy 74.93 16.51))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid e48a6630-e5b0-470d-b313-f08c3f08c6aa)
   )
   (polyline (pts (xy 12.7 16.51) (xy 12.7 63.5))
-    (stroke (width 0) (type default))
+    (stroke (width 0.5) (type default))
     (uuid ec7ac83a-9809-4e7d-84be-13fb1829b1dd)
   )
 

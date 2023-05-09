@@ -1085,6 +1085,30 @@
     },
     "net_colors": null,
     "netclass_assignments": {
+      "/RGB CONTROL/LED-SIG.B1": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B2": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B3": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B4": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B5": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B6": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B7": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.B8": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G1": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G2": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G3": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G4": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G5": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G6": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G7": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.G8": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R1": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R2": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R3": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R4": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R5": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R6": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R7": "LED-CTRL",
+      "/RGB CONTROL/LED-SIG.R8": "LED-CTRL",
       "Net-(U5A-OUT)": "ALG-SIG",
       "Net-(U5B-OUT)": "ALG-SIG",
       "Net-(U5C-OUT)": "ALG-SIG",
@@ -1252,22 +1276,6 @@
     [
       "c5b6f44f-b454-4d73-ae8d-4f0249b04054",
       "RGB CONTROL"
-    ],
-    [
-      "7f4e9734-e24e-4821-971a-aa27c706cb90",
-      "RGB Control"
-    ],
-    [
-      "75c45b3d-e09a-41c7-88e5-ae1bbc637da8",
-      "Strip Connector"
-    ],
-    [
-      "c531f82f-a257-4f09-9fb4-dd6a683aa13c",
-      "Strip Current Monitors"
-    ],
-    [
-      "f487ad54-ecfd-46ce-97af-fbacfbdc739e",
-      "Solid Lights"
     ],
     [
       "47dd7232-a18b-43ab-b8d2-1101988d95b2",
