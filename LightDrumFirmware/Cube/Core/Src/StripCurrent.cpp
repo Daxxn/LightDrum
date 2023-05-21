@@ -8,10 +8,12 @@
 #include "main.h"
 #include <StripCurrent.h>
 
-StripCurrent::StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timerHandle)
+StripCurrent::StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer)
 {
+	this->buffer = new uint8_t[STRIP_CURR_BUFFER_LEN];
 	this->adc = adcHandle;
-	this->timer = timerHandle;
+	this->timer = timer;
+//	HAL_ADC_RegisterCallback(adc, HAL_ADC_CONVERSION_COMPLETE_CB_ID, callback);
 }
 
 StripCurrent::~StripCurrent()
@@ -19,28 +21,34 @@ StripCurrent::~StripCurrent()
 	delete[] this->buffer;
 }
 
-void StripCurrent::Init()
+HAL_StatusTypeDef StripCurrent::Init()
 {
-	this->buffer = new uint8_t[STRIP_CURR_BUFFER_LEN];
-	HAL_ADC_Start(this->adc);
-	HAL_ADC_Start_DMA(this->adc, (uint32_t *)this->buffer, STRIP_CURR_BUFFER_LEN);
-	HAL_TIM_Base_Start(this->timer);
+	if (HAL_ADC_Start_DMA(this->adc, (uint32_t *)this->buffer, STRIP_CURR_BUFFER_LEN) != HAL_OK)
+	{
+		return HAL_ERROR;
+	}
+	return HAL_TIM_Base_Start(this->timer);
 }
 
 uint8_t StripCurrent::GetChannel(StripIndecies ch)
 {
-	return 0;
+	return buffer[ch];
 }
 
 void StripCurrent::Calc()
 {
-
+	// Get each channels value from the DMA buffer
+	// and calc the average.
+	for (int i = 0; i < ADC_CHANNELS; ++i) {
+//		averages[i] += *buffer + (i * 8);
+		averages[i] += buffer[i * SAMPLE_SIZE];
+	}
 }
 
-void CalcAverage(uint8_t index)
+void CalcAverage(uint8_t *index)
 {
-	for (int i = 0; i < STRIP_CURR_BUFFER_LEN; ++i)
-	{
-
-	}
+//	for (int i = 0; i < STRIP_CURR_BUFFER_LEN; ++i)
+//	{
+//
+//	}
 }

@@ -10,7 +10,9 @@
 
 #include "main.h"
 
-#define STRIP_CURR_BUFFER_LEN 1000
+#define STRIP_CURR_BUFFER_LEN 110
+#define ADC_CHANNELS 11
+#define SAMPLE_SIZE 10
 
 typedef enum
 {
@@ -33,10 +35,10 @@ class StripCurrent
 {
 public:
 	StripCurrent() {};
-	StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timerHandle);
-	virtual ~StripCurrent();
+	StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer);
+	~StripCurrent();
 
-	void Init();
+	HAL_StatusTypeDef Init();
 
 	uint8_t GetChannel(StripIndecies ch);
 
@@ -47,7 +49,9 @@ private:
 	uint8_t *buffer;
 	uint16_t sampleSize;
 
-	void CalcAverage(uint8_t index);
+	uint8_t *averages;
+
+	void CalcAverage(uint8_t *index);
 };
 
 #endif /* INC_STRIPCURRENT_H_ */

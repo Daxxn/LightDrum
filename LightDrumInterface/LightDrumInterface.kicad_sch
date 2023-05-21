@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrumInterface")
-    (rev "REV8")
+    (rev "REV9")
     (company "Daxxn Industries")
   )
 
@@ -7106,7 +7106,7 @@
       )
       (project "LightDrumInterface"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "J3") (unit 1)
+          (reference "JW") (unit 1)
         )
       )
     )

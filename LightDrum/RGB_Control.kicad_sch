@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV11")
+    (rev "REV13")
     (company "Daxxn Industries")
   )
 
@@ -466,7 +466,7 @@
   )
 
   (sheet (at 69.85 21.59) (size 25.4 58.42)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 75c45b3d-e09a-41c7-88e5-ae1bbc637da8)
     (property "Sheetname" "Strip Connector" (at 69.85 21.59 0)
@@ -507,7 +507,7 @@
   )
 
   (sheet (at 39.37 25.4) (size 25.4 20.32)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 7f4e9734-e24e-4821-971a-aa27c706cb90)
     (property "Sheetname" "RGB Control" (at 39.37 25.4 0)
@@ -540,7 +540,7 @@
   )
 
   (sheet (at 100.33 21.59) (size 24.13 15.24)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid c531f82f-a257-4f09-9fb4-dd6a683aa13c)
     (property "Sheetname" "Strip Current Monitors" (at 100.33 21.59 0)
@@ -565,7 +565,7 @@
   )
 
   (sheet (at 39.37 54.61) (size 25.4 13.97) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid f487ad54-ecfd-46ce-97af-fbacfbdc739e)
     (property "Sheetname" "Solid Lights" (at 39.37 53.8984 0)

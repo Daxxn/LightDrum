@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "LightDrum")
+    (rev "REV13")
+    (company "Daxxn Industries")
+  )
+
   (lib_symbols
     (symbol "Amplifier_Current:INA180A3" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 3.81 3.81 0)
@@ -690,7 +696,7 @@
     (uuid f4828647-4166-4267-b51e-9ffafd52d6b5)
   )
 
-  (text "100V/V" (at 57.15 35.56 0)
+  (text "50V/V" (at 57.15 35.56 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 53a28332-ea17-44e1-a06f-00120c5a1300)
   )
@@ -925,7 +931,7 @@
     (property "Reference" "U15" (at 57.15 31.242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "INA180A3" (at 57.15 33.02 0)
+    (property "Value" "INA180A2" (at 57.15 33.02 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 55.88 38.1 0)
@@ -1269,7 +1275,7 @@
     (property "Reference" "R117" (at 76.2 22.86 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "70m" (at 76.2 21.082 90)
+    (property "Value" "150m" (at 76.2 21.082 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 76.2 27.178 90)

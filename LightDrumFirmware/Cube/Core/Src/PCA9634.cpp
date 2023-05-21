@@ -37,22 +37,23 @@ PCA9634Settings PCA9634Settings::FromBytes(uint8_t *buffer, size_t offset = 0)
 {
 	PCA9634Settings result = PCA9634Settings();
 	result.Enable = (PCA9634_OUTPUT_ENABLE)(buffer[1 + offset] & 0b00000011);
-	result.Driver = (PCA9634_OUTPUT_DRIVER)(buffer[1 + offset] & 0b00000100);
-	result.Change = (PCA9634_OUTPUT_CHANGE)(buffer[1 + offset] & 0b00001000);
-	result.Invert =  (PCA9634_OUTPUT_LOGIC)(buffer[1 + offset] & 0b00010000);
-	result.GroupCtrl = (PCA9634_GROUP_CTRL)(buffer[1 + offset] & 0b00100000);
+	result.Driver = (PCA9634_OUTPUT_DRIVER)((buffer[1 + offset] & 0b00000100) >> 2);
+	result.Change = (PCA9634_OUTPUT_CHANGE)((buffer[1 + offset] & 0b00001000) >> 3);
+	result.Invert =  (PCA9634_OUTPUT_LOGIC)((buffer[1 + offset] & 0b00010000) >> 4);
+	result.GroupCtrl = (PCA9634_GROUP_CTRL)((buffer[1 + offset] & 0b00100000) >> 5);
 	result.AllCallEnable =           (bool)(buffer[0 + offset] & 0b00000001);
-	result.SubAddrEn3 =              (bool)(buffer[0 + offset] & 0b00000010);
-	result.SubAddrEn2 =              (bool)(buffer[0 + offset] & 0b00000100);
-	result.SubAddrEn1 =              (bool)(buffer[0 + offset] & 0b00001000);
-	result.Sleep =          (PCA9634_SLEEP)(buffer[0 + offset] & 0b00010000);
+	result.SubAddrEn3 =              (bool)((buffer[0 + offset] & 0b00000010) >> 1);
+	result.SubAddrEn2 =              (bool)((buffer[0 + offset] & 0b00000100) >> 2);
+	result.SubAddrEn1 =              (bool)((buffer[0 + offset] & 0b00001000) >> 3);
+	result.Sleep =          (PCA9634_SLEEP)((buffer[0 + offset] & 0b00010000) >> 4);
 	return result;
 }
 
 /* PCA9634 Class Methods -----------------------------------------------------*/
 
-PCA9634::PCA9634(FMPI2C_HandleTypeDef *i2cBus, Pin oePin)
+PCA9634::PCA9634(uint8_t address, FMPI2C_HandleTypeDef *i2cBus, Pin oePin)
 {
+	this->address = address << 1;
 	this->i2cBus = i2cBus;
 	this->channels = new uint8_t[RGB_CHANNELS];
 	this->channelState = new PCA9634_LEDOUT[RGB_CHANNELS];
@@ -118,6 +119,8 @@ HAL_StatusTypeDef PCA9634::ChangeSettings(PCA9634Settings settings)
 PCA9634Settings PCA9634::ReadSettings()
 {
 	uint8_t buffer[2] = {0,0};
+	buffer[0] = this->CombineCommand(PCA9634_AUTO_INC::ALL_REGS, PCA9634_CTRL_REGISTER::MODE1);
+	HAL_FMPI2C_Master_Transmit(i2cBus, address, buffer, 1, FMPI2C_TIMEOUT);
 	HAL_FMPI2C_Master_Receive(i2cBus, this->address, buffer, 2, 200);
 	return PCA9634Settings::FromBytes(buffer);
 }

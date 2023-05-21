@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV11")
+    (rev "REV13")
     (company "Daxxn Industries")
   )
 
@@ -5998,7 +5998,7 @@
     (property "Reference" "R16" (at 219.71 31.242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "430K" (at 219.71 33.02 0)
+    (property "Value" "432K" (at 219.71 33.02 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 218.44 31.75 0)
@@ -6616,7 +6616,7 @@
   )
 
   (sheet (at 72.39 68.58) (size 17.78 10.16)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 33823fd6-c5f7-46ac-ae5c-a135891f46f0)
     (property "Sheetname" "LED_Power_Control" (at 72.39 68.58 0)

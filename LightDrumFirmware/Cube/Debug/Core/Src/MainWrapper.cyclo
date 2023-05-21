@@ -1,29 +1,31 @@
 Utils.h:24:2:Pin::Pin()	1
 Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	1
 Utils.h:32:2:Pin::Pin(GPIO_TypeDef*, uint16_t, GPIO_Default_State)	1
-StripCurrent.h:35:2:StripCurrent::StripCurrent()	1
+StripCurrent.h:37:2:StripCurrent::StripCurrent()	1
 ShiftRegs.h:37:2:ShiftRegs::ShiftRegs()	1
 PCA9634.h:146:8:PCA9634Settings::PCA9634Settings()	1
 PCA9634.h:169:2:PCA9634::PCA9634()	1
-MainWrapper.cpp:82:6:void ToggleTest(uint8_t, int)	2
-MainWrapper.cpp:93:6:void EaseInDebug()	2
-MainWrapper.cpp:102:6:void EaseInStatus()	2
-MainWrapper.cpp:111:6:void ReadCurrent()	2
+MainWrapper.cpp:91:6:void EaseInDebug()	2
+MainWrapper.cpp:100:6:void EaseInStatus()	2
+MainWrapper.cpp:109:6:void ReadCurrent()	2
+MainWrapper.cpp:121:6:void AudioLevelsAverage()	2
+MainWrapper.cpp:131:6:void ReadAudioTest()	2
+MainWrapper.cpp:139:6:void AudioFullCallback()	1
+MainWrapper.cpp:144:6:void AudioHalfFullCallback()	1
+MainWrapper.cpp:149:6:void CurrentConvFullCallback()	1
 ShiftRegs.h:34:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	1
-StripCurrent.h:32:7:constexpr StripCurrent& StripCurrent::operator=(const StripCurrent&)	1
-PCA9634.h:166:7:constexpr PCA9634& PCA9634::operator=(const PCA9634&)	1
-MainWrapper.cpp:127:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*)	1
-MainWrapper.cpp:191:6:void InitTest()	1
-MainWrapper.cpp:200:6:void Main()	1
-MainWrapper.cpp:255:6:void MenuUpInterruptCallback()	1
-MainWrapper.cpp:259:6:void MenuDownInterruptCallback()	1
-MainWrapper.cpp:269:6:void MenuRightInterruptCallback()	1
-MainWrapper.cpp:273:6:void MenuActInterruptCallback()	1
-MainWrapper.cpp:277:6:void MenuBackInterruptCallback()	1
-MainWrapper.cpp:283:6:void Enc1SwInterruptCallback()	1
-MainWrapper.cpp:287:6:void Enc2SwInterruptCallback()	1
-MainWrapper.cpp:291:6:void Enc1TurnInterruptCallback()	1
-MainWrapper.cpp:300:6:void Enc2TurnInterruptCallback()	1
-MainWrapper.cpp:304:1:void __static_initialization_and_destruction_0(int, int)	5
-MainWrapper.cpp:304:1:cpp)	1
-MainWrapper.cpp:304:1:cpp)	1
+MainWrapper.cpp:158:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*)	2
+MainWrapper.cpp:245:6:void InitTest()	1
+MainWrapper.cpp:254:6:void Main()	3
+MainWrapper.cpp:313:6:void MenuUpInterruptCallback()	1
+MainWrapper.cpp:317:6:void MenuDownInterruptCallback()	1
+MainWrapper.cpp:327:6:void MenuRightInterruptCallback()	1
+MainWrapper.cpp:331:6:void MenuActInterruptCallback()	1
+MainWrapper.cpp:335:6:void MenuBackInterruptCallback()	1
+MainWrapper.cpp:341:6:void Enc1SwInterruptCallback()	1
+MainWrapper.cpp:345:6:void Enc2SwInterruptCallback()	1
+MainWrapper.cpp:349:6:void Enc1TurnInterruptCallback()	1
+MainWrapper.cpp:358:6:void Enc2TurnInterruptCallback()	1
+MainWrapper.cpp:362:1:void __static_initialization_and_destruction_0(int, int)	5
+MainWrapper.cpp:362:1:cpp)	1
+MainWrapper.cpp:362:1:cpp)	1

@@ -17,8 +17,11 @@
 #include "Button.h"
 #include "PCA9634.h"
 
+#define AUDIO_BUFFER_SIZE 128
+#define AUDIO_HALF_BUFFER_SIZE 64
+
 ADC_HandleTypeDef *currentADCHandle;
-DMA_HandleTypeDef *currentADCMemHandle;
+DMA_HandleTypeDef *currentADC_DMAHandle;
 
 FMPI2C_HandleTypeDef *stripI2cHandle;
 DMA_HandleTypeDef *dmaTXStripHandle;
@@ -26,10 +29,6 @@ I2C_HandleTypeDef *i2cHandle;
 
 I2S_HandleTypeDef *audioHandle;
 DMA_HandleTypeDef *dmaRXAudioHandle;
-
-RTC_HandleTypeDef *rtcHandle;
-
-SD_HandleTypeDef *sdHandle;
 
 SPI_HandleTypeDef *graphHandle;
 
@@ -42,6 +41,9 @@ TIM_HandleTypeDef *adcTimHandle;
 UART_HandleTypeDef *screenHandle;
 UART_HandleTypeDef *midiHandle;
 UART_HandleTypeDef *dmxHandle;
+
+RTC_HandleTypeDef *rtcHandle;
+SD_HandleTypeDef *sdHandle;
 
 ShiftRegs shiftReg;
 Nextion screen = Nextion();
@@ -57,6 +59,12 @@ uint8_t ledCount = 0;
 
 uint8_t count = 0;
 uint8_t page = 0;
+
+PCA9634Settings settings;
+
+uint16_t audioBuffer[AUDIO_BUFFER_SIZE];
+
+bool indicator = false;
 
 GPIO_PinState menuLeftPrev = GPIO_PIN_RESET;
 
@@ -79,16 +87,6 @@ const int i = 127;
 //	HAL_GPIO_WritePin(EXT_LED_GPIO_Port, EXT_LED_Pin, GPIO_PIN_RESET);
 //}
 
-void ToggleTest(uint8_t count, int delay)
-{
-	for (int i = 0; i < count; ++i)
-	{
-		HAL_GPIO_WritePin(AUDIO_SRC_IND_GPIO_Port, AUDIO_SRC_IND_Pin, GPIO_PIN_SET);
-		HAL_Delay(delay);
-		HAL_GPIO_WritePin(AUDIO_SRC_IND_GPIO_Port, AUDIO_SRC_IND_Pin, GPIO_PIN_RESET);
-		HAL_Delay(delay);
-	}
-}
 
 void EaseInDebug()
 {
@@ -120,6 +118,39 @@ void ReadCurrent()
 
 }
 
+void AudioLevelsAverage()
+{
+	double sum = 0;
+	double average = 0;
+	for (int i = 0; i < AUDIO_BUFFER_SIZE; ++i) {
+		sum += audioBuffer[i];
+	}
+	average = sum / 64;
+}
+
+void ReadAudioTest()
+{
+	if (HAL_I2S_Receive(audioHandle, audioBuffer, AUDIO_BUFFER_SIZE, 200) == HAL_OK)
+	{
+		AudioLevelsAverage();
+	}
+}
+
+void AudioFullCallback()
+{
+	AudioLevelsAverage();
+}
+
+void AudioHalfFullCallback()
+{
+
+}
+
+void CurrentConvFullCallback()
+{
+	stripCurr.Calc();
+}
+
 /**
   * @brief C++ Initialization Function
   * @retval None
@@ -127,21 +158,27 @@ void ReadCurrent()
 HAL_StatusTypeDef Init(
 		ADC_HandleTypeDef    *in_hadc1,
 		DMA_HandleTypeDef    *in_hdma_adc1,
+
 		FMPI2C_HandleTypeDef *in_hfmpi2c1,
 		DMA_HandleTypeDef    *in_hdma_fmpi2c1_tx,
+
 		I2C_HandleTypeDef    *in_hi2c1,
-		I2S_HandleTypeDef    *in_hi2s3,
-		DMA_HandleTypeDef    *in_hdma_spi3_rx,
-		RTC_HandleTypeDef    *in_hrtc,
-		SD_HandleTypeDef     *in_hsd,
+
+		I2S_HandleTypeDef    *in_hi2s5,
+		DMA_HandleTypeDef    *hdma_spi5_rx,
+
 		SPI_HandleTypeDef    *in_hspi4,
+
 		TIM_HandleTypeDef    *in_htim1,
-		TIM_HandleTypeDef    *in_htim2,
 		TIM_HandleTypeDef    *in_htim3,
 		TIM_HandleTypeDef    *in_htim8,
+
 		UART_HandleTypeDef   *in_huart1,
 		UART_HandleTypeDef   *in_huart2,
-		UART_HandleTypeDef   *in_huart3
+		UART_HandleTypeDef   *in_huart3,
+
+		RTC_HandleTypeDef    *in_hrtc,
+		SD_HandleTypeDef     *in_hsd
 	)
 {
 
@@ -150,47 +187,64 @@ HAL_StatusTypeDef Init(
 	Pin pwmOE = Pin(PWM_OE_GPIO_Port, PWM_OE_Pin, GPIO_Default_State::ACTIVE_LOW);
 
 	currentADCHandle = in_hadc1;
-	currentADCMemHandle = in_hdma_adc1;
+	currentADC_DMAHandle = in_hdma_adc1;
+
 	stripI2cHandle = in_hfmpi2c1;
 	dmaTXStripHandle = in_hdma_fmpi2c1_tx;
+
 	i2cHandle = in_hi2c1;
-	audioHandle = in_hi2s3;
-	dmaRXAudioHandle = in_hdma_spi3_rx;
+
+	audioHandle = in_hi2s5;
+	dmaRXAudioHandle = hdma_spi5_rx;
+
 	rtcHandle = in_hrtc;
 	sdHandle = in_hsd;
 	graphHandle = in_hspi4;
 	pwm1Handle = in_htim1;
-	pwm2Handle = in_htim2;
 	pwm3Handle = in_htim3;
+	adcTimHandle = in_htim8;
 	screenHandle = in_huart1;
 	midiHandle = in_huart2;
 	dmxHandle = in_huart3;
-	adcTimHandle = in_htim8;
 
 //	screen.Startup(screenHandle);
 	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
 	stripCurr = StripCurrent(currentADCHandle, adcTimHandle);
-	ledA = PCA9634(stripI2cHandle, pwmOE);
+	ledA = PCA9634(0x2A, stripI2cHandle, pwmOE);
 
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start(pwm2Handle, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start(pwm2Handle, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_4);
+
+//	HAL_TIM_Base_Start(adcTimHandle);
 
 	HAL_GPIO_WritePin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_SET);
 
-	stripCurr.Init();
+	settings = PCA9634Settings();
+	settings.Driver = PCA9634_OUTPUT_DRIVER::TOTEM_POLE;
+	settings.Invert = PCA9634_OUTPUT_LOGIC::INVERTED;
+	ledA.ChangeSettings(settings);
 
 	shiftReg.Init();
+
+	if (stripCurr.Init() != HAL_OK)
+	{
+		return HAL_ERROR;
+	}
+
+//	if (HAL_I2S_Receive_DMA(audioHandle, audioBuffer, AUDIO_BUFFER_SIZE) != HAL_OK)
+//	{
+//		return HAL_ERROR;
+//	}
 
 	return HAL_OK;
 }
 
 void InitTest()
 {
-	shiftReg.IndicatorTest();
+//	shiftReg.IndicatorTest();
 }
 
 /**
@@ -199,9 +253,12 @@ void InitTest()
   */
 void Main()
 {
-	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, UINT32_MAX / 2);
-	PCA9634Settings settings = ledA.ReadSettings();
-	__HAL_TIM_SET_COMPARE(pwm2Handle, TIM_CHANNEL_1, UINT32_MAX / 4);
+	indicator = !indicator;
+	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_1, indicator ? UINT16_MAX : 0);
+	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_3, !indicator ? UINT16_MAX : 0);
+//	ReadCurrent();
+//	ReadAudioTest();
+//	PCA9634Settings settings = ledA.ReadSettings();
 
 
 //		OLD Testing

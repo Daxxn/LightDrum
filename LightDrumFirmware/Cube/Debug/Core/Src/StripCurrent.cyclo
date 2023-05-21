@@ -1,7 +1,6 @@
 StripCurrent.cpp:11:1:StripCurrent::StripCurrent(ADC_HandleTypeDef*, TIM_HandleTypeDef*)	1
-StripCurrent.cpp:17:1:StripCurrent::~StripCurrent()	2
-StripCurrent.cpp:17:1:virtual StripCurrent::~StripCurrent()	1
-StripCurrent.cpp:22:6:void StripCurrent::Init()	1
-StripCurrent.cpp:30:9:uint8_t StripCurrent::GetChannel(StripIndecies)	1
-StripCurrent.cpp:35:6:void StripCurrent::Calc()	1
-StripCurrent.cpp:40:6:void CalcAverage(uint8_t)	2
+StripCurrent.cpp:19:1:StripCurrent::~StripCurrent()	2
+StripCurrent.cpp:24:19:HAL_StatusTypeDef StripCurrent::Init()	2
+StripCurrent.cpp:33:9:uint8_t StripCurrent::GetChannel(StripIndecies)	1
+StripCurrent.cpp:38:6:void StripCurrent::Calc()	2
+StripCurrent.cpp:48:6:void CalcAverage(uint8_t*)	1

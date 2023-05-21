@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV11")
+    (rev "REV13")
     (company "Daxxn Industries")
   )
 
@@ -1350,6 +1350,12 @@
     (property "SupplierPN" "2092-KPJXHT-4S-S-ND" (at 33.02 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Schematic" "" (at 33.02 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "PartNumber" "" (at 33.02 45.72 0)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid add63d56-906e-480d-bbfc-12c172a8d5e4))
     (pin "2" (uuid 83ffc792-0522-4cb5-846e-1074c137cba7))
     (pin "3" (uuid fa93970e-7385-46d5-b575-345ad7644a4d))
@@ -1358,6 +1364,9 @@
     (instances
       (project "LightDrum"
         (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/1cf17c4e-5921-408b-a9f8-9e373eae7d69/33823fd6-c5f7-46ac-ae5c-a135891f46f0"
+          (reference "J5") (unit 1)
+        )
+        (path "/7f137461-fd46-4a4c-8db7-555d487fb3ca/c5b6f44f-b454-4d73-ae8d-4f0249b04054/f487ad54-ecfd-46ce-97af-fbacfbdc739e"
           (reference "J5") (unit 1)
         )
       )

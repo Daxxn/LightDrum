@@ -6,7 +6,7 @@
 
   (title_block
     (title "LightDrum")
-    (rev "REV11")
+    (rev "REV13")
     (company "Daxxn Industries")
   )
 
@@ -2816,7 +2816,7 @@
   )
 
   (sheet (at 148.59 41.91) (size 26.67 20.32)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 0b4455a9-9524-4969-89d6-fafc6f740fef)
     (property "Sheetname" "AUDIO INPUTS" (at 124.46 40.64 0)
@@ -2857,7 +2857,7 @@
   )
 
   (sheet (at 148.59 17.78) (size 26.67 15.24)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 1cf17c4e-5921-408b-a9f8-9e373eae7d69)
     (property "Sheetname" "POWER" (at 124.46 16.51 0)
@@ -2894,7 +2894,7 @@
   )
 
   (sheet (at 128.27 110.49) (size 34.29 48.26)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 37b1a4e5-7bc5-4d58-948d-cb24160396b1)
     (property "Sheetname" "INTERFACE CONNECTOR" (at 100.33 109.22 0)
@@ -3039,7 +3039,7 @@
   )
 
   (sheet (at 34.29 166.37) (size 27.94 16.51)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 47dd7232-a18b-43ab-b8d2-1101988d95b2)
     (property "Sheetname" "TEST POINTS" (at 13.97 165.1 0)
@@ -3092,7 +3092,7 @@
   )
 
   (sheet (at 35.56 17.78) (size 50.8 81.28)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 97311934-873d-4d1e-ba68-f7e43f64afbc)
     (property "Sheetname" "MICROCONTROLLER" (at 13.97 16.51 0)
@@ -3309,7 +3309,7 @@
   )
 
   (sheet (at 147.32 69.85) (size 27.94 33.02)
-    (stroke (width 0.1524) (type solid))
+    (stroke (width 0.2) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid c5b6f44f-b454-4d73-ae8d-4f0249b04054)
     (property "Sheetname" "RGB CONTROL" (at 124.46 67.31 0)

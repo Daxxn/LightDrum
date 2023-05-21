@@ -99,7 +99,7 @@ typedef enum
 {
 	PULL_LOW = 0b00,
 	USE_LOGIC = 0b01,
-	HIGH_Z
+	HIGH_Z = 0b10
 } PCA9634_OUTPUT_ENABLE;
 
 struct LEDChannel
@@ -167,8 +167,8 @@ class PCA9634
 {
 public:
 	PCA9634() {};
-	PCA9634(FMPI2C_HandleTypeDef *i2cBus, Pin oePin);
-	virtual ~PCA9634();
+	PCA9634(uint8_t address, FMPI2C_HandleTypeDef *i2cBus, Pin oePin);
+	~PCA9634();
 
 	/*
 	 * @brief Initialize the PCA9634 IC with the provided settings.
