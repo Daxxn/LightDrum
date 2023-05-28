@@ -32,6 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+//#define USE_HAL_UART_REGISTER_CALLBACKS 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -109,11 +110,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		case MENU_DOWN_Pin:
 			MenuDownInterruptCallback();
 			break;
-			// Pin moved for next revision. Right now the pin is set as GPIO.
-			// Shares the same interrupt channel as the ENC1_A pin.
-//		case MENU_LEFT_Pin:
-//			MenuLeftInterruptCallback();
-//			break;
+		case MENU_LEFT_Pin:
+			MenuLeftInterruptCallback();
+			break;
 		case MENU_RIGHT_Pin:
 			MenuRightInterruptCallback();
 			break;
@@ -140,6 +139,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 	CurrentConvFullCallback();
 }
+
+//void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+//{
+//	ScreenReceiveCallback();
+//}
 /* USER CODE END 0 */
 
 /**
@@ -186,7 +190,8 @@ int main(void)
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
 
-//  HAL_ADC_Start_DMA(&hadc1, pData, Length);
+
+//  HAL_GPIO_WritePin(DIAG_DEBUG_GPIO_Port, DIAG_DEBUG_Pin, GPIO_PIN_RESET);
   if (Init(
 		  &hadc1,
 		  &hdma_adc1,
@@ -788,7 +793,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 65535;
+  htim3.Init.Period = 0x100;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -961,7 +966,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -1114,8 +1119,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : VDD_PG_Pin VDDA_PG_Pin STRIP_PG_Pin */
-  GPIO_InitStruct.Pin = VDD_PG_Pin|VDDA_PG_Pin|STRIP_PG_Pin;
+  /*Configure GPIO pins : VDD_PG_Pin VAA_PG_Pin STRIP_PG_Pin */
+  GPIO_InitStruct.Pin = VDD_PG_Pin|VAA_PG_Pin|STRIP_PG_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -1208,7 +1213,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
-	  HAL_GPIO_TogglePin(DIAG_DEBUG_GPIO_Port, DIAG_DEBUG_Pin);
+	  HAL_GPIO_WritePin(DIAG_DEBUG_GPIO_Port, DIAG_DEBUG_Pin, GPIO_PIN_SET);
 	  HAL_Delay(200);
   }
   /* USER CODE END Error_Handler_Debug */

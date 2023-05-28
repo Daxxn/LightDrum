@@ -62,6 +62,7 @@ extern FMPI2C_HandleTypeDef hfmpi2c1;
 extern DMA_HandleTypeDef hdma_spi5_rx;
 extern RTC_HandleTypeDef hrtc;
 extern TIM_HandleTypeDef htim6;
+extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -90,6 +91,7 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
+  Error_Handler();
 
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
@@ -120,6 +122,7 @@ void MemManage_Handler(void)
 void BusFault_Handler(void)
 {
   /* USER CODE BEGIN BusFault_IRQn 0 */
+  Error_Handler();
 
   /* USER CODE END BusFault_IRQn 0 */
   while (1)
@@ -135,6 +138,7 @@ void BusFault_Handler(void)
 void UsageFault_Handler(void)
 {
   /* USER CODE BEGIN UsageFault_IRQn 0 */
+  Error_Handler();
 
   /* USER CODE END UsageFault_IRQn 0 */
   while (1)
@@ -272,6 +276,20 @@ void EXTI9_5_IRQHandler(void)
   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
 
   /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
+
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /**

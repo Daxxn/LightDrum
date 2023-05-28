@@ -32,7 +32,9 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Inc/Screen \
 Core/Src \
+Core/Src/Screen \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
 FATFS/App \

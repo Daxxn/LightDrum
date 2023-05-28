@@ -1,0 +1,13 @@
+Component.h:20:2:Component::Component(Nextion*, uint8_t)	1
+Control.h:32:7:bool Control::CheckNav(uint8_t&, uint8_t&)	3
+Control.h:34:10:uint8_t Control::GetNavX()	1
+Control.h:35:10:uint8_t Control::GetNavY()	1
+Page.cpp:10:1:Page::Page(Nextion*, uint8_t, Button*, int, PageButton*, int)	7
+Page.cpp:51:1:Page::Page(Nextion*, uint8_t, Button*, int, PageButton*, int, ProgressBar*, int)	6
+Page.cpp:98:1:Page::~Page()	7
+Page.cpp:98:1:virtual Page::~Page()	1
+Page.cpp:107:6:void Page::Navigate(int8_t, int8_t)	11
+Page.cpp:154:6:void Page::Init()	1
+Page.cpp:160:6:virtual void Page::Act()	1
+Page.cpp:165:10:Control* Page::FindControl(uint8_t)	3
+Page.cpp:177:6:void Page::ResetNavigation()	3

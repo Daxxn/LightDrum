@@ -53,4 +53,6 @@ void AudioHalfFullCallback();
 void AudioFullCallback();
 void CurrentConvFullCallback();
 
+void ScreenReceiveCallback();
+
 #endif /* INC_MAINWRAPPER_H_ */

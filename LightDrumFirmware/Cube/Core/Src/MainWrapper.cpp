@@ -14,8 +14,13 @@
 #include "Nextion.h"
 #include "ShiftRegs.h"
 #include "Utils.h"
-#include "Button.h"
 #include "PCA9634.h"
+#include "StripControl.h"
+#include "Screen/Button.h"
+#include "Screen/PageButton.h"
+#include "Screen/Page.h"
+#include "Screen/ProgressBar.h"
+#include "ScreenControl.h"
 
 #define AUDIO_BUFFER_SIZE 128
 #define AUDIO_HALF_BUFFER_SIZE 64
@@ -46,12 +51,10 @@ RTC_HandleTypeDef *rtcHandle;
 SD_HandleTypeDef *sdHandle;
 
 ShiftRegs shiftReg;
-Nextion screen = Nextion();
-
-Button menuUp = Button();
-Button menuDown = Button();
+Nextion next = Nextion();
 
 StripCurrent stripCurr;
+StripControl stripCtrl;
 
 PCA9634 ledA;
 
@@ -71,11 +74,218 @@ GPIO_PinState menuLeftPrev = GPIO_PIN_RESET;
 GPIO_PinState relayState = GPIO_PIN_RESET;
 uint32_t adcReading = 0;
 
-#define NAV_BACKLIGHT 0
-#define MENU_BACK_IND 1
-#define MENU_DOWN_IND 2
-#define MENU_UP_IND   3
-#define MENU_LEFT_IND 4
+/* Screen Components ---------------------------------------------------------*/
+
+// Global
+PageButton homeBtn = PageButton(&next, 1, "pb1", 0, 0, 1);
+PageButton settingsBtn = PageButton(&next, 2, "pb5", 1, 0, 5);
+
+PageButton subMenuPageBtns[] = {
+		homeBtn,
+		settingsBtn
+};
+
+// MainMenu
+PageButton mainPageBtn   = PageButton(&next, 7, "pb1", 0, 0, 2);
+PageButton chnPageBtn    = PageButton(&next, 1, "pb2", 0, 1, 3);
+PageButton chCfgPageBtn  = PageButton(&next, 6, "pb3", 0, 2, 4);
+PageButton audPageBtn    = PageButton(&next, 4, "pb5", 0, 3, 6);
+PageButton patPageBtn    = PageButton(&next, 5, "pb7", 1, 1, 8);
+PageButton colPageBtn    = PageButton(&next, 8, "pb6", 1, 2, 7);
+PageButton settPageBtn   = PageButton(&next, 2, "pb4", 1, 3, 5);
+
+PageButton mainBtns[] = {
+		mainPageBtn,
+		chnPageBtn,
+		chCfgPageBtn,
+		audPageBtn,
+		patPageBtn,
+		colPageBtn,
+		settPageBtn
+};
+
+Page homePage = Page(&next, 1, NULL, 0, mainBtns, 7);
+
+// Run
+
+Button runBtn = Button(&next, 2, "b0", 0, 1);
+
+Button runBtns[] = {
+		runBtn
+};
+
+PageButton runHomeBtn = PageButton(&next, 18, "pb1", 0, 0, 1);
+PageButton runSettingsBtn = PageButton(&next, 19, "pb5", 1, 0, 5);
+
+PageButton runPageBtns[] = {
+		runHomeBtn,
+		runSettingsBtn
+};
+
+Page runPage = Page(&next, 2, runBtns, 1, runPageBtns, 2);
+
+//Channel Vis
+Button srcCh1Btn = Button(&next, 3, "b0", 0, 1);
+Button srcCh2Btn = Button(&next, 21, "b1", 1, 1);
+Button srcCh3Btn = Button(&next, 22, "b2", 2, 1);
+Button srcCh4Btn = Button(&next, 23, "b3", 3, 1);
+Button srcCh5Btn = Button(&next, 24, "b4", 4, 1);
+Button srcCh6Btn = Button(&next, 25, "b5", 5, 1);
+Button srcCh7Btn = Button(&next, 26, "b6", 6, 1);
+Button srcCh8Btn = Button(&next, 27, "b7", 7, 1);
+
+ProgressBar ch1Bar = ProgressBar(&next, 1, "j0");
+ProgressBar ch2Bar = ProgressBar(&next, 4, "j1");
+ProgressBar ch3Bar = ProgressBar(&next, 6, "j2");
+ProgressBar ch4Bar = ProgressBar(&next, 8, "j3");
+ProgressBar ch5Bar = ProgressBar(&next, 10, "j4");
+ProgressBar ch6Bar = ProgressBar(&next, 12, "j5");
+ProgressBar ch7Bar = ProgressBar(&next, 14, "j6");
+ProgressBar ch8Bar = ProgressBar(&next, 16, "j7");
+
+PageButton chVisHomeBtn = PageButton(&next, 18, "pb1", 0, 0, 1);
+PageButton chVisSettingsBtn = PageButton(&next, 19, "pb5", 1, 0, 5);
+
+PageButton chVisPageBtns[] = {
+		chVisHomeBtn,
+		chVisSettingsBtn
+};
+
+Button chVisBtns[] = {
+		srcCh1Btn,
+		srcCh2Btn,
+		srcCh3Btn,
+		srcCh4Btn,
+		srcCh5Btn,
+		srcCh6Btn,
+		srcCh7Btn,
+		srcCh8Btn
+};
+
+ProgressBar progBars[] = {
+		ch1Bar,
+		ch2Bar,
+		ch3Bar,
+		ch4Bar,
+		ch5Bar,
+		ch6Bar,
+		ch7Bar,
+		ch8Bar,
+};
+
+Page channelVisPage = Page(&next, 3, chVisBtns, 8, chVisPageBtns, 2, progBars, 8);
+
+// Channel Config
+Button ch1Btn = Button(&next, 13, "b0", 0, 2);
+Button ch2Btn = Button(&next, 13, "b1", 1, 2);
+Button ch3Btn = Button(&next, 13, "b2", 2, 2);
+Button ch4Btn = Button(&next, 13, "b3", 3, 2);
+Button ch5Btn = Button(&next, 13, "b4", 4, 2);
+Button ch6Btn = Button(&next, 13, "b5", 5, 2);
+Button ch7Btn = Button(&next, 13, "b6", 6, 2);
+Button ch8Btn = Button(&next, 13, "b7", 7, 2);
+
+PageButton chCfgHomeBtn = PageButton(&next, 3, "pb1", 0, 0, 1);
+PageButton chCfgSettingsBtn = PageButton(&next, 4, "pb5", 1, 0, 5);
+
+PageButton chCfgPageBtns[] = {
+		chCfgHomeBtn,
+		chCfgSettingsBtn
+};
+
+Button chCfgBtns[] = {
+		ch1Btn,
+		ch2Btn,
+		ch3Btn,
+		ch4Btn,
+		ch5Btn,
+		ch6Btn,
+		ch7Btn,
+		ch8Btn,
+};
+
+Page channelConfigPage = Page(&next, 4, chCfgBtns, 8, chCfgPageBtns, 2);
+
+//Settings
+Button saveBtn = Button(&next, 0, "b0", 0, 2);
+
+Button settBtns[] = {
+		saveBtn
+};
+
+PageButton settPageBtns[] = {
+		homeBtn
+};
+
+Page settingsPage = Page(&next, 5, settBtns, 1, settPageBtns, 1);
+
+// Audio
+Button audSrcXlrBtn = Button(&next, 12, "b7", 2, 1);
+Button audSrcJackBtn = Button(&next, 13, "b0", 3, 1);
+
+PageButton audHomeBtn = PageButton(&next, 15, "pb1", 0, 0, 1);
+PageButton audSettingsBtn = PageButton(&next, 16, "pb5", 1, 0, 5);
+
+PageButton audPageBtns[] = {
+		audHomeBtn,
+		audSettingsBtn
+};
+
+Button audBtns[] = {
+		audSrcXlrBtn,
+		audSrcJackBtn
+};
+
+Page audioPage = Page(&next, 6, audBtns, 2, audPageBtns, 2);
+
+// Colors
+Button colChSelBtn = Button(&next, 0, "b0", 0, 2);
+Button colorBtns[] = {
+		colChSelBtn
+};
+
+PageButton colHomeBtn = PageButton(&next, 5, "pb1", 0, 0, 1);
+PageButton colSettingsBtn = PageButton(&next, 6, "pb5", 1, 0, 5);
+
+PageButton colPageBtns[] = {
+		colHomeBtn,
+		colSettingsBtn
+};
+
+Page colorPage = Page(&next, 7, colorBtns, 0, colPageBtns, 2);
+
+// Pattern
+
+//Button patternBtns[] = {};
+
+PageButton patHomeBtn = PageButton(&next, 4, "pb1", 0, 0, 1);
+PageButton patSettingsBtn = PageButton(&next, 5, "pb5", 1, 0, 5);
+
+PageButton patPageBtns[] = {
+		patHomeBtn,
+		patSettingsBtn
+};
+
+Page patternPage = Page(&next, 7, NULL, 0, patPageBtns, 2);
+
+// Screen Control
+Page pages[] = {
+		homePage,
+		runPage,
+		channelVisPage,
+		channelConfigPage,
+		settingsPage,
+		audioPage,
+		colorPage
+};
+
+ScreenControl screenCtrl = ScreenControl(&next, pages);
+
+#define NAV_BACKLIGHT  0
+#define MENU_BACK_IND  1
+#define MENU_DOWN_IND  2
+#define MENU_UP_IND    3
+#define MENU_LEFT_IND  4
 #define MENU_RIGHT_IND 5
 
 const int delay = 50;
@@ -120,12 +330,12 @@ void ReadCurrent()
 
 void AudioLevelsAverage()
 {
-	double sum = 0;
-	double average = 0;
-	for (int i = 0; i < AUDIO_BUFFER_SIZE; ++i) {
-		sum += audioBuffer[i];
-	}
-	average = sum / 64;
+//	double sum = 0;
+//	double average = 0;
+//	for (int i = 0; i < AUDIO_BUFFER_SIZE; ++i) {
+//		sum += audioBuffer[i];
+//	}
+//	average = sum / 64;
 }
 
 void ReadAudioTest()
@@ -149,6 +359,21 @@ void AudioHalfFullCallback()
 void CurrentConvFullCallback()
 {
 	stripCurr.Calc();
+}
+
+void PageChangeCallbackHandle(uint8_t pageNumber)
+{
+	screenCtrl.ChangePageEvent(pageNumber);
+}
+
+void TouchEventCallbackHandle(uint8_t pageID, uint8_t compID, uint8_t event)
+{
+	screenCtrl.TouchEvent(pageID, compID, event);
+}
+
+void ScreenReceiveCallback()
+{
+	next.Receive();
 }
 
 /**
@@ -181,6 +406,8 @@ HAL_StatusTypeDef Init(
 		SD_HandleTypeDef     *in_hsd
 	)
 {
+//	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_4);
+//	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_4, 127);
 
 	Pin graphLE = Pin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin);
 	Pin graphOE = Pin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin);
@@ -207,17 +434,14 @@ HAL_StatusTypeDef Init(
 	midiHandle = in_huart2;
 	dmxHandle = in_huart3;
 
-//	screen.Startup(screenHandle);
 	shiftReg = ShiftRegs(graphHandle, graphOE, graphLE);
 	stripCurr = StripCurrent(currentADCHandle, adcTimHandle);
+	stripCtrl = StripControl(&stripCurr);
 	ledA = PCA9634(0x2A, stripI2cHandle, pwmOE);
 
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start(pwm3Handle, TIM_CHANNEL_4);
-
-//	HAL_TIM_Base_Start(adcTimHandle);
 
 	HAL_GPIO_WritePin(GRAPH_LE_GPIO_Port, GRAPH_LE_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GRAPH_OE_GPIO_Port, GRAPH_OE_Pin, GPIO_PIN_SET);
@@ -234,11 +458,17 @@ HAL_StatusTypeDef Init(
 		return HAL_ERROR;
 	}
 
-//	if (HAL_I2S_Receive_DMA(audioHandle, audioBuffer, AUDIO_BUFFER_SIZE) != HAL_OK)
-//	{
-//		return HAL_ERROR;
-//	}
+	stripCtrl.Init();
 
+	NextionCallbacks callbacks = NextionCallbacks();
+	callbacks.PageChange = PageChangeCallbackHandle;
+	callbacks.TouchEvent = TouchEventCallbackHandle;
+
+	next.Startup(screenHandle, callbacks);
+	screenCtrl.ChangePage(1);
+	screenCtrl.Init();
+
+	__HAL_TIM_SET_COMPARE(pwm3Handle, TIM_CHANNEL_4, 0);
 	return HAL_OK;
 }
 
@@ -254,8 +484,22 @@ void InitTest()
 void Main()
 {
 	indicator = !indicator;
-	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_1, indicator ? UINT16_MAX : 0);
+	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_1, indicator ? UINT16_MAX / 2 : 0);
 	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_3, !indicator ? UINT16_MAX : 0);
+
+	stripCtrl.Check();
+
+	if (screenCtrl.CheckPage(1))
+	{
+		screenCtrl.ChangeText("t1", indicator ? AUDIO_SRC_BTN_XLR : AUDIO_SRC_BTN_JACK, 4);
+	}
+	else
+	{
+		screenCtrl.ChangeText("b0", indicator ? AUDIO_SRC_BTN_XLR : AUDIO_SRC_BTN_JACK, 4);
+	}
+
+	HAL_Delay(500);
+
 //	ReadCurrent();
 //	ReadAudioTest();
 //	PCA9634Settings settings = ledA.ReadSettings();
@@ -308,29 +552,33 @@ void Main()
 //
 //	ReadCurrent();
 //	shiftReg.Update();
+
+	next.CheckForTouchEvents();
 }
 
 void MenuUpInterruptCallback()
 {
-	shiftReg.ToggleValue(MENU_UP_IND);
+//	shiftReg.ToggleValue(MENU_UP_IND);
+	screenCtrl.NavigateVert(-1);
 }
 void MenuDownInterruptCallback()
 {
-	shiftReg.ToggleValue(MENU_DOWN_IND);
+//	shiftReg.ToggleValue(MENU_DOWN_IND);
+	screenCtrl.NavigateVert(1);
 }
-// Pin moved for next revision. Right now the pin is set as GPIO.
-// Shares the same interrupt channel as the ENC1_A pin.
-//void MenuLeftInterruptCallback()
-//{
-//
-//}
+void MenuLeftInterruptCallback()
+{
+	screenCtrl.NavigateHorz(-1);
+}
 void MenuRightInterruptCallback()
 {
-	shiftReg.ToggleValue(MENU_RIGHT_IND);
+//	shiftReg.ToggleValue(MENU_RIGHT_IND);
+	screenCtrl.NavigateHorz(1);
 }
 void MenuActInterruptCallback()
 {
 	shiftReg.ToggleValue(8);
+	screenCtrl.Act();
 }
 void MenuBackInterruptCallback()
 {

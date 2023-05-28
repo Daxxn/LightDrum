@@ -70,8 +70,8 @@ void Error_Handler(void);
 #define STRIP_ESHDN_GPIO_Port GPIOC
 #define VDD_PG_Pin GPIO_PIN_1
 #define VDD_PG_GPIO_Port GPIOC
-#define VDDA_PG_Pin GPIO_PIN_2
-#define VDDA_PG_GPIO_Port GPIOC
+#define VAA_PG_Pin GPIO_PIN_2
+#define VAA_PG_GPIO_Port GPIOC
 #define STRIP_PG_Pin GPIO_PIN_3
 #define STRIP_PG_GPIO_Port GPIOC
 #define SOLID_LGTS_MON_Pin GPIO_PIN_0
@@ -167,6 +167,11 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 #define FMPI2C_TIMEOUT 200
+#define STRIP_CHANNEL_SIZE 8
+
+#define UINT32_HALF 2147483647
+#define UINT16_HALF 32767
+#define UINT8_HALF  127
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
