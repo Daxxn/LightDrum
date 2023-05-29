@@ -30,10 +30,15 @@ public:
 private:
 	StripCurrent *stripCurrent;
 	GPIO_PinState enable;
+	uint8_t stripPGood;
+	uint8_t vddPGood;
+	uint8_t vaaPGood;
 	uint8_t pGood;
 	Pin stripPowerPin;
 	Pin stripPGoodPin;
 	Pin stripEShdnPin;
+	Pin vddPGoodPin;
+	Pin vaaPGoodPin;
 };
 
 #endif /* SRC_STRIPCONTROL_H_ */

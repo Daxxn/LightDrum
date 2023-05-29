@@ -1,14 +1,15 @@
-ScreenControl.cpp:10:1:ScreenControl::ScreenControl(Nextion*, Page*)	1
-ScreenControl.cpp:16:1:ScreenControl::~ScreenControl()	3
-ScreenControl.cpp:16:1:virtual ScreenControl::~ScreenControl()	1
-ScreenControl.cpp:22:19:HAL_StatusTypeDef ScreenControl::Init()	1
-ScreenControl.cpp:29:6:void ScreenControl::NavigateHorz(int8_t)	1
-ScreenControl.cpp:34:6:void ScreenControl::NavigateVert(int8_t)	1
-ScreenControl.cpp:39:6:void ScreenControl::Navigate(int8_t, int8_t)	1
-ScreenControl.cpp:44:6:void ScreenControl::ChangePageEvent(uint8_t)	1
-ScreenControl.cpp:50:6:void ScreenControl::ChangePage(uint8_t)	3
-ScreenControl.cpp:62:6:void ScreenControl::ChangePage_Index(uint8_t)	1
-ScreenControl.cpp:68:6:void ScreenControl::TouchEvent(uint8_t, uint8_t, uint8_t)	3
-ScreenControl.cpp:80:6:void ScreenControl::Act()	1
-ScreenControl.cpp:85:6:void ScreenControl::ChangeText(const char*, const char*, uint8_t)	1
-ScreenControl.cpp:90:6:bool ScreenControl::CheckPage(uint8_t)	1
+ScreenControl.cpp:10:1:ScreenControl::~ScreenControl()	3
+ScreenControl.cpp:10:1:virtual ScreenControl::~ScreenControl()	1
+ScreenControl.cpp:16:19:HAL_StatusTypeDef ScreenControl::Init(Nextion*, Page*)	1
+ScreenControl.cpp:23:6:void ScreenControl::NavigateHorz(int8_t)	1
+ScreenControl.cpp:28:6:void ScreenControl::NavigateVert(int8_t)	1
+ScreenControl.cpp:33:6:void ScreenControl::Navigate(int8_t, int8_t)	1
+ScreenControl.cpp:38:6:void ScreenControl::ChangePageEvent(uint8_t)	1
+ScreenControl.cpp:44:6:void ScreenControl::ChangePage(uint8_t)	4
+ScreenControl.cpp:60:6:void ScreenControl::PageBack()	2
+ScreenControl.cpp:68:6:void ScreenControl::HomePage()	1
+ScreenControl.cpp:73:6:void ScreenControl::ChangePage_Index(uint8_t)	1
+ScreenControl.cpp:79:6:void ScreenControl::TouchEvent(uint8_t, uint8_t, uint8_t)	3
+ScreenControl.cpp:91:6:void ScreenControl::Act()	1
+ScreenControl.cpp:96:6:void ScreenControl::ChangeText(const char*, const char*, uint8_t)	1
+ScreenControl.cpp:101:6:bool ScreenControl::CheckPage(uint8_t)	1

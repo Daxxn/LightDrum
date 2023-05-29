@@ -73,16 +73,16 @@ bool Nextion::SendCommand()
 {
 	HAL_UART_Transmit(this->uart, (unsigned char*)this->buffer, strlen(this->buffer), UART_TIMEOUT);
 	HAL_UART_Transmit(this->uart, NEXT_END, 3, UART_TIMEOUT);
-	HAL_UART_Receive(this->uart, this->recBuffer, NEXTION_REC_SIZE, UART_TIMEOUT);
-	return CommandCheck();
+//	HAL_UART_Receive(this->uart, this->recBuffer, NEXTION_REC_SIZE, UART_TIMEOUT);
+//	return CommandCheck();
 }
 
 bool Nextion::SendCommand(const char *buffer)
 {
 	HAL_UART_Transmit(this->uart, (unsigned char*)buffer, strlen(buffer), UART_TIMEOUT);
 	HAL_UART_Transmit(this->uart, NEXT_END, 3, UART_TIMEOUT);
-	HAL_UART_Receive(this->uart, this->recBuffer, NEXTION_REC_SIZE, UART_TIMEOUT);
-	return CommandCheck();
+//	HAL_UART_Receive(this->uart, this->recBuffer, NEXTION_REC_SIZE, UART_TIMEOUT);
+//	return CommandCheck();
 }
 
 void Nextion::SetBaud(int baud, bool save)

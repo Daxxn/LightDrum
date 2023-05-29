@@ -32,7 +32,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/Inc/Screen \
+Core/Inc \
 Core/Src \
 Core/Src/Screen \
 Core/Startup \

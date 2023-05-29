@@ -14,7 +14,7 @@
 #define DISABLE_TOUCH 				0
 
 #define NEXTION_BUFFER 				16
-#define NEXTION_REC_SIZE 			32
+#define NEXTION_REC_SIZE 			16
 
 // Nextion Defines
 #define NXT_END 					"ÿÿÿ"

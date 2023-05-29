@@ -172,6 +172,8 @@ void Error_Handler(void);
 #define UINT32_HALF 2147483647
 #define UINT16_HALF 32767
 #define UINT8_HALF  127
+
+#define MENU_DEBOUNCE_WAIT 1
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

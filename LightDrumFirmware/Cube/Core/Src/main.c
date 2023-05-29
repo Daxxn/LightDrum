@@ -44,6 +44,8 @@
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+CRC_HandleTypeDef hcrc;
+
 FMPI2C_HandleTypeDef hfmpi2c1;
 DMA_HandleTypeDef hdma_fmpi2c1_tx;
 
@@ -68,7 +70,9 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-
+uint32_t prevTick = 0;
+uint32_t currentTick = UINT32_MAX;
+uint8_t checkTick = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,14 +93,27 @@ static void MX_TIM1_Init(void);
 static void MX_I2S5_Init(void);
 static void MX_SDIO_SD_Init(void);
 static void MX_TIM8_Init(void);
+static void MX_CRC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_IncTick(void)
+{
+  uwTick += uwTickFreq;
+  if (uwTick == 0)
+  {
+	  prevTick = 0;
+  }
+}
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	currentTick = HAL_GetTick();
+	checkTick = prevTick + MENU_DEBOUNCE_WAIT < currentTick;
+	prevTick = currentTick;
 	switch (GPIO_Pin) {
 		case ENC1_A_Pin:
 			Enc1TurnInterruptCallback();
@@ -105,22 +122,40 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			Enc2TurnInterruptCallback();
 			break;
 		case MENU_UP_Pin:
-			MenuUpInterruptCallback();
+			if (checkTick)
+			{
+				MenuUpInterruptCallback();
+			}
 			break;
 		case MENU_DOWN_Pin:
-			MenuDownInterruptCallback();
+			if (checkTick)
+			{
+				MenuDownInterruptCallback();
+			}
 			break;
 		case MENU_LEFT_Pin:
-			MenuLeftInterruptCallback();
+			if (checkTick)
+			{
+				MenuLeftInterruptCallback();
+			}
 			break;
 		case MENU_RIGHT_Pin:
-			MenuRightInterruptCallback();
+			if (checkTick)
+			{
+				MenuRightInterruptCallback();
+			}
 			break;
 		case MENU_ACT_Pin:
-			MenuActInterruptCallback();
+			if (checkTick)
+			{
+				MenuActInterruptCallback();
+			}
 			break;
 		case MENU_BACK_Pin:
-			MenuBackInterruptCallback();
+			if (checkTick)
+			{
+				MenuBackInterruptCallback();
+			}
 		default:
 			break;
 	}
@@ -131,10 +166,16 @@ void HAL_I2SEx_TxRxCpltCallback(I2S_HandleTypeDef *hi2s)
 	AudioFullCallback();
 }
 
-void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
+//void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
+//{
+//	AudioHalfFullCallback();
+//}
+
+void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s)
 {
-	AudioHalfFullCallback();
+	AudioFullCallback();
 }
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 	CurrentConvFullCallback();
@@ -188,6 +229,7 @@ int main(void)
   MX_SDIO_SD_Init();
   MX_FATFS_Init();
   MX_TIM8_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
 
 
@@ -260,9 +302,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 50;
+  RCC_OscInitStruct.PLL.PLLN = 80;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   RCC_OscInitStruct.PLL.PLLR = 2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -275,10 +317,10 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -305,7 +347,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_8B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
@@ -428,6 +470,32 @@ static void MX_ADC1_Init(void)
 }
 
 /**
+  * @brief CRC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  hcrc.Instance = CRC;
+  if (HAL_CRC_Init(&hcrc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
+
+}
+
+/**
   * @brief FMPI2C1 Initialization Function
   * @param None
   * @retval None
@@ -443,7 +511,7 @@ static void MX_FMPI2C1_Init(void)
 
   /* USER CODE END FMPI2C1_Init 1 */
   hfmpi2c1.Instance = FMPI2C1;
-  hfmpi2c1.Init.Timing = 0x0020081F;
+  hfmpi2c1.Init.Timing = 0x00100618;
   hfmpi2c1.Init.OwnAddress1 = 0;
   hfmpi2c1.Init.AddressingMode = FMPI2C_ADDRESSINGMODE_7BIT;
   hfmpi2c1.Init.DualAddressMode = FMPI2C_DUALADDRESS_DISABLE;
@@ -524,10 +592,10 @@ static void MX_I2S5_Init(void)
   /* USER CODE END I2S5_Init 1 */
   hi2s5.Instance = SPI5;
   hi2s5.Init.Mode = I2S_MODE_MASTER_RX;
-  hi2s5.Init.Standard = I2S_STANDARD_PHILIPS;
-  hi2s5.Init.DataFormat = I2S_DATAFORMAT_16B;
+  hi2s5.Init.Standard = I2S_STANDARD_MSB;
+  hi2s5.Init.DataFormat = I2S_DATAFORMAT_32B;
   hi2s5.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
-  hi2s5.Init.AudioFreq = I2S_AUDIOFREQ_16K;
+  hi2s5.Init.AudioFreq = I2S_AUDIOFREQ_48K;
   hi2s5.Init.CPOL = I2S_CPOL_LOW;
   hi2s5.Init.ClockSource = I2S_CLOCK_PLL;
   hi2s5.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
@@ -793,7 +861,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 0x100;
+  htim3.Init.Period = 65535;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -1139,7 +1207,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : ENC2_A_Pin ENC1_A_Pin */
   GPIO_InitStruct.Pin = ENC2_A_Pin|ENC1_A_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 

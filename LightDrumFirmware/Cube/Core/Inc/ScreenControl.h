@@ -17,6 +17,8 @@
 #define AUDIO_SRC_BTN_BOTH "BOTH"
 
 #define PAGE_COUNT 9
+#define HOME_PAGE  1
+#define NULL_PAGE 255
 
 typedef enum
 {
@@ -48,10 +50,10 @@ typedef enum
 class ScreenControl
 {
 public:
-	ScreenControl(Nextion *nxt, Page *pages);
+	ScreenControl() {};
 	virtual ~ScreenControl();
 
-	HAL_StatusTypeDef Init();
+	HAL_StatusTypeDef Init(Nextion *nxt, Page *pages);
 
 	void NavigateHorz(int8_t x);
 	void NavigateVert(int8_t y);
@@ -63,6 +65,8 @@ public:
 	void ChangeText(const char* objId, const char* text, uint8_t len);
 	void ChangePage(uint8_t pageID);
 	void ChangePage_Index(uint8_t index);
+	void PageBack();
+	void HomePage();
 
 	bool CheckPage(uint8_t pageID);
 
@@ -71,7 +75,7 @@ private:
 	Nextion *nxt;
 	Page *pages;
 	Page *currentPage;
-	uint8_t prevPage;
+	uint8_t prevPage = NULL_PAGE;
 };
 
 #endif /* SRC_SCREENCONTROL_H_ */

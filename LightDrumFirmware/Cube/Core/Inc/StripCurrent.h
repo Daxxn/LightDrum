@@ -57,7 +57,7 @@ class StripCurrent
 {
 public:
 	StripCurrent() {};
-	StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer);
+	StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer, pStripCurrentAlertTypeDef callback);
 	~StripCurrent();
 
 	HAL_StatusTypeDef Init();
@@ -68,11 +68,8 @@ public:
 
 	void Calc();
 	StripCurrentStatus CheckCurrents();
-
-	void RegisterAlertCallback(pStripCurrentAlertTypeDef callback);
-	void RemoveAlertCallback();
 private:
-	void (* alertCallback)(StripCurrentStatus status);
+	void (*alertCallback)(StripCurrentStatus status);
 	ADC_HandleTypeDef *adc;
 	TIM_HandleTypeDef *timer;
 	uint8_t *buffer;

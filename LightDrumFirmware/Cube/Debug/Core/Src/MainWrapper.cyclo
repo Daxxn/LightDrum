@@ -10,40 +10,47 @@ Component.h:20:2:Component::Component(Nextion*, uint8_t)	1
 Control.h:21:2:Control::Control(Nextion*, uint8_t, const char*, uint8_t, uint8_t)	1
 Control.h:26:2:Control::Control(Nextion*, uint8_t, const char*)	1
 Button.h:21:2:Button::Button(Nextion*, uint8_t, const char*, uint8_t, uint8_t)	1
-PageButton.h:19:2:PageButton::PageButton(Nextion*, uint8_t, const char*, uint8_t, uint8_t, uint8_t)	1
+PageButton.h:21:2:PageButton::PageButton(Nextion*, uint8_t, const char*, uint8_t, uint8_t, uint8_t, ChangePageCallback)	1
 ProgressBar.h:19:2:ProgressBar::ProgressBar(Nextion*, uint8_t, const char*)	1
+ScreenControl.h:53:2:ScreenControl::ScreenControl()	1
+RotaryEncoder.h:25:2:RotaryEncoder::RotaryEncoder()	1
+MainWrapper.cpp:85:6:void ScreenChangeCallback(uint8_t)	1
 Component.h:17:7:constexpr Component::Component(const Component&)	1
 Control.h:18:7:constexpr Control::Control(const Control&)	1
-PageButton.h:16:7:constexpr PageButton::PageButton(const PageButton&)	1
+PageButton.h:18:7:constexpr PageButton::PageButton(const PageButton&)	1
 Page.h:19:7:constexpr Page::Page(const Page&)	1
 Button.h:18:7:constexpr Button::Button(const Button&)	1
 ProgressBar.h:16:7:constexpr ProgressBar::ProgressBar(const ProgressBar&)	1
-MainWrapper.cpp:301:6:void EaseInDebug()	2
-MainWrapper.cpp:310:6:void EaseInStatus()	2
-MainWrapper.cpp:319:6:void ReadCurrent()	2
-MainWrapper.cpp:331:6:void AudioLevelsAverage()	1
-MainWrapper.cpp:341:6:void ReadAudioTest()	2
-MainWrapper.cpp:349:6:void AudioFullCallback()	1
-MainWrapper.cpp:354:6:void AudioHalfFullCallback()	1
-MainWrapper.cpp:359:6:void CurrentConvFullCallback()	1
-MainWrapper.cpp:364:6:void PageChangeCallbackHandle(uint8_t)	1
-MainWrapper.cpp:369:6:void TouchEventCallbackHandle(uint8_t, uint8_t, uint8_t)	1
-MainWrapper.cpp:374:6:void ScreenReceiveCallback()	1
+MainWrapper.cpp:310:6:void EaseInDebug()	2
+MainWrapper.cpp:319:6:void EaseInStatus()	2
+MainWrapper.cpp:328:6:void ReadCurrent()	2
+MainWrapper.cpp:340:6:void AudioLevelsAverage()	1
+MainWrapper.cpp:350:6:void ReadAudioTest()	1
+MainWrapper.cpp:361:6:void RMSTest()	2
+MainWrapper.cpp:372:6:void AudioFullCallback()	1
+MainWrapper.cpp:387:6:void AudioHalfFullCallback()	1
+MainWrapper.cpp:392:6:void CurrentConvFullCallback()	1
+MainWrapper.cpp:397:6:void PageChangeCallbackHandle(uint8_t)	1
+MainWrapper.cpp:402:6:void TouchEventCallbackHandle(uint8_t, uint8_t, uint8_t)	1
+MainWrapper.cpp:407:6:void ScreenReceiveCallback()	1
+MainWrapper.cpp:412:6:void StripCurrentAlertCallback(StripCurrentStatus)	1
+RotaryEncoder.h:22:7:constexpr RotaryEncoder& RotaryEncoder::operator=(const RotaryEncoder&)	1
 ShiftRegs.h:34:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	1
 StripControl.h:18:7:constexpr StripControl& StripControl::operator=(const StripControl&)	1
-MainWrapper.cpp:383:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*)	2
-MainWrapper.cpp:475:6:void InitTest()	1
-MainWrapper.cpp:484:6:void Main()	6
-MainWrapper.cpp:559:6:void MenuUpInterruptCallback()	1
-MainWrapper.cpp:564:6:void MenuDownInterruptCallback()	1
-MainWrapper.cpp:569:6:void MenuLeftInterruptCallback()	1
-MainWrapper.cpp:573:6:void MenuRightInterruptCallback()	1
-MainWrapper.cpp:578:6:void MenuActInterruptCallback()	1
-MainWrapper.cpp:583:6:void MenuBackInterruptCallback()	1
-MainWrapper.cpp:589:6:void Enc1SwInterruptCallback()	1
-MainWrapper.cpp:593:6:void Enc2SwInterruptCallback()	1
-MainWrapper.cpp:597:6:void Enc1TurnInterruptCallback()	1
-MainWrapper.cpp:606:6:void Enc2TurnInterruptCallback()	1
-MainWrapper.cpp:610:1:void __static_initialization_and_destruction_0(int, int)	22
-MainWrapper.cpp:610:1:cpp)	1
-MainWrapper.cpp:610:1:cpp)	1
+MainWrapper.cpp:421:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*)	2
+MainWrapper.cpp:528:6:void InitTest()	1
+MainWrapper.cpp:537:6:void Main()	3
+MainWrapper.cpp:613:6:void MenuUpInterruptCallback()	1
+MainWrapper.cpp:618:6:void MenuDownInterruptCallback()	1
+MainWrapper.cpp:623:6:void MenuLeftInterruptCallback()	1
+MainWrapper.cpp:627:6:void MenuRightInterruptCallback()	1
+MainWrapper.cpp:632:6:void MenuActInterruptCallback()	1
+MainWrapper.cpp:637:6:void MenuBackInterruptCallback()	1
+MainWrapper.cpp:641:6:void Enc1SwInterruptCallback()	1
+MainWrapper.cpp:645:6:void Enc2SwInterruptCallback()	1
+MainWrapper.cpp:649:6:void Enc1TurnInterruptCallback()	1
+MainWrapper.cpp:659:6:void Enc2TurnInterruptCallback()	1
+cmath:415:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = long unsigned int; _Up = int]	1
+MainWrapper.cpp:664:1:void __static_initialization_and_destruction_0(int, int)	22
+MainWrapper.cpp:664:1:cpp)	1
+MainWrapper.cpp:664:1:cpp)	1

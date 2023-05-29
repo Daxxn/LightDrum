@@ -2,8 +2,8 @@ Utils.h:24:2:Pin::Pin()	1
 Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	1
 Utils.h:32:2:Pin::Pin(GPIO_TypeDef*, uint16_t, GPIO_Default_State)	1
 StripControl.cpp:10:1:StripControl::StripControl(StripCurrent*)	1
-StripControl.cpp:18:1:StripControl::~StripControl()	1
-StripControl.cpp:18:1:virtual StripControl::~StripControl()	1
-StripControl.cpp:23:19:HAL_StatusTypeDef StripControl::Init()	1
-StripControl.cpp:31:6:void StripControl::Power(GPIO_PinState)	4
-StripControl.cpp:49:6:void StripControl::Check()	2
+StripControl.cpp:21:1:StripControl::~StripControl()	1
+StripControl.cpp:21:1:virtual StripControl::~StripControl()	1
+StripControl.cpp:26:19:HAL_StatusTypeDef StripControl::Init()	1
+StripControl.cpp:37:6:void StripControl::Power(GPIO_PinState)	2
+StripControl.cpp:49:6:void StripControl::Check()	3

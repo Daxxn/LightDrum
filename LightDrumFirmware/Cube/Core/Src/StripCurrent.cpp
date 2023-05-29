@@ -6,14 +6,17 @@
  */
 
 #include "main.h"
-#include <StripCurrent.h>
+#include "string.h"
+#include "StripCurrent.h"
 
-StripCurrent::StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer)
+StripCurrent::StripCurrent(ADC_HandleTypeDef *adcHandle, TIM_HandleTypeDef *timer, pStripCurrentAlertTypeDef callback)
 {
 	this->buffer = new uint8_t[STRIP_CURR_BUFFER_LEN];
 	this->adc = adcHandle;
 	this->timer = timer;
 	this->averages = new uint8_t[ADC_CHANNELS];
+	memset(this->averages, 0, ADC_CHANNELS);
+	this->alertCallback = callback;
 //	HAL_ADC_RegisterCallback(adc, HAL_ADC_CONVERSION_COMPLETE_CB_ID, callback);
 }
 
@@ -74,7 +77,10 @@ StripCurrentStatus StripCurrent::CheckCurrents()
 	}
 	if (status != GOOD && this->alertCallback != NULL)
 	{
-		this->alertCallback(status);
+		if (this->alertCallback != NULL)
+		{
+			this->alertCallback(status);
+		}
 	}
 	return status;
 }
@@ -96,14 +102,4 @@ float StripCurrent::CalcCurrent(uint8_t channel)
 float StripCurrent::CalcPerc(uint8_t channel)
 {
 	return this->averages[channel] / UINT8_MAX;
-}
-
-void StripCurrent::RegisterAlertCallback(pStripCurrentAlertTypeDef callback)
-{
-	this->alertCallback = callback;
-}
-
-void StripCurrent::RemoveAlertCallback()
-{
-	this->alertCallback = NULL;
 }

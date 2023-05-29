@@ -1,11 +1,9 @@
-StripCurrent.cpp:11:1:StripCurrent::StripCurrent(ADC_HandleTypeDef*, TIM_HandleTypeDef*)	1
-StripCurrent.cpp:20:1:StripCurrent::~StripCurrent()	3
-StripCurrent.cpp:26:19:HAL_StatusTypeDef StripCurrent::Init()	2
-StripCurrent.cpp:35:9:uint8_t StripCurrent::GetChannelValue(StripIndecies)	1
-StripCurrent.cpp:40:6:void StripCurrent::Calc()	3
-StripCurrent.cpp:59:20:StripCurrentStatus StripCurrent::CheckCurrents()	7
-StripCurrent.cpp:82:6:void StripCurrent::CalcAverage(uint8_t*)	1
-StripCurrent.cpp:90:7:float StripCurrent::CalcCurrent(uint8_t)	1
-StripCurrent.cpp:96:7:float StripCurrent::CalcPerc(uint8_t)	1
-StripCurrent.cpp:101:6:void StripCurrent::RegisterAlertCallback(pStripCurrentAlertTypeDef)	1
-StripCurrent.cpp:106:6:void StripCurrent::RemoveAlertCallback()	1
+StripCurrent.cpp:12:1:StripCurrent::StripCurrent(ADC_HandleTypeDef*, TIM_HandleTypeDef*, pStripCurrentAlertTypeDef)	1
+StripCurrent.cpp:23:1:StripCurrent::~StripCurrent()	3
+StripCurrent.cpp:29:19:HAL_StatusTypeDef StripCurrent::Init()	2
+StripCurrent.cpp:38:9:uint8_t StripCurrent::GetChannelValue(StripIndecies)	1
+StripCurrent.cpp:43:6:void StripCurrent::Calc()	3
+StripCurrent.cpp:62:20:StripCurrentStatus StripCurrent::CheckCurrents()	8
+StripCurrent.cpp:88:6:void StripCurrent::CalcAverage(uint8_t*)	1
+StripCurrent.cpp:96:7:float StripCurrent::CalcCurrent(uint8_t)	1
+StripCurrent.cpp:102:7:float StripCurrent::CalcPerc(uint8_t)	1

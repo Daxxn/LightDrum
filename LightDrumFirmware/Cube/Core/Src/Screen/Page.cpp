@@ -114,7 +114,7 @@ void Page::Navigate(int8_t x, int8_t y)
 	}
 	else
 	{
-		this->currentXNav += x;
+		this->currentXNav = tempX;
 	}
 	if (tempY > this->maxYNav || tempY < 0)
 	{
@@ -122,7 +122,7 @@ void Page::Navigate(int8_t x, int8_t y)
 	}
 	else
 	{
-		this->currentYNav += y;
+		this->currentYNav = tempY;
 	}
 	int i;
 	for (i = 0; i < this->btnCount; ++i) {
@@ -130,7 +130,6 @@ void Page::Navigate(int8_t x, int8_t y)
 		{
 			this->buttons[i].SetNav();
 			this->CurrentControl = &this->buttons[i];
-			break;
 		}
 		else
 		{
@@ -142,7 +141,6 @@ void Page::Navigate(int8_t x, int8_t y)
 		{
 			this->pageButtons[i].SetNav();
 			this->CurrentControl = &this->pageButtons[i];
-			return;
 		}
 		else
 		{
@@ -154,7 +152,7 @@ void Page::Navigate(int8_t x, int8_t y)
 void Page::Init()
 {
 	this->nxt->SetPage(ID);
-	this->Navigate(0, 0);
+	this->ResetNavigation();
 }
 
 void Page::Act()
@@ -176,11 +174,6 @@ Control* Page::FindControl(uint8_t id)
 
 void Page::ResetNavigation()
 {
-	int i;
-	for (i = 0; i < this->btnCount; ++i) {
-		this->buttons[i].ClearNav();
-	}
-	for (i = 0; i < this->pageBtnCount; ++i) {
-		this->pageButtons[i].ClearNav();
-	}
+	this->CurrentControl = NULL;
+	this->Navigate(0, 0);
 }

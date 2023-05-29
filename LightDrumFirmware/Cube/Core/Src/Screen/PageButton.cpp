@@ -23,5 +23,5 @@ void PageButton::UpdateState()
 
 void PageButton::Act()
 {
-	this->nxt->SetPage(pageID);
+	this->callback(this->pageID);
 }

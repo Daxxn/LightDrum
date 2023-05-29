@@ -7,22 +7,16 @@
 
 #include "ScreenControl.h"
 
-ScreenControl::ScreenControl(Nextion *nxt, Page *pages)
-{
-	this->nxt = nxt;
-	this->pages = pages;
-}
-
 ScreenControl::~ScreenControl()
 {
 	this->nxt = NULL;
 	delete[] this->pages;
 }
 
-HAL_StatusTypeDef ScreenControl::Init()
+HAL_StatusTypeDef ScreenControl::Init(Nextion *nxt, Page *pages)
 {
-	this->currentPage = &pages[0];
-	this->currentPage->Navigate(0, 0);
+	this->nxt = nxt;
+	this->pages = pages;
 	return HAL_OK;
 }
 
@@ -52,11 +46,28 @@ void ScreenControl::ChangePage(uint8_t pageID)
 	for (int i = 0; i < PAGE_COUNT; ++i) {
 		if (this->pages[i].ID == pageID)
 		{
+			if (this->currentPage != NULL)
+			{
+				this->prevPage = this->currentPage->ID;
+			}
 			this->currentPage = &this->pages[i];
 			this->currentPage->Init();
 			return;
 		}
 	}
+}
+
+void ScreenControl::PageBack()
+{
+	if (this->prevPage != NULL_PAGE)
+	{
+		this->ChangePage(this->prevPage);
+	}
+}
+
+void ScreenControl::HomePage()
+{
+	this->ChangePage(HOME_PAGE);
 }
 
 void ScreenControl::ChangePage_Index(uint8_t index)
