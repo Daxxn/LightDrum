@@ -1,0 +1,3 @@
+../Core/Inc/Screen/Component.h:26:15:virtual void Component::Act()	1
+../Core/Src/Screen/Component.cpp:10:1:Component::~Component()	1
+../Core/Src/Screen/Component.cpp:10:1:virtual Component::~Component()	1

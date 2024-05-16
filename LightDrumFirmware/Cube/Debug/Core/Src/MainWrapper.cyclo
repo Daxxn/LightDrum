@@ -1,23 +1,58 @@
-Utils.h:24:2:Pin::Pin()	1
-Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	1
-ShiftRegs.h:37:2:ShiftRegs::ShiftRegs()	1
-MainWrapper.cpp:79:6:void ToggleTest(uint8_t, int)	2
-MainWrapper.cpp:90:6:void EaseInDebug()	2
-MainWrapper.cpp:99:6:void EaseInStatus()	2
-MainWrapper.cpp:108:6:void ReadCurrent()	2
-ShiftRegs.h:34:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	1
-MainWrapper.cpp:124:6:void Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*)	1
-MainWrapper.cpp:170:6:void InitTest()	1
-MainWrapper.cpp:179:6:void Main()	1
-MainWrapper.cpp:234:6:void MenuUpInterruptCallback()	1
-MainWrapper.cpp:238:6:void MenuDownInterruptCallback()	1
-MainWrapper.cpp:248:6:void MenuRightInterruptCallback()	1
-MainWrapper.cpp:252:6:void MenuActInterruptCallback()	1
-MainWrapper.cpp:256:6:void MenuBackInterruptCallback()	1
-MainWrapper.cpp:262:6:void Enc1SwInterruptCallback()	1
-MainWrapper.cpp:266:6:void Enc2SwInterruptCallback()	1
-MainWrapper.cpp:270:6:void Enc1TurnInterruptCallback()	1
-MainWrapper.cpp:279:6:void Enc2TurnInterruptCallback()	1
-MainWrapper.cpp:283:1:void __static_initialization_and_destruction_0(int, int)	5
-MainWrapper.cpp:283:1:cpp)	1
-MainWrapper.cpp:283:1:cpp)	1
+../Core/Inc/Utils.h:24:2:Pin::Pin()	1
+../Core/Inc/Utils.h:25:2:Pin::Pin(GPIO_TypeDef*, uint16_t)	1
+../Core/Inc/Utils.h:32:2:Pin::Pin(GPIO_TypeDef*, uint16_t, GPIO_Default_State)	1
+../Core/Inc/StripCurrent.h:59:2:StripCurrent::StripCurrent()	1
+../Core/Inc/ShiftRegs.h:37:2:ShiftRegs::ShiftRegs()	1
+../Core/Inc/PCA9634.h:147:8:PCA9634Settings::PCA9634Settings()	1
+../Core/Inc/PCA9634.h:170:2:PCA9634::PCA9634()	1
+../Core/Inc/StripControl.h:21:2:StripControl::StripControl()	1
+../Core/Inc/Screen/Component.h:20:2:Component::Component(Nextion*, uint8_t)	1
+../Core/Inc/Screen/Control.h:21:2:Control::Control(Nextion*, uint8_t, const char*, uint8_t, uint8_t)	1
+../Core/Inc/Screen/Control.h:26:2:Control::Control(Nextion*, uint8_t, const char*)	1
+../Core/Inc/Screen/Button.h:21:2:Button::Button(Nextion*, uint8_t, const char*, uint8_t, uint8_t)	1
+../Core/Inc/Screen/PageButton.h:21:2:PageButton::PageButton(Nextion*, uint8_t, const char*, uint8_t, uint8_t, uint8_t, ChangePageCallback)	1
+../Core/Inc/Screen/ProgressBar.h:19:2:ProgressBar::ProgressBar(Nextion*, uint8_t, const char*)	1
+../Core/Inc/ScreenControl.h:53:2:ScreenControl::ScreenControl()	1
+../Core/Inc/RotaryEncoder.h:25:2:RotaryEncoder::RotaryEncoder()	1
+../Core/Src/MainWrapper.cpp:91:6:void ScreenChangeCallback(uint8_t)	1
+../Core/Inc/Screen/Component.h:17:7:constexpr Component::Component(const Component&)	1
+../Core/Inc/Screen/Control.h:18:7:constexpr Control::Control(const Control&)	1
+../Core/Inc/Screen/PageButton.h:18:7:constexpr PageButton::PageButton(const PageButton&)	1
+../Core/Inc/Screen/Page.h:19:7:constexpr Page::Page(const Page&)	1
+../Core/Inc/Screen/Button.h:18:7:constexpr Button::Button(const Button&)	1
+../Core/Inc/Screen/ProgressBar.h:16:7:constexpr ProgressBar::ProgressBar(const ProgressBar&)	1
+../Core/Src/MainWrapper.cpp:316:6:void EaseInDebug()	2
+../Core/Src/MainWrapper.cpp:325:6:void EaseInStatus()	2
+../Core/Src/MainWrapper.cpp:334:6:void ReadCurrent()	2
+../Core/Src/MainWrapper.cpp:346:6:void AudioLevelsAverage()	1
+../Core/Src/MainWrapper.cpp:356:6:void ReadAudioTest()	1
+../Core/Src/MainWrapper.cpp:367:6:void RMSTest()	2
+../Core/Src/MainWrapper.cpp:378:6:void AudioFullCallback()	1
+../Core/Src/MainWrapper.cpp:393:6:void AudioHalfFullCallback()	1
+../Core/Src/MainWrapper.cpp:398:6:void CurrentConvFullCallback()	1
+../Core/Src/MainWrapper.cpp:403:6:void PageChangeCallbackHandle(uint8_t)	1
+../Core/Src/MainWrapper.cpp:408:6:void TouchEventCallbackHandle(uint8_t, uint8_t, uint8_t)	1
+../Core/Src/MainWrapper.cpp:413:6:void ScreenReceiveCallback()	1
+../Core/Src/MainWrapper.cpp:418:6:void StripCurrentAlertCallback(StripCurrentStatus)	1
+../Core/Inc/RotaryEncoder.h:22:7:constexpr RotaryEncoder& RotaryEncoder::operator=(const RotaryEncoder&)	1
+../Core/Inc/ShiftRegs.h:34:7:constexpr ShiftRegs& ShiftRegs::operator=(const ShiftRegs&)	1
+../Core/Inc/StripControl.h:18:7:constexpr StripControl& StripControl::operator=(const StripControl&)	1
+../Core/Src/MainWrapper.cpp:427:19:HAL_StatusTypeDef Init(ADC_HandleTypeDef*, DMA_HandleTypeDef*, FMPI2C_HandleTypeDef*, DMA_HandleTypeDef*, I2C_HandleTypeDef*, I2S_HandleTypeDef*, DMA_HandleTypeDef*, SPI_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, TIM_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, UART_HandleTypeDef*, RTC_HandleTypeDef*, SD_HandleTypeDef*)	2
+../Core/Src/MainWrapper.cpp:536:6:void InitTest()	1
+../Core/Src/MainWrapper.cpp:545:6:void Main()	3
+../Core/Src/MainWrapper.cpp:630:6:void MenuUpInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:635:6:void MenuDownInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:640:6:void MenuLeftInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:644:6:void MenuRightInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:649:6:void MenuActInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:654:6:void MenuBackInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:658:6:void Enc1SwInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:662:6:void Enc2SwInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:666:6:void Enc1TurnInterruptCallback()	1
+../Core/Src/MainWrapper.cpp:676:6:void Enc2TurnInterruptCallback()	1
+C:\ST\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/c++/12.3.1/cmath:415:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = long unsigned int; _Up = int]	1
+C:\ST\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/c++/12.3.1/cmath:437:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sin(_Tp) [with _Tp = unsigned char]	1
+C:\ST\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/c++/12.3.1/cmath:196:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::cos(_Tp) [with _Tp = unsigned char]	1
+../Core/Src/MainWrapper.cpp:681:1:void __static_initialization_and_destruction_0(int, int)	22
+../Core/Src/MainWrapper.cpp:681:1:cpp)	1
+../Core/Src/MainWrapper.cpp:681:1:cpp)	1

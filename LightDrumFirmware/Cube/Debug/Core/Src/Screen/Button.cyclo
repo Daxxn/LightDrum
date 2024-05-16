@@ -1,0 +1,5 @@
+../Core/Src/Screen/Button.cpp:10:1:Button::~Button()	1
+../Core/Src/Screen/Button.cpp:10:1:virtual Button::~Button()	1
+../Core/Src/Screen/Button.cpp:14:6:void Button::Press(bool)	1
+../Core/Src/Screen/Button.cpp:19:6:virtual void Button::UpdateState()	1
+../Core/Src/Screen/Button.cpp:24:6:virtual void Button::Act()	2

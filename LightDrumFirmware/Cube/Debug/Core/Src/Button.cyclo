@@ -1,3 +1,0 @@
-Button.cpp:11:1:Button::Button()	1
-Button.cpp:15:1:Button::~Button()	1
-Button.cpp:15:1:virtual Button::~Button()	1

@@ -1,21 +1,32 @@
-Nextion.cpp:14:1:Nextion::Nextion()	1
-Nextion.cpp:22:1:Nextion::~Nextion()	4
-Nextion.cpp:22:1:virtual Nextion::~Nextion()	1
-Nextion.cpp:29:6:void Nextion::Startup(UART_HandleTypeDef*)	1
-Nextion.cpp:37:6:bool Nextion::CommandCheck()	3
-Nextion.cpp:46:6:bool Nextion::SendCommand()	1
-Nextion.cpp:55:6:bool Nextion::SendCommand(const char*)	1
-Nextion.cpp:64:6:void Nextion::SetBaud(int, bool)	2
-Nextion.cpp:71:6:void Nextion::ToggleSleep()	2
-Nextion.cpp:81:6:void Nextion::ToggleSleep(bool)	2
-Nextion.cpp:90:6:void Nextion::HomePage()	1
-Nextion.cpp:95:6:void Nextion::SetPage(uint8_t)	1
-Nextion.cpp:101:6:void Nextion::SetBrightness(uint8_t, bool)	3
-Nextion.cpp:111:6:void Nextion::FullBrightness(bool)	1
-Nextion.cpp:116:6:void Nextion::SetNumber(uint8_t, int)	1
-Nextion.cpp:122:6:void Nextion::SetProgressBar(uint8_t, uint8_t)	1
-Nextion.cpp:128:6:void Nextion::SetGauge(uint8_t, uint16_t)	1
-Nextion.cpp:134:6:void Nextion::UpdateGraph(uint8_t, uint8_t, uint8_t)	1
-Nextion.cpp:140:6:void Nextion::ClearGraph(uint8_t, uint8_t)	1
-Nextion.cpp:146:6:void Nextion::SetGraphScale(uint8_t, uint16_t)	1
-Nextion.cpp:152:6:void Nextion::SetClick(uint8_t, bool)	1
+../Core/Src/Nextion.cpp:14:1:Nextion::Nextion()	1
+../Core/Src/Nextion.cpp:25:1:Nextion::~Nextion()	4
+../Core/Src/Nextion.cpp:25:1:virtual Nextion::~Nextion()	1
+../Core/Src/Nextion.cpp:32:6:void Nextion::Startup(UART_HandleTypeDef*, NextionCallbacks)	1
+../Core/Src/Nextion.cpp:47:6:void Nextion::Reset()	1
+../Core/Src/Nextion.cpp:53:6:bool Nextion::CommandCheck()	5
+../Core/Src/Nextion.cpp:72:6:bool Nextion::SendCommand()	1
+../Core/Src/Nextion.cpp:80:6:bool Nextion::SendCommand(const char*)	1
+../Core/Src/Nextion.cpp:88:6:void Nextion::SetBaud(int, bool)	2
+../Core/Src/Nextion.cpp:95:6:void Nextion::ToggleSleep()	2
+../Core/Src/Nextion.cpp:105:6:void Nextion::ToggleSleep(bool)	2
+../Core/Src/Nextion.cpp:114:6:void Nextion::HomePage()	1
+../Core/Src/Nextion.cpp:119:6:void Nextion::SetPage(uint8_t)	1
+../Core/Src/Nextion.cpp:125:6:void Nextion::SetBrightness(uint8_t, bool)	3
+../Core/Src/Nextion.cpp:135:6:void Nextion::FullBrightness(bool)	1
+../Core/Src/Nextion.cpp:140:6:void Nextion::SetNumber(uint8_t, int)	1
+../Core/Src/Nextion.cpp:146:6:void Nextion::SetNumber(const char*, int)	1
+../Core/Src/Nextion.cpp:152:6:void Nextion::SetProgressBar(uint8_t, uint8_t)	1
+../Core/Src/Nextion.cpp:158:6:void Nextion::SetProgressBar(const char*, uint8_t)	1
+../Core/Src/Nextion.cpp:164:6:void Nextion::SetGauge(uint8_t, uint16_t)	1
+../Core/Src/Nextion.cpp:170:6:void Nextion::SetGauge(const char*, uint16_t)	1
+../Core/Src/Nextion.cpp:176:6:void Nextion::SetText(uint8_t, const char*, int)	1
+../Core/Src/Nextion.cpp:182:6:void Nextion::SetText(const char*, const char*, int)	1
+../Core/Src/Nextion.cpp:188:6:void Nextion::UpdateGraph(uint8_t, uint8_t, uint8_t)	1
+../Core/Src/Nextion.cpp:194:6:void Nextion::ClearGraph(uint8_t, uint8_t)	1
+../Core/Src/Nextion.cpp:200:6:void Nextion::SetGraphScale(uint8_t, uint16_t)	1
+../Core/Src/Nextion.cpp:206:6:void Nextion::SetGraphScale(const char*, uint16_t)	1
+../Core/Src/Nextion.cpp:212:6:void Nextion::SetClick(uint8_t, bool)	1
+../Core/Src/Nextion.cpp:218:6:void Nextion::MenuNav(uint8_t)	1
+../Core/Src/Nextion.cpp:223:6:void Nextion::Receive()	2
+../Core/Src/Nextion.cpp:231:19:HAL_StatusTypeDef Nextion::CheckForTouchEvents()	3
+../Core/Src/Nextion.cpp:243:6:void Nextion::ParseCommands()	6

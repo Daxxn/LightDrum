@@ -1,0 +1,45 @@
+{
+    "type": "InteractiveHtmlBom settings",
+    "version": 1,
+    "pcbmetadata": {
+        "title": "Light Drum",
+        "revision": "REV12",
+        "company": "Daxxn Industries",
+        "date": "2023-05-09 01:09:19"
+    },
+    "settings": {
+        "canvaslayout": "FB",
+        "bomlayout": "left-right",
+        "bommode": "ungrouped",
+        "checkboxes": [
+            "Placed"
+        ],
+        "checkboxStoredRefs": {
+            "Placed": "41,211,114,147,130,82,89,119,109,5,199,148,153,166,79,30,68,93,104,19,171,49,138,160,186,54,206,3,127,83,222,88,192,14,170,46,1,129,67,24,0,65,131,165,40,43,155,28,8,61,42,39,13,70,34,38,113,169,48,167,100,7,164,74,187,135,141,123,176,207,198,96,10,156,45,17,189,37,95,86,201,184,57,16,36,221,205,64,136,80,97,21,195,173,76,203,22,197,69,117,66,210,180,32,84,217,223,194,111,85,151,132,196,204,60,146,59,106,25,179,9,209,157,218,90,103,115,185,178,124,337,336,232,231,313,283,251,311,275,281,266,294,269,235,288,255,229,302,323,307,326,230,264,228,296,268,289,261,271,280,316,287,328,319,247,252,279,240,315,239,263,305,257,256,273,225,295,308,233,324,270,245,249,293,310,292,262,286,318,246,258,259,291,236,301,325,290,327,322,265,254,333,224,242,285,248,314,241,284,250,274,253,276,278,282,297,330,298,260,272,244,312,300,267,237,303,334,227,15,177,174,213,53,183,161,137,55,105,110,62,193,58,140,94,216,118,35"
+        },
+        "darkMode": true,
+        "highlightpin1": false,
+        "redrawOnDrag": true,
+        "boardRotation": 0,
+        "offsetBackRotation": false,
+        "renderPads": true,
+        "renderReferences": true,
+        "renderValues": true,
+        "renderSilkscreen": true,
+        "renderFabrication": false,
+        "renderDnpOutline": false,
+        "renderTracks": true,
+        "renderZones": true,
+        "columnOrder": [
+            "checkboxes",
+            "References",
+            "Value",
+            "Footprint",
+            "PartNumber",
+            "SupplierPN",
+            "Quantity"
+        ],
+        "hiddenColumns": [],
+        "markWhenChecked": "Placed"
+    }
+}

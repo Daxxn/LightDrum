@@ -1,3 +1,21 @@
-PCA9634.cpp:10:1:PCA9634::PCA9634()	1
-PCA9634.cpp:14:1:PCA9634::~PCA9634()	1
-PCA9634.cpp:14:1:virtual PCA9634::~PCA9634()	1
+../Core/Inc/Utils.h:24:2:Pin::Pin()	1
+../Core/Inc/PCA9634.h:147:8:PCA9634Settings::PCA9634Settings()	1
+../Core/Src/PCA9634.cpp:18:6:void PCA9634Settings::ToBytes(uint8_t*, size_t)	1
+../Core/Src/PCA9634.cpp:36:17:static PCA9634Settings PCA9634Settings::FromBytes(uint8_t*, size_t)	1
+../Core/Src/PCA9634.cpp:54:1:PCA9634::PCA9634(uint8_t, FMPI2C_HandleTypeDef*, Pin)	1
+../Core/Src/PCA9634.cpp:63:1:PCA9634::~PCA9634()	2
+../Core/Src/PCA9634.cpp:73:19:HAL_StatusTypeDef PCA9634::Init(PCA9634Settings)	3
+../Core/Src/PCA9634.cpp:93:19:HAL_StatusTypeDef PCA9634::Reset()	2
+../Core/Src/PCA9634.cpp:109:19:HAL_StatusTypeDef PCA9634::ChangeSettings(PCA9634Settings)	2
+../Core/Src/PCA9634.cpp:119:17:PCA9634Settings PCA9634::ReadSettings()	1
+../Core/Src/PCA9634.cpp:128:6:void PCA9634::SetChannel(uint8_t, uint8_t)	1
+../Core/Src/PCA9634.cpp:133:6:void PCA9634::SetChannelState(uint8_t, PCA9634_LEDOUT)	1
+../Core/Src/PCA9634.cpp:138:6:void PCA9634::ResetChannels(int8_t)	2
+../Core/Src/PCA9634.cpp:149:9:uint8_t PCA9634::GetChannel(uint8_t)	1
+../Core/Src/PCA9634.cpp:154:6:void PCA9634::SetAll(bool)	1
+../Core/Src/PCA9634.cpp:159:6:void PCA9634::SetAll(GPIO_PinState)	1
+../Core/Src/PCA9634.cpp:164:19:HAL_StatusTypeDef PCA9634::Update()	1
+../Core/Src/PCA9634.cpp:181:19:HAL_StatusTypeDef PCA9634::SendSettings(PCA9634Settings)	1
+../Core/Src/PCA9634.cpp:194:19:HAL_StatusTypeDef PCA9634::WriteByte(PCA9634_CTRL_REGISTER, uint8_t)	1
+../Core/Src/PCA9634.cpp:206:19:HAL_StatusTypeDef PCA9634::WriteBytes(PCA9634_AUTO_INC, PCA9634_CTRL_REGISTER, uint8_t*, size_t)	3
+../Core/Src/PCA9634.cpp:221:9:uint8_t PCA9634::CombineCommand(PCA9634_AUTO_INC, PCA9634_CTRL_REGISTER)	1

@@ -1,0 +1,8 @@
+../Core/Inc/Utils.h:24:2:Pin::Pin()	1
+../Core/Inc/RotaryEncoder.cpp:10:1:RotaryEncoder::RotaryEncoder(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, Pin)	1
+../Core/Inc/RotaryEncoder.cpp:19:1:RotaryEncoder::~RotaryEncoder()	1
+../Core/Inc/RotaryEncoder.cpp:19:1:virtual RotaryEncoder::~RotaryEncoder()	1
+../Core/Inc/RotaryEncoder.cpp:23:19:HAL_StatusTypeDef RotaryEncoder::Init()	1
+../Core/Inc/RotaryEncoder.cpp:30:6:void RotaryEncoder::Decode()	4
+../Core/Inc/RotaryEncoder.cpp:56:10:uint16_t RotaryEncoder::GetPosition()	1
+../Core/Inc/RotaryEncoder.cpp:61:11:Direction RotaryEncoder::GetDirection()	1
