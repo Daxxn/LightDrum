@@ -39,6 +39,7 @@ private:
 	Pin stripEShdnPin;
 	Pin vddPGoodPin;
 	Pin vaaPGoodPin;
+	Pin pwmOEPin;
 };
 
 #endif /* SRC_STRIPCONTROL_H_ */

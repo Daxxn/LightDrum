@@ -125,11 +125,6 @@ PCA9634Settings PCA9634::ReadSettings()
 	return PCA9634Settings::FromBytes(buffer);
 }
 
-void PCA9634::ToggleLEDs(GPIO_PinState state)
-{
-	this->oePin.Write(state);
-}
-
 void PCA9634::SetChannel(uint8_t index, uint8_t pwm)
 {
 	this->channels[index] = pwm;
@@ -156,15 +151,26 @@ uint8_t PCA9634::GetChannel(uint8_t index)
 	return this->channels[index];
 }
 
+void PCA9634::SetAll(bool state)
+{
+	this->oePin.Write((GPIO_PinState)state);
+}
+
+void PCA9634::SetAll(GPIO_PinState state)
+{
+	this->oePin.Write(state);
+}
+
 HAL_StatusTypeDef PCA9634::Update()
 {
-	uint16_t ledOut0 = 0;
-	for (size_t i = 0; i < RGB_CHANNELS; ++i) {
-		ledOut0 |= (uint8_t)this->channelState[i] << (i * 2);
-	}
-	uint8_t buffer[2] = {(uint8_t)(ledOut0 >> 8), (uint8_t)(ledOut0 & 0xFF)};
-	HAL_StatusTypeDef pwmStatus = WriteBytes(PCA9634_AUTO_INC::LED_REGS, PCA9634_CTRL_REGISTER::PWMStart, this->channels, RGB_CHANNELS);
-	return pwmStatus + WriteBytes(PCA9634_AUTO_INC::ALL_REGS, PCA9634_CTRL_REGISTER::LEDOUT0, buffer, 2) == 0 ? HAL_OK : HAL_ERROR;
+
+//	uint16_t ledOut0 = 0;
+//	for (size_t i = 0; i < RGB_CHANNELS; ++i) {
+//		ledOut0 |= (uint8_t)this->channelState[i] << (i * 2);
+//	}
+//	uint8_t buffer[2] = {(uint8_t)(ledOut0 >> 8), (uint8_t)(ledOut0 & 0xFF)};
+//	HAL_StatusTypeDef pwmStatus = WriteBytes(PCA9634_AUTO_INC::LED_REGS, PCA9634_CTRL_REGISTER::PWMStart, this->channels, RGB_CHANNELS);
+//	return pwmStatus + WriteBytes(PCA9634_AUTO_INC::ALL_REGS, PCA9634_CTRL_REGISTER::LEDOUT0, buffer, 2) == 0 ? HAL_OK : HAL_ERROR;
 }
 
 /*

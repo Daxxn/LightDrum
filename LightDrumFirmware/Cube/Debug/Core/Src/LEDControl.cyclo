@@ -1,0 +1,7 @@
+../Core/Inc/LEDControl.h:19:2:LEDStrip::LEDStrip()	1
+../Core/Src/LEDControl.cpp:10:1:LEDControl::LEDControl(PCA9634*, StripControl*)	2
+../Core/Src/LEDControl.cpp:17:1:LEDControl::~LEDControl()	2
+../Core/Src/LEDControl.cpp:17:1:virtual LEDControl::~LEDControl()	1
+../Core/Src/LEDControl.cpp:23:19:HAL_StatusTypeDef LEDControl::Init()	1
+../Core/Src/LEDControl.cpp:28:6:void LEDControl::UpdateStrip(uint8_t, uint8_t, uint8_t, uint8_t)	1
+../Core/Src/LEDControl.cpp:35:6:void LEDControl::Update()	1

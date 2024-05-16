@@ -16,6 +16,7 @@ StripControl::StripControl(StripCurrent *stripCurrent)
 	this->stripPowerPin = Pin(STRIP_PWR_GPIO_Port, STRIP_PWR_Pin);
 	this->vddPGoodPin = Pin(VDD_PG_GPIO_Port, VDD_PG_Pin);
 	this->vaaPGoodPin = Pin(VAA_PG_GPIO_Port, VAA_PG_Pin);
+	this->pwmOEPin = Pin(PWM_OE_GPIO_Port, PWM_OE_Pin);
 }
 
 StripControl::~StripControl()
@@ -27,6 +28,7 @@ HAL_StatusTypeDef StripControl::Init()
 {
 	this->stripPowerPin.Clear();
 	this->stripEShdnPin.Clear();
+	this->pwmOEPin.Clear();
 	this->vddPGood   = this->vddPGoodPin.Read();
 	this->vaaPGood   = this->vaaPGoodPin.Read();
 	this->stripPGood = this->stripPGoodPin.Read();

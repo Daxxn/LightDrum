@@ -59,6 +59,8 @@ StripCurrent stripCurr;
 StripControl stripCtrl;
 
 PCA9634 ledA;
+PCA9634 ledB;
+PCA9634 ledC;
 
 uint8_t ledCount = 0;
 
@@ -66,6 +68,10 @@ uint8_t count = 0;
 uint8_t page = 0;
 
 PCA9634Settings settings;
+
+/* LED Test Counts -----------------------------------------------------------*/
+const uint8_t greenOffset = 85;
+const uint8_t blueOffset = 170;
 
 uint32_t audioBuffer[AUDIO_BUFFER_SIZE];
 
@@ -486,6 +492,8 @@ HAL_StatusTypeDef Init(
 	stripCurr = StripCurrent(currentADCHandle, adcTimHandle, StripCurrentAlertCallback);
 	stripCtrl = StripControl(&stripCurr);
 	ledA = PCA9634(0x2A, stripI2cHandle, pwmOE);
+	ledB = PCA9634(0x2A, stripI2cHandle, pwmOE);
+	ledC = PCA9634(0x2A, stripI2cHandle, pwmOE);
 
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(pwm1Handle, TIM_CHANNEL_3);
@@ -517,7 +525,7 @@ HAL_StatusTypeDef Init(
 	screenCtrl.Init(&next, pages);
 	screenCtrl.HomePage();
 
-	stripCtrl.Power(GPIO_PIN_SET);
+//	stripCtrl.Power(GPIO_PIN_SET);
 
 //	HAL_I2S_Receive_DMA(audioHandle, (uint16_t*)audioBuffer, AUDIO_BUFFER_SIZE);
 
@@ -537,8 +545,17 @@ void InitTest()
 void Main()
 {
 	indicator = !indicator;
+	ledA.SetAll(indicator);
 	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_1, indicator ? UINT16_MAX / 2 : 0);
 	__HAL_TIM_SET_COMPARE(pwm1Handle, TIM_CHANNEL_3, !indicator ? UINT16_MAX : 0);
+
+	ledA.SetChannel(0, (uint8_t)(sin(count) * 127 + 127));
+	ledA.SetChannel(1, (uint8_t)(cos(count) * 127 + 127));
+	ledA.SetChannel(2, (uint8_t)(sin(count) * 127 + 64));
+
+	ledA.Update();
+
+	HAL_Delay(250);
 
 //	stripCtrl.Check();
 //

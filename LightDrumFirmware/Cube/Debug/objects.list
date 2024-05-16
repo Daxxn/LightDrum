@@ -1,4 +1,5 @@
 "./Core/Inc/RotaryEncoder.o"
+"./Core/Src/LEDControl.o"
 "./Core/Src/MainWrapper.o"
 "./Core/Src/Nextion.o"
 "./Core/Src/PCA9634.o"

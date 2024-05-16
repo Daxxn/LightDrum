@@ -9,6 +9,7 @@
 #define INC_PCA9634_H_
 
 #include "main.h"
+#include "Utils.h"
 
 #define RGB_CHANNELS 8
 
@@ -181,14 +182,15 @@ public:
 	HAL_StatusTypeDef ChangeSettings(PCA9634Settings settings);
 	PCA9634Settings ReadSettings();
 
-	void ToggleLEDs(GPIO_PinState state);
-
 	void SetChannel(uint8_t index, uint8_t pwm);
 	void SetChannelState(uint8_t index, PCA9634_LEDOUT state);
 	void ResetChannels(int8_t except);
 
 //	LEDChannel* GetChannel(uint8_t index);
 	uint8_t GetChannel(uint8_t index);
+
+	void SetAll(bool state);
+	void SetAll(GPIO_PinState state);
 
 	HAL_StatusTypeDef Update();
 private:
@@ -211,7 +213,6 @@ private:
 	HAL_StatusTypeDef WriteLEDs();
 
 	HAL_StatusTypeDef SendSettings(PCA9634Settings settings);
-
 
 	uint8_t CombineCommand(PCA9634_AUTO_INC inc, PCA9634_CTRL_REGISTER reg);
 };
